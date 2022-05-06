@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"dartsass.targetDirectory": "asset_utokyo-is/css"
+	}
+}
