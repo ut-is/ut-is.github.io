@@ -1,0 +1,224 @@
+@charset "utf-8";
+@import "setting";
+/*                トップページ用
+======================================================= */
+/*TOP共通*/
+#lower{
+  #wrapper{
+    #first_view{
+      height: 100vh;
+      #home_kv{
+        height: 100%;
+        background-color: #ffffff;
+        z-index: 9998;
+        .home_kv_inner{
+          position: relative;
+          width: 100%;
+          height: 100%;
+          .kv_slides{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            .slick-list{
+              height: 100%;
+              .slick-track{
+                height: 100%;
+                .slides_cont{
+                  width: 100%;
+                  height: 100%;
+                  background-size: cover;
+                  background-position: center center;
+                  background-repeat: no-repeat;
+                  img{
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+              }
+            }
+            .slick-dots{
+              position: absolute;
+              left: 50%;
+              bottom: 40px;
+              display: flex;
+              align-items: center;
+              transform: translateX(-50%);
+              z-index: 9;
+              li{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin: 14px;
+                button{
+                  position: relative;
+                  width: 16px;
+                  height: 16px;
+                  text-indent: -9999px;
+                  &:before{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background: #fff;
+                    transform: translate(-50%,-50%);
+                    transition: 300ms;
+                  }
+                }
+                &.slick-active{
+                  button{
+                    &:before{
+                      width: 16px;
+                      height: 16px;
+                      background: #4D7C2D;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .kv_items{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 80px;
+            width: 100%;
+            height: 100%;
+            .kv_items_inner{
+              display: flex;
+              align-items: center;
+              padding: 0 36px;
+              @include media768{
+                display: block;
+                max-width: 440px;
+              }
+              .kv_items_text{
+                padding: 0 36px;
+                width: 45%;
+                max-width: 612px;
+                @include media1024{
+                  padding: 0 20px;
+                }
+                @include media768{
+                  width: 100%;
+                  margin-bottom: 40px;
+                }
+                @include media400{
+                  padding: 0;
+                }
+                .kv_items_catch{
+                  span{
+                    width: 100%;
+                    display: block;
+                    color: #4D7C2D;
+                    font-size: 120px;
+                    font-weight: 900;
+                    font-style: italic;
+                    &:last-child{
+                      font-size: 74px;
+                    }
+                    img{
+                      width: 100%;
+                    }
+                  }
+                }
+                .kv_items_btn{
+                  margin-top: 110px;
+                  @include media1200{
+                    margin-top: 80px;
+                  }
+                  @include media1024{
+                    margin-top: 60px;
+                  }
+                  @include media768{
+                    margin-top: 24px;
+                  }
+                  ul{
+                    display: flex;
+                    margin: 0 -10px;
+                    li{
+                      padding: 0 10px;
+                      width: 50%;
+                      height: 60px;
+                      @include media400{
+                        height: 50px;
+                      }
+                      a{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+                        font-size: 20px;
+                        font-weight: bold;
+                        text-decoration: none;
+                        @include media1024{
+                          font-size: 16px;
+                        }
+                      }
+                      @include media769{
+                        &:hover{
+                          cursor: pointer;
+                          transition: all 0.5s;
+                        }
+                      }
+                      &:first-child{
+                        @include media400{
+                          margin-bottom: 10px;
+                        }
+                        a{
+                          background-color: #fff;
+                          border: solid 2px #fff;
+                          @include media769{
+                            &:hover{
+                              background-color: rgba(0,0,0,0);
+                              color: #fff;
+                            }
+                          }
+                        }
+                      }
+                      &:last-child{
+                        a{
+                          color: #fff;
+                          border: solid 2px #fff;
+                          &:hover{
+                            background-color: #fff;
+                            color: #000;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              .kv_items_img{
+                padding: 0 36px;
+                width: 55%;
+                @include media1024{
+                  padding: 0 20px;
+                }
+                @include media768{
+                  width: 100%;
+                }
+                @include media400{
+                  padding: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }//first_view
+  }
+}//home
+
+

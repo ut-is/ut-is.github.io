@@ -1,0 +1,58 @@
+{{ define "main" }}{{ if and (.Params.otherlink) (ne .Params.otherlink "") }}{{- partial "inc-404.html" . -}}{{ else }}
+</head>
+<body id="lecture_info" class="lower detail">
+  <div id="wrapper">
+    <div class="flex-wrapper">
+      {{- partial "inc-header.en.html" . -}}
+
+      <div class="main_container">
+        <div id="main_area" role="main">
+          <section id="top_kv" class="content_wrapper">
+            <img src="/en/asset_utokyo-is/media/images/news_lecture/kv_news_lecture.jpg" alt="KV" width="1340" height="240">
+            <div class="overlay_text">
+              <h2>Department Lecture</h2>
+            </div>
+          </section>
+
+          <div id="bread">
+            <ol>
+              <li><a href="/en/"><span class="home"></span></a></li>
+              <li><span>Department Lecture</span></li>
+              <li><a href="{{ .Permalink }}"><span>{{ .Title }}</span></a></li>
+            </ol>
+          </div>
+
+          <section id="content_area" class="content_wrapper">
+            <div class="main_width">
+              <div class="content_inner">
+                <div class="flex_container">
+                  <div class="section_title">
+                    <h3><span>Department Lecture</span></h3>
+                  </div>
+                  <div class="section_main_content">
+                    <div class="lecture_content">
+                      <h4 class="content_title"><span>{{ .Title }}</span></h4>
+                      <div class="content_info">
+                        {{ if and (.Params.speaker) (ne .Params.speaker "") }}<p>Speakers: {{ .Params.speaker }}</p>{{ end }}
+                        <p>{{ if and (.Params.helddate) (ne .Params.helddate "") }}{{ .Params.helddate }}{{ end }}{{ if and (.Params.heldtime) (ne .Params.heldtime "") }}, {{ .Params.heldtime }}</span>{{ end }}</p>
+                        {{ if and (.Params.technique) (ne .Params.technique "") }}<p>{{ .Params.technique }}</p>{{ end }}
+                      </div>
+                      <div class="article_area">
+                        {{ .Content }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section><!-- content_area -->
+
+          {{- partial "inc-pagetop.html" . -}}
+        </div>
+      </div>
+    </div>
+  </div><!-- wrapper -->
+  {{- partial "inc-footer.en.html" . -}}
+  {{- partial "inc-sp_menu.en.html" . -}}
+  {{- partial "inc-js.html" . -}}
+  {{ end }}{{ end }}

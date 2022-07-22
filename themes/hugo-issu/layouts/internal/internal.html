@@ -1,0 +1,59 @@
+{{ define "main" }}
+</head>
+<body id="internal" class="lower">
+  <div id="wrapper">
+    <div class="flex-wrapper">
+      {{- partial "inc-header.html" . -}}
+
+      <div class="main_container">
+        <div id="main_area" role="main">
+          <section id="top_kv" class="content_wrapper">
+            <img src="/asset_utokyo-is/media/images/internal/kv_internal.jpg" alt="KV" width="1340" height="240">
+            <div class="overlay_text">
+              <h2>内部限定</h2>
+              <p>Internal</p>
+            </div>
+          </section>
+
+          <div id="bread">
+            <ol>
+              <li><a href="/"><span class="home"></span></a></li>
+              <li><a href="{{ .Permalink }}"><span>{{ .Title }}</span></a></li>
+            </ol>
+          </div>
+
+          <section id="internal_area" class="content_wrapper">
+            <div class="main_width">
+              <div class="content_inner">
+                <div class="flex_container">
+                  <div class="section_title">
+                    <h3><span>内部限定</span></h3>
+                    <p>Internal</p>
+                  </div>
+                  <div class="section_main_content">
+                    <div class="link_content">
+                      <div class="text_area">
+                        <p class="title_ja">図書室</p>
+                        <p class="title_en">library</p>
+                      </div>
+                      <div class="dl_btn_area">
+                        <a href="http://library.t.u-tokyo.ac.jp/sci7.php">LINK</a>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section><!-- member_list_area -->
+
+          {{- partial "inc-pagetop.html" . -}}
+        </div>
+      </div>
+    </div>
+  </div><!-- wrapper -->
+
+  {{- partial "inc-footer.html" . -}}
+  {{- partial "inc-sp_menu.html" . -}}
+  {{- partial "inc-js.html" . -}}
+ {{ end }}

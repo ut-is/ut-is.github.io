@@ -1,0 +1,336 @@
+{{ define "main" }}
+</head>
+<body id="members" class="lower">
+  <div id="wrapper">
+    <div class="flex-wrapper">
+      {{- partial "inc-header.html" . -}}
+
+      <div class="main_container">
+        <div id="main_area" role="main">
+          <section id="top_kv" class="content_wrapper">
+            <img src="/asset_utokyo-is/media/images/lab-members/kv_lab_members.jpg" alt="KV" width="1340" height="240">
+            <div class="overlay_text">
+              <h2>教員/研究室</h2>
+              <p>Lab./Members</p>
+            </div>
+          </section>
+
+          <div id="bread">
+            <ol>
+              <li><a href="/"><span class="home"></span></a></li>
+              <li><a href="/lab-members/"><span>教員/研究室</span></a></li>
+              <li><a href="{{ .Permalink }}"><span>{{ .Title }}</span></a></li>
+            </ol>
+          </div>
+
+          {{- partial "inc-lab-members_selector.html" . -}}
+          <section id="members_list_area" class="content_wrapper">
+            <div class="main_width">
+              <div class="content_inner">
+                <div class="flex_container">
+                  <div class="section_title">
+                    <h3><span>教員一覧</span></h3>
+                    <p>Members</p>
+                  </div>
+                  <div class="section_main_content">
+                    <div class="top_text">
+                      <p>情報理工学系研究科コンピュータ科学専攻に所属する教員の一覧です。</p>
+                    </div>
+                    <div class="date">
+                      <p>（2022年4月）</p>
+                    </div>
+
+                    <div class="table_list_wrap">
+                      <!-- 理学部情報科学科 -->
+                      <table class="members_list">
+                        <tbody>
+                          <tr class="list_title">
+                            <th colspan="4" scope="col">理学部情報科学科</th>
+                          </tr>
+                          <tr class="list_type">
+                            <th class="rep">担当・関連専攻等</th>
+                            <th class="job">職名</th>
+                            <th class="name">氏名</th>
+                            <th class="specialized_field">専門分野</th>
+                          </tr>
+
+                          <tr>
+                            <td>学科長</td>
+                            <td>教授</td>
+                            <td><a href="https://www-imai.is.s.u-tokyo.ac.jp/" target="_blank">今井 浩</a></td>
+                            <td>アルゴリズム論・離散構造・計算幾何・最適化・量子情報科学</td>
+                          </tr>
+
+                          <tr>
+                            <td></td>
+                            <td>教授</td>
+                            <td><a href="http://sudalab.is.s.u-tokyo.ac.jp/~reiji/" target="_blank">須田 礼仁</a></td>
+                            <td>並列数値計算</td>
+                          </tr>
+
+                          <tr>
+                            <td>専攻主任</td>
+                            <td>教授</td>
+                            <td><a href="https://www-kb.is.s.u-tokyo.ac.jp/~koba/" target="_blank">小林 直樹</a></td>
+                            <td>プログラミング言語・ソフトウェア検証</td>
+                          </tr>
+
+                          <tr>
+                            <td>創造情報学専攻</td>
+                            <td>教授</td>
+                            <td><a href="http://www-ui.is.s.u-tokyo.ac.jp/~takeo/" target="_blank">五十嵐 健夫</a></td>
+                            <td>ユーザインタフェース・コンピュータグラフィックス</td>
+                          </tr>
+
+                          <tr>
+                            <td>新領域創成科学研究科</td>
+                            <td>教授</td>
+                            <td><a href="http://www.ms.k.u-tokyo.ac.jp/sugi/index-jp.html" target="_blank">杉山 将</a></td>
+                            <td>機械学習・統計的データ解析</td>
+                          </tr>
+
+                          <tr>
+                            <td>専攻長</td>
+                            <td>教授</td>
+                            <td><a href="https://mynlp.github.io/ja/members" target="_blank">宮尾 祐介</a></td>
+                            <td>自然言語処理・計算言語学</td>
+                          </tr>
+
+                          <tr>
+                            <td>&nbsp;</td>
+                            <td>准教授</td>
+                            <td><a href="http://www.cp.is.s.u-tokyo.ac.jp" target="_blank">吉本 芳英</a></td>
+                            <td>計算科学および並列シミュレーションソフトウエア　特に第一原理電子状態計算</td>
+                          </tr>
+
+                          <tr>
+                            <td>&nbsp;</td>
+                            <td>准教授</td>
+                            <td><a href="http://www.pf.is.s.u-tokyo.ac.jp/ja/" target="_blank">加藤 真平</a></td>
+                            <td>オペレーティングシステム・リアルタイムシステム・並列分散システム</td>
+                          </tr>
+
+                          <tr>
+                            <td>&nbsp;</td>
+                            <td>准教授</td>
+                            <td><a href="https://sites.google.com/site/shinyaty/home-japanese" target="_blank">高前田 伸也</a></td>
+                            <td>コンピュータアーキテクチャ・高位合成コンパイラ・FPGAシステム・アルゴリズム/ハードウェア協調設計・機械学習処理の高速化</td>
+                          </tr>
+
+                          <tr>
+                            <td>&nbsp;</td>
+                            <td>准教授</td>
+                            <td><a href="https://www.ml.is.s.u-tokyo.ac.jp/" target="_blank">佐藤 一誠</a></td>
+                            <td>統計的機械学習</td>
+                          </tr>
+
+                          <tr>
+                            <td>新領域創成科学研究科</td>
+                            <td>講師</td>
+                            <td><a href="https://naotoyokoya.com/" target="_blank">横矢 直人</a></td>
+                            <td>画像解析・空間情報学</td>
+                          </tr>
+
+                          <tr>
+                            <td>新領域創成科学研究科</td>
+                            <td>講師</td>
+                            <td><a href="https://takashiishida.github.io/" target="_blank">石田 隆</a></td>
+                            <td>機械学習</td>
+                          </tr>
+
+                          <tr class>
+                            <td></td>
+                            <td>講師</td>
+                            <td><a href="https://hitomiyanaka.mystrikingly.com/" target="_blank">谷中 瞳</a></td>
+                            <td>計算言語学・推論・自然言語処理</td>
+                          </tr>
+
+                          <tr class>
+                            <td></td>
+                            <td>助教</td>
+                            <td>
+                              <a href="https://sites.google.com/view/tsukasafukusato/about-me-j/" target="_blank">福里 司</a>
+                            </td>
+                            <td>ユーザインターフェース・コンピュータグラフィックス</td>
+                          </tr>
+
+                          <tr>
+                            <td></td>
+                            <td>助教</td>
+                            <td><a href="https://www-kb.is.s.u-tokyo.ac.jp/~ryosuke/" target="_blank">佐藤 亮介</a></td>
+                            <td>プログラミング言語・ソフトウェア検証</td>
+                          </tr>
+
+                          <tr>
+                            <td></td>
+                            <td>助教</td>
+                            <td><a href="https://tk-ono.neocities.org" target="blank">小野寺 拓</a></td>
+                            <td>バイオインフォマティクス・データ構造</td>
+                          </tr>
+
+                          <tr>
+                            <td></td>
+                            <td>助教</td>
+                            <td><a href="https://sites.google.com/g.ecc.u-tokyo.ac.jp/yukokuroki/home/japanese" target="_blank">黒木 祐子</a></td>
+                            <td>組合せ最適化・統計的機械学習</td>
+                          </tr>
+
+
+                          <tr>
+                            <td></td>
+                            <td>助教</td>
+                            <td><a href="https://researchmap.jp/wakakuwa" target="_blank">若桑 江友里</a></td>
+                            <td>量子情報理論 </td>
+                          </tr>
+
+
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="table_list_wrap">
+                      <!-- ゲノム情報科学 -->
+                      <table class="members_list">
+                        <tbody>
+                          <tr class="list_title">
+                            <th colspan="4" scope="col">ゲノム情報科学</th>
+                          </tr>
+                          <tr class="list_type">
+                            <th class="rep">担当・関連専攻等</th>
+                            <th class="job">職名</th>
+                            <th class="name">氏名</th>
+                            <th class="specialized_field">専門分野</th>
+                          </tr>
+
+                          <tr>
+                            <td rowspan="5" class="marge">医科学研究所ヒトゲノム解析センター</td>
+                            <td>教授</td>
+                            <td><a href="http://www.hgc.jp/~knakai/" target="_blank">中井 謙太</a></td>
+                            <td>遺伝子情報・ゲノム情報科学</td>
+                          </tr>
+
+                          <tr class>
+                            <!-- <td></td> -->
+                            <td>教授</td>
+                            <td><a href="https://www.is.s.u-tokyo.ac.jp/lab/member.html" target="_blank">井元 清哉</a></td>
+                            <td>ゲノム情報学、データサイエンス</td>
+                          </tr>
+
+                          <tr>
+                            <!-- <td>&nbsp;</td> -->
+                            <td>教授</td>
+                            <td><a href="http://www.hgc.jp/~tshibuya/" target="_blank">渋谷 哲朗</a></td>
+                            <td>ゲノム解析・アルゴリズム論</td>
+                          </tr>
+                          <tr class>
+                            <!-- <td></td> -->
+                            <td>准教授</td>
+                            <td><a href="https://www.is.s.u-tokyo.ac.jp/lab/member.html" target="_blank">朴 聖俊</a></td>
+                            <td>生命情報、計算知能</td>
+                          </tr>
+
+                          <tr class>
+                            <td>准教授</td>
+                            <td><a href="https://www.is.s.u-tokyo.ac.jp/lab/member.html" target="_blank">片山 琴絵</a></td>
+                            <td>ゲノム解析、レセプト情報解析</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="table_list_wrap">
+                      <!-- ソーシャルICT研究センター -->
+                      <table class="members_list">
+                        <tbody>
+                          <tr class="list_title">
+                            <th colspan="4" scope="col">ソーシャルICT研究センター</th>
+                          </tr>
+                          <tr class="list_type">
+                            <th class="rep">担当・関連専攻等</th>
+                            <th class="job">職名</th>
+                            <th class="name">氏名</th>
+                            <th class="specialized_field">専門分野</th>
+                          </tr>
+
+                          <tr>
+                            <td>ソーシャルICT研究センター</td>
+                            <td>教授</td>
+                            <td>中田 登志之</td>
+                            <td>並列アーキテクチャ・ 並列プログラミング言語・ サイバーフィジカルシステムのアーキテクチャ</td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="table_list_wrap">
+                      <!-- 農学生命科学研究科 -->
+                      <table class="members_list">
+                        <tbody>
+                          <tr class="list_title">
+                            <th colspan="4" scope="col">農学生命科学研究科</th>
+                          </tr>
+                          <tr class="list_type">
+                            <th class="rep">担当・関連専攻等</th>
+                            <th class="job">職名</th>
+                            <th class="name">氏名</th>
+                            <th class="specialized_field">専門分野</th>
+                          </tr>
+
+                          <tr>
+                            <td>応用生命工学専攻</td>
+                            <td>教授</td>
+                            <td><a href="http://www.bi.a.u-tokyo.ac.jp/~shimizu/" target="_blank">清水 謙多郎</a></td>
+                            <td>生物情報工学、並列・分散コンピューティング</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="table_list_wrap">
+                      <!-- 学際理学 -->
+                      <table class="members_list">
+                        <tbody>
+                          <tr class="list_title">
+                            <th colspan="4" scope="col">学際理学</th>
+                          </tr>
+                          <tr class="list_type">
+                            <th class="rep">担当・関連専攻等</th>
+                            <th class="job">職名</th>
+                            <th class="name">氏名</th>
+                            <th class="specialized_field">専門分野</th>
+                          </tr>
+
+                          <tr>
+                            <td rowspan="3" class="marge">国立情報学研究所</td>
+                            <td>教授</td>
+                            <td><a href="http://research.nii.ac.jp/~akiko/index_j.html" target="_blank">相澤 彰子</a></td>
+                            <td>テキストメディア・知識処理</td>
+                          </tr>
+                          <tr>
+                            <td>教授</td>
+                            <td><a href="https://researchmap.jp/imarik/" target="_blank">佐藤 いまり</a></td>
+                            <td>コンピュータビジョン、コンピューテーショナルフォトグラフィー、画像解析、反射解析、医療画像処理</td>
+                          </tr>
+                          <tr>
+                            <td>教授</td>
+                            <td><a href="https://researchmap.jp/k_keniti/" target="_blank">河原林健一</a></td>
+                            <td> アルゴリズム、離散数学、理論計算機科学</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section><!-- member_list_area -->
+
+          {{- partial "inc-pagetop.html" . -}}
+        </div>
+      </div>
+    </div>
+  </div><!-- wrapper -->
+
+  {{- partial "inc-footer.html" . -}}
+  {{- partial "inc-sp_menu.html" . -}}
+  {{- partial "inc-js.html" . -}}
+ {{ end }}

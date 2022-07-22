@@ -1,0 +1,344 @@
+{{ define "main" }}
+</head>
+<body id="members" class="lower">
+  <div id="wrapper">
+    <div class="flex-wrapper">
+      {{- partial "inc-header.en.html" . -}}
+
+      <div class="main_container">
+        <div id="main_area" role="main">
+          <section id="top_kv" class="content_wrapper">
+            <img src="/asset_utokyo-is/media/images/lab-members/kv_lab_members.jpg" alt="KV" width="1340" height="240">
+            <div class="overlay_text">
+              <h2>Lab. / Members</h2>
+          </section>
+
+          <div id="bread">
+            <ol>
+              <li><a href="/en/"><span class="home"></span></a></li>
+              <li><a href="/en/lab-members/"><span>Lab. / Members</span></a></li>
+              <li><a href="{{ .Permalink }}"><span>{{ .Title }}</span></a></li>
+            </ol>
+          </div>
+
+          {{- partial "inc-lab-members_selector.en.html" . -}}
+          <section id="members_list_area" class="content_wrapper">
+            <div class="main_width">
+              <div class="content_inner">
+                <div class="flex_container">
+                  <div class="section_title">
+                    <h3><span>Members</span></h3>
+                  </div>
+                  <div class="section_main_content">
+                    <div class="top_text">
+                      <p>List of faculty members belonging to the Department of Computer Science, Graduate School of Information Science and Technology.</p>
+                    </div>
+                    <div class="date">
+                      <p>（April 2022）</p>
+                    </div>
+
+                    <div class="table_list_wrap">
+                      <!-- 理学部情報科学科 -->
+                      <table class="members_list">
+                        <tbody>
+                          <tr class="list_title">
+                            <th colspan="4" scope="col">Department of Information Science,
+                              Faculty of Science</th>
+                          </tr>
+                          <tr class="list_type">
+                            <th class="rep"><span>In charge,</span><span>related
+                                majors</span></th>
+                            <th class="job">Official Title</th>
+                            <th class="name">Name</th>
+                            <th class="specialized_field">Specialized Fields</th>
+                          </tr>
+
+                          <tr>
+                            <td>Chair of Dept. of IS</td>
+                            <td>Professor</td>
+                            <td><a href="https://www-imai.is.s.u-tokyo.ac.jp/" target="_blank">Hiroshi Imai</a></td>
+                            <td>Algorithm, discrete structure, computational geometry, optimization, quantum information science</td>
+                          </tr>
+
+                          <tr>
+                            <td></td>
+                            <td>Professor</td>
+                            <td><a href="http://sudalab.is.s.u-tokyo.ac.jp/~reiji/lab-e.html" target="_blank">Reiji Suda</a></td>
+                            <td>Parallel numerical processing</td>
+                          </tr>
+
+                          <tr>
+                            <td><span>Course Chair</span></td>
+                            <td>Professor</td>
+                            <td><a href="https://www-kb.is.s.u-tokyo.ac.jp/~koba/" target="_blank">Naoki Kobayashi</a></td>
+                            <td>Programming languages, program verification</td>
+                          </tr>
+
+                          <tr>
+                            <td><span>Creative Informatics</span></td>
+                            <td>Professor</td>
+                            <td><a href="http://www-ui.is.s.u-tokyo.ac.jp/~takeo/" target="_blank">Takeo Igarashi</a></td>
+                            <td>User interface, computer graphics</td>
+                          </tr>
+
+                          <tr>
+                            <td><span>Frontier Sciences</span></td>
+                            <td>Professor</td>
+                            <td><a href="http://www.ms.k.u-tokyo.ac.jp/sugi/index.html" target="_blank">Masashi Sugiyama</a></td>
+                            <td>Machine learning, statistical data analysis</td>
+                          </tr>
+
+                          <tr>
+                            <td><span>Department Chair</span></td>
+                            <td>Professor</td>
+                            <td><a href="https://mynlp.is.s.u-tokyo.ac.jp/en/members" target="_blank">Yusuke Miyao</a></td>
+                            <td>Natural language processing, Computational linguistics</td>
+                          </tr>
+
+                          <tr>
+                            <td>&nbsp;</td>
+                            <td><span>Associate</span> <span>Professor</span></td>
+                            <td><a href="https://www.cp.is.s.u-tokyo.ac.jp/?lang=en" target="_blank">Yoshihide Yoshimoto</a></td>
+                            <td>Computational science, parallel simulation software (especially, first-principles electronic structure calculation)</td>
+                          </tr>
+
+                          <tr>
+                            <td>&nbsp;</td>
+                            <td><span>Associate</span> <span>Professor</span></td>
+                            <td><a href="https://www.pf.is.s.u-tokyo.ac.jp/" target="_blank">Shinpei Kato</a></td>
+                            <td>Operating Systems, Real-Time Systems, Parallel and Distributed Systems</td>
+                          </tr>
+
+                          <tr>
+                            <td>&nbsp;</td>
+                            <td><span>Associate</span> <span>Professor</span></td>
+                            <td><a href="https://sites.google.com/site/shinyaty/home?authuser=0" target="_blank">Shinya Takamaeda</a></td>
+                            <td>Computer Architecture, High-Level Synthesis Compiler, FPGA System, Algorithm/Hardware Co-design, Machine Learning Acceleration</td>
+                          </tr>
+
+                          <tr>
+                            <td>&nbsp;</td>
+                            <td><span>Associate</span> <span>Professor</span></td>
+                            <td><a href="https://www.ml.is.s.u-tokyo.ac.jp/home-en" target="_blank">Issei Sato</a></td>
+                            <td>Statistical machine learning</td>
+                          </tr>
+
+                          <tr>
+                            <td><span>Frontier Sciences</span></td>
+                            <td>Lecturer</td>
+                            <td><a href="https://naotoyokoya.com/" target="_blank">Naoto
+                                Yokoya</a></td>
+                            <td>Image analysis, Geoinformatics</td>
+                          </tr>
+
+                          <tr>
+                            <td><span>Frontier Sciences</span></td>
+                            <td>Lecturer</td>
+                            <td><a href="https://takashiishida.github.io/" target="_blank">Takashi Ishida</a></td>
+                            <td>Machine learning</td>
+                          </tr>
+
+                          <tr class>
+                            <td></td>
+                            <td>Lecturer</td>
+                            <td><a href="https://hitomiyanaka.mystrikingly.com/" target="_blank">Hitomi Yanaka</a></td>
+                            <td>Computational Linguistics, Inference, Natural Language Processing</td>
+                          </tr>
+
+                          <tr class>
+                            <td></td>
+                            <td><span>Assistant</span> <span>Professor</span></td>
+                            <td>
+                              <a href="https://sites.google.com/view/tsukasafukusato" target="_blank">Tsukasa Fukusato</a>
+                            </td>
+                            <td>User Interface, Computer Graphics</td>
+                          </tr>
+
+                          <tr>
+                            <td></td>
+                            <td><span>Assistant</span> <span>Professor</span></td>
+                            <td><a href="https://www-kb.is.s.u-tokyo.ac.jp/~ryosuke/" target="_blank">Ryosuke Sato</a></td>
+                            <td>Programming Languages, Program Verification</td>
+                          </tr>
+
+                          <tr>
+                            <td></td>
+                            <td><span>Assistant</span> <span>Professor</span></td>
+                            <td><a href="https://tk-ono.neocities.org" target="blank">Taku
+                                Onodera</a></td>
+                            <td>Bioinformatics, Data Structure</td>
+                          </tr>
+
+                          <tr>
+                            <td></td>
+                            <td><span>Assistant</span> <span>Professor</span></td>
+                            <td><a href="https://sites.google.com/g.ecc.u-tokyo.ac.jp/yukokuroki/home/japanese" target="_blank">Yuko Kuroki</a></td>
+                            <td>Combinatorial Optimization, Statistical Machine Learning</td>
+                          </tr>
+
+
+                          <tr>
+                            <td></td>
+                            <td><span>Assistant</span> <span>Professor</span></td>
+                            <td><a href="https://researchmap.jp/wakakuwa?lang=en" target="_blank">Eyuri Wakakuwa</a></td>
+                            <td>Quantum Information Theory</td>
+                          </tr>
+
+
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="table_list_wrap">
+                      <!-- ゲノム情報科学 -->
+                      <table class="members_list">
+                        <tbody>
+                          <tr class="list_title">
+                            <th colspan="4" scope="col">Genome Informatics</th>
+                          </tr>
+                          <tr class="list_type">
+                            <th class="rep"><span>In charge,</span><span>related
+                                majors</span></th>
+                            <th class="job">Official Title</th>
+                            <th class="name">Name</th>
+                            <th class="specialized_field">Specialized Fields</th>
+                          </tr>
+
+                          <tr>
+                            <td rowspan="5" class="marge"><span>The Institute of Medical
+                                Science</span> <span>Human Genome Center</span></td>
+                            <td>Professor</td>
+                            <td><a href="http://www.hgc.jp/~knakai/" target="_blank">Kenta
+                                Nakai</a></td>
+                            <td>Genome informatics</td>
+                          </tr>
+
+                          <tr class>
+                            <!-- <td></td> -->
+                            <td>Professor</td>
+                            <td><a href="https://www.is.s.u-tokyo.ac.jp/lab/member.html" target="_blank">Seiya Imoto</a></td>
+                            <td>Genome Informatics, Data Science</td>
+                          </tr>
+
+                          <tr>
+                            <!-- <td>&nbsp;</td> -->
+                            <td>Professor</td>
+                            <td><a href="http://www.hgc.jp/~tshibuya/" target="_blank">Tetsuo Shibuya</a></td>
+                            <td>Algorithms in computational biology</td>
+                          </tr>
+                          <tr class>
+                            <!-- <td></td> -->
+                            <td><span>Associate</span> <span>Professor</span></td>
+                            <td><a href="https://www.is.s.u-tokyo.ac.jp/lab/member.html" target="_blank">Sung-Joon Park</a></td>
+                            <td>Genome Informatics, Computational Intelligence</td>
+                          </tr>
+
+                          <tr class>
+                            <td><span>Associate</span> <span>Professor</span></td>
+                            <td><a href="https://www.is.s.u-tokyo.ac.jp/lab/member.html" target="_blank">Kotoe Katayama</a></td>
+                            <td>Genome Informatics, Health Insurance Claim Analysis</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="table_list_wrap">
+                      <!-- ソーシャルICT研究センター -->
+                      <table class="members_list">
+                        <tbody>
+                          <tr class="list_title">
+                            <th colspan="4" scope="col">Social ICT Research Center</th>
+                          </tr>
+                          <tr class="list_type">
+                            <th class="rep"><span>In charge,</span><span>related
+                                majors</span></th>
+                            <th class="job">Official Title</th>
+                            <th class="name">Name</th>
+                            <th class="specialized_field">Specialized Fields</th>
+                          </tr>
+
+                          <tr>
+                            <td>Social ICT Research Center</td>
+                            <td>Professor</td>
+                            <td>Toshiyuki Nakata</td>
+                            <td>Parallel architectures，parallel programming languages, architecture of cyber physical systems</td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="table_list_wrap">
+                      <!-- 農学生命科学研究科 -->
+                      <table class="members_list">
+                        <tbody>
+                          <tr class="list_title">
+                            <th colspan="4" scope="col">Agricultural and Life Sciences</th>
+                          </tr>
+                          <tr class="list_type">
+                            <th class="rep"><span>In charge,</span><span>related
+                                majors</span></th>
+                            <th class="job">Official Title</th>
+                            <th class="name">Name</th>
+                            <th class="specialized_field">Specialized Fields</th>
+                          </tr>
+
+                          <tr>
+                            <td>Department of Applied Biotechnology</td>
+                            <td>Professor</td>
+                            <td><a href="http://www.bi.a.u-tokyo.ac.jp/~shimizu/index_e.html" target="_blank">Kentaro Shimizu</a></td>
+                            <td>Bioinformatics, Parallel and Distributed Computing</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="table_list_wrap">
+                      <!-- 学際理学 -->
+                      <table class="members_list">
+                        <tbody>
+                          <tr class="list_title">
+                            <th colspan="4" scope="col">Interdisciplinary Science</th>
+                          </tr>
+                          <tr class="list_type">
+                            <th class="rep"><span>In charge,</span><span>related
+                                majors</span></th>
+                            <th class="job">Official Title</th>
+                            <th class="name">Name</th>
+                            <th class="specialized_field">Specialized Fields</th>
+                          </tr>
+
+                          <tr>
+                            <td rowspan="3" class="marge">National Institute of Informatics
+                            </td>
+                            <td>Professor</td>
+                            <td><a href="http://research.nii.ac.jp/~akiko/index_e.html" target="_blank">Akiko Aizawa</a></td>
+                            <td>Text Media, Knowledge Processing</td>
+                          </tr>
+                          <tr>
+                            <td>Professor</td>
+                            <td><a href="https://researchmap.jp/imarik/?lang=en" target="_blank">Imari Sato</a></td>
+                            <td>Computer Vision, Computational Photography, Image analysis, Reflectance analysis, Medical Imaging</td>
+                          </tr>
+                          <tr>
+                            <td>Professor</td>
+                            <td><a href="https://researchmap.jp/k_keniti/?lang=en" target="_blank">Kenichi Kawarabayashi</a></td>
+                            <td>Algorithm, Discrete Math, Theoretical Computer Science</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section><!-- member_list_area -->
+
+          {{- partial "inc-pagetop.html" . -}}
+        </div>
+      </div>
+    </div>
+  </div><!-- wrapper -->
+
+  {{- partial "inc-footer.en.html" . -}}
+  {{- partial "inc-sp_menu.en.html" . -}}
+  {{- partial "inc-js.html" . -}}
+ {{ end }}

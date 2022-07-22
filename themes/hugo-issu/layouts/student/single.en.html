@@ -1,0 +1,1396 @@
+{{ define "main" }}
+</head>
+<body id="{{.Params.slug}}" class="lower">
+  <div id="wrapper">
+    <div class="flex-wrapper">
+      {{- partial "inc-header.en.html" . -}}
+
+      <div class="main_container">
+        <div id="main_area" role="main">
+          <section id="top_kv" class="content_wrapper">
+            <img src="/en/asset_utokyo-is/media/images/student/kv_student.jpg" alt="KV" width="1340" height="240">
+            <div class="overlay_text">
+              <h2>for Undergrad Sci. Students</h2>
+            </div>
+          </section>
+
+          <div id="bread">
+            <ol>
+              <li><a href="/en/"><span class="home"></span></a></li>
+              <li><a href="/en/student/"><span>for Undergrad Sci. Students</span></a></li>
+              <li><a href="{{ .Permalink }}"><span>{{ .Title }}</span></a></li>
+            </ol>
+          </div>
+          {{- partial "inc-schedule_selector.en.html" . -}}
+          <!-- <div id="category_selector">
+            <div class="main_width">
+              <ul class="selector">
+                <li class="selector_item">
+                  <div class="item_inner">
+                    <a href="" class="selector_btn disable" data-activate_area="members_list_area">休講・補講</a>
+                  </div>
+                </li>
+                <li class="selector_item">
+                  <div class="item_inner">
+                    <a href="" class="selector_btn disable" data-activate_area="labs_list_area">試験・レポート</a>
+                  </div>
+                </li>
+                <li class="selector_item">
+                  <div class="item_inner">
+                    <a href="" class="selector_btn disable" data-activate_area="members_list_area">授業日程</a>
+                  </div>
+                </li>
+                <li class="selector_item">
+                  <div class="item_inner">
+                    <a href="/student/schedule/" class="selector_btn current" data-activate_area="labs_list_area">時間割</a>
+                  </div>
+                </li>
+                <li class="selector_item">
+                  <div class="item_inner">
+                    <a href="/student/lecture/" class="selector_btn" data-activate_area="labs_list_area">講義内容</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div> -->
+          {{ if eq .Params.slug  "schedule" }}          
+          <section id="schedule_table_area" class="content_wrapper">
+            <div class="main_width">
+              <div class="content_inner">
+                <div class="flex_container">
+                  <div class="section_title">
+                    <h3><span>Lecture Timetable</span></h3>
+                  </div>
+                  <div class="section_main_content">
+
+                    <div class="link_btn_list_wrap ">
+                      <ul class="btn_list">
+                        <li class="btn_item">
+                          <a href="#table_1" data-table-id="table_1">
+                            <span>3rd year S Semester</span>
+                          </a>
+                        </li>
+                        <li class="btn_item">
+                          <a href="#table_2" data-table-id="table_2">
+                            <span>3rd year A Semester</span>
+                          </a>
+                        </li>
+                        <li class="btn_item">
+                          <a href="#table_3" data-table-id="table_3">
+                            <span>4th year S Semester</span>
+                          </a>
+                        </li>
+                        <li class="btn_item">
+                          <a href="#table_4" data-table-id="table_4">
+                            <span>4th year A Semester</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="date">
+                      <p>（Fiscal Year 2022）</p>
+                    </div>
+                    <div class="top_text">
+                      <p>Please check UTAS and ITC-LMS for the latest information.</p>
+                    </div>
+
+                    <!-- 3年生Sセメスター -->
+                    <div id="table_1" class="schedule_table_wrap active">
+                      <div class="scrollable">
+                        <table>
+                          <tr>
+                            <th class="table_title" colspan="6" scope="col"><span>3rd year S Semester</span></th>
+                          </tr>
+                          <tr>
+                            <th rowspan="2" scope="col" class="time"><span>1</span>
+                              <span>8:30-</span>
+                              <span>10:15</span>
+                            </th>
+                            <th class="week" scope="col"><span>Mon</span></th>
+                            <th class="week" scope="col"><span>Tue</span></th>
+                            <th class="week" scope="col"><span>Wed</span></th>
+                            <th class="week" scope="col"><span>Thu</span></th>
+                            <th class="week" scope="col"><span>Fri</span></th>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="time"><span>2</span><span>10:25-</span><span>12:10</span></td>
+                            <td>
+                              <div class="cell_cont">
+                                <p>0510012</p>
+                                <p><span>Operating</span> <span>System</span></p>
+                                <p>S.Kato</p>
+                                <p>Science Bldg.7-214</p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p>0510013</p>
+                                <p><span>Discrete<span> </span>Mathematics</span></p>
+                                <p>H.Imai</p>
+                                <p>Science Bldg.7-007</p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p>0510014</p>
+                                <p><span>Information</span> <span>Logic</span></p>
+                                <p>H.Yanaka</p>
+                                <p>Science Bldg.7-007</p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p>0510015</p>
+                                <p><span>Linguistic</span> <span>Systems</span></p>
+                                <p>N.Kobayashi</p>
+                                <p>Science Bldg.7-007</p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p>0510019</p>
+                                <p><span>Computer</span><span>Configuration</span></p>
+                                <p>S.Takamaeda</p>
+                                <p>Science Bldg.7-007</p>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="time"><span>3</span><span>13:00-</span><span>14:45</span></td>
+                            <td rowspan="2">
+                              <div class="cell_cont">
+                                <p>0510030</p>
+                                <p><span>Systems</span> <span>Programming</span> <span>Experiments</span></p>
+                                <p>S.Kato</p>
+                                <p>Science Bldg.7-214</p>
+                              </div>
+                            </td>
+                            <td rowspan="2">
+                              <div class="cell_cont">
+                                <p>0510031</p>
+                                <p><span>Functional</span> <span>and Logic</span> <span>Programming</span> <span>Experiments</span></p>
+                                <p>N.Kobayashi</p>
+                                <p>Science Bldg.7-214</p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td rowspan="2">
+                              <div class="cell_cont">
+                                <p>0510032</p>
+                                <p><span>Hardware</span> <span>Experiments</span></p>
+                                <p>Y.Yoshimoto</p>
+                                <p>Chemistry East Bldg-236</p>
+                              </div>
+                            </td>
+                            <td rowspan="2">
+                              <div class="cell_cont">
+                                <p>0510016</p>
+                                <p><span>Exercise in</span> <span>Information Science Ⅰ</span></p>
+                                <p>H.Imai</p>
+                                <p>H.Yanaka</p>
+                                <p>Science Bldg.7-007</p>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="time"><span>4</span><span>14:55-</span><span>16:40</span></td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="time"><span>5</span><span>16:50-</span><span>18:35</span></td>
+                            <td>
+                              <div class="cell_cont">
+                                <p><span>0590004</span><span>(Teaching Courses)</span></p>
+                                <p>
+                                  <span>Information</span>
+                                  <span>Science</span>
+                                  <span>Education</span>
+                                  <span>Methods Ⅰ</span>
+                                </p>
+                                <p>T.Tatsumi</p>
+                                <p> <a href="https://www.u-tokyo.ac.jp/campusmap/cam01_06_01_j.html" target="_blank">Science Bldg.1</a>-381</p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                          </tr>
+                        </table><!-- table -->
+                      </div>
+                      <div class="table_bottom_text">
+                        <p>*The required course "Computer Network" (2 credits) for students who entered the university before the 2018 academic year will be replaced with two credits of "Computer Network Theory" (1 credit) and "Information Security" (1 credit) in the new curriculum.</p>
+                      </div>
+                    </div>
+                    <!-- 3年生Aセメスター -->
+                    <div id="table_2" class="schedule_table_wrap">
+                      <div class="annotation">
+                        <p>△Electives Courses</p>
+                      </div>
+                      <div class="scrollable">
+                        <table>
+                          <tr>
+                            <th class="table_title" colspan="6" scope="col"><span>3rd year A Semester</span></th>
+                          </tr>
+                          <tr>
+                            <th rowspan="2" scope="col" class="time"><span>1</span>
+                              <span>8:30-</span>
+                              <span>10:15</span>
+                            </th>
+                            <th class="week" scope="col"><span>Mon</span></th>
+                            <th class="week" scope="col"><span>Tue</span></th>
+                            <th class="week" scope="col"><span>Wed</span></th>
+                            <th class="week" scope="col"><span>Thu</span></th>
+                            <th class="week" scope="col"><span>Fri</span></th>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p><span>0590005</span><span>(Teaching Courses)</span></p>
+                                <p>
+                                  <span>Information</span>
+                                  <span>Science</span>
+                                  <span>Education</span>
+                                  <span>Methods Ⅱ</span>
+                                </p>
+                                <p>T.Tatsumi</p>
+                                <p> <a href="https://www.u-tokyo.ac.jp/campusmap/cam01_06_01_j.html" target="_blank">Science Bldg.1</a>-340</p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="time"><span>2</span><span>10:25-</span><span>12:10</span></td>
+                            <td>
+                              <div class="cell_cont">
+                                <p>0510020</p>
+                                <p>
+                                  <span>Linguistic</span>
+                                  <span>Modeling</span>
+                                </p>
+                                <p>N.Kobayashi</p>
+                                <p>Science Bldg.7-007</p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p>0510021</p>
+                                <p>
+                                  <span>Computational</span>
+                                  <span>Quantity</span>
+                                  <span>Theory</span>
+                                </p>
+                                <p>H.Imai</p>
+                                <p>Science Bldg.7-007</p>
+                              </div>
+                            </td>
+                            <td class="half">
+                              <div class="cell_cont">
+                                <p>A1</p>
+                                <p>0510093</p>
+                                <p>
+                                  <span>Computer</span>
+                                  <span>Network</span>
+                                  <span>Theory</span>
+                                </p>
+                                <p>D.Miyamoto</p>
+                                <p>Science Bldg.7-007</p>
+                              </div>
+                              <div class="cell_cont">
+
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p>0510018</p>
+                                <p>
+                                  <span>Intelligent</span>
+                                  <span>Systems</span>
+                                  <span>Theory</span>
+                                </p>
+                                <p>M.Sugiyama</p>
+                                <p>Y.Miyao</p>
+                                <p>I.Sato</p>
+                                <p>T.Ishida</p>
+                                <p> <a href="https://www.u-tokyo.ac.jp/campusmap/cam01_06_01_j.html" target="_blank">Science Bldg.1</a> East-285</p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="time"><span>3</span><span>13:00-</span><span>14:45</span></td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td rowspan="3">
+                              <div class="cell_cont">
+                                <p>0510033</p>
+                                <p>
+                                  <span>Processor and</span>
+                                  <span>Compiler</span>
+                                  <span>Experiments</span>
+                                </p>
+                                <p>S.Takamaeda</p>
+                                <p>Chemistry East Bldg-236</p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td rowspan="3">
+                              <div class="cell_cont">
+                                <p>0510033</p>
+                                <p>
+                                  <span>Processor and</span>
+                                  <span>Compiler</span>
+                                  <span>Experiments</span>
+                                </p>
+                                <p>N.Kobayashi</p>
+                                <p>Chemistry East Bldg-236</p>
+                              </div>
+                            </td>
+                            <td rowspan="2">
+                              <div class="cell_cont">
+                                <p>0510023</p>
+                                <p><span>Exercise in</span> <span>Information Science Ⅱ</span></p>
+                                <p>H.Imai</p>
+                                <p>R.Suda</p>
+                                <p>Chemistry East Bldg-236</p>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="time"><span>4</span><span>14:55-</span><span>16:40</span></td>
+                            <td>
+                              <div class="cell_cont">
+                                <p>0510022</p>
+                                <p><span>Continuous</span><span>Algorithm</span></p>
+                                <p>R.Suda</p>
+                                <p>Y.Yoshimoto</p>
+                                <p><a href="https://www.u-tokyo.ac.jp/campusmap/cam01_06_04_j.html" target="_blank"> Science Bldg.4</a>-1220</p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p>△0510067</p>
+                                <p>
+                                  <span>Information</span>
+                                  <span>Society and</span>
+                                  <span>Information Ethics</span>
+                                </p>
+                                <p>I.Sato</p>
+                                <p>Science Bldg.7-007</p>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="time"><span>5</span><span>16:50-</span><span>18:35</span></td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td class="half">
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                              <div class="cell_cont">
+                                <p>A2</p>
+                                <p>0510094</p>
+                                <p>
+                                  <span>Information</span>
+                                  <span>Security</span>
+                                </p>
+                                <p>K.Takahashi</p>
+                                <p>Science Bldg.7-007</p>
+                              </div>
+                            </td>
+                          </tr>
+                        </table><!-- table -->
+                      </div>
+                      <div class="table_bottom_text">
+                        <p>*The required course "Computer Network" (2 credits) for students who entered the university before the 2018 academic year will be replaced with two credits of "Computer Network Theory" (1 credit) and "Information Security" (1 credit) in the new curriculum.</p>
+                      </div>
+                    </div>
+                    <!-- 4年生Sセメスター -->
+                    <div id="table_3" class="schedule_table_wrap">
+                      <div class="annotation">
+                        <p>〇Required Courses</p>
+                        <p>△Electives Courses</p>
+                      </div>
+                      <div class="scrollable">
+                        <table>
+                          <tr>
+                            <th class="table_title" colspan="6" scope="col"><span>4th year S Semester</span></th>
+                          </tr>
+                          <tr>
+                            <th rowspan="2" scope="col" class="time"><span>1</span>
+                              <span>8:30-</span>
+                              <span>10:15</span>
+                            </th>
+                            <th class="week" scope="col"><span>Mon</span></th>
+                            <th class="week" scope="col"><span>Tue</span></th>
+                            <th class="week" scope="col"><span>Wed</span></th>
+                            <th class="week" scope="col"><span>Thu</span></th>
+                            <th class="week" scope="col"><span>Fri</span></th>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="time"><span>2</span><span>10:25-</span><span>12:10</span></td>
+                            <td class="half">
+                              <div class="cell_cont">
+                                <p>S1</p>
+                                <p>〇0510096</p>
+                                <p>
+                                  <span>Natural Language</span>
+                                  <span>Processing</span>
+                                </p>
+                                <p>Y.Miyao</p>
+                                <p>A.Aizawa</p>
+                                <p>Science Bldg.7-007</p>
+                              </div>
+                              <div class="cell_cont">
+                                <p>S2</p>
+                                <p>〇0510071</p>
+                                <p>
+                                  <span>User</span>
+                                  <span>Interface</span>
+                                </p>
+                                <p>T.Igarashi</p>
+                                <p>Science Bldg.7-007</p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p>△0510090</p>
+                                <p>Bioinformatics</p>
+                                <p>H.Kori</p>
+                                <p>Y.Izumida</p>
+                                <p><a href="https://www.u-tokyo.ac.jp/campusmap/cam01_04_07_j.html" target="_blank">Engineering Bldg.6</a>-62</p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p>〇0510091</p>
+                                <p>
+                                  <span>Statistical</span>
+                                  <span>Machine</span>
+                                  <span>Learning</span>
+                                </p>
+                                <p>M.Sugiyama</p>
+                                <p>I.Sato</p>
+                                <p>T.Ishida</p>
+                                <p><a href="https://www.u-tokyo.ac.jp/campusmap/cam01_06_01_j.html" target="_blank">Science Bldg.1</a>-285</p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class=" cell_cont">
+                                <p>0510029</p>
+                                <p>
+                                  <span>Computer</span>
+                                  <span>Graphics</span>
+                                  <span>Theory</span>
+                                </p>
+                                <p>T.Igarashi</p>
+                                <p>Science Bldg.7-214</p>
+                              </div>
+                            </td>
+                            <td class="half">
+                              <div class="cell_cont">
+                                <p>S1</p>
+                                <p>〇0510079</p>
+                                <p>
+                                  <span>Computational</span>
+                                  <span>Algorithm</span>
+                                  <span>Theory</span>
+                                </p>
+                                <p>R.Suda</p>
+                                <p>Chemistry East Bldg-236</p>
+                              </div>
+                              <div class="cell_cont">
+                                <p>S2</p>
+                                <p>〇0510080</p>
+                                <p>
+                                  <span>Discrete</span>
+                                  <span>Algorithm</span>
+                                  <span>Theory</span>
+                                </p>
+                                <p>H.Imai</p>
+                                <p>Chemistry East Bldg-236</p>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="time"><span>3</span><span>13:00-</span><span>14:45</span></td>
+                            <td class="half">
+                              <div class="cell_cont">
+                                <p>S1</p>
+                                <p>〇0510083</p>
+                                <p>
+                                  <span>Calculator</span>
+                                  <span>Linguistics</span>
+                                  <span>Theory</span>
+                                </p>
+                                <p>N.Kobayashi</p>
+                                <p>Chemistry East Bldg-236</p>
+                              </div>
+                              <div class="cell_cont">
+                                <p>S2</p>
+                                <p>〇05100108</p>
+                                <p>
+                                  <span>Computational</span>
+                                  <span>Linguistics</span>
+                                </p>
+                                <p>H.Yanaka</p>
+                                <p>Chemistry East Bldg-236</p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p>〇0510076</p>
+                                <p>
+                                  <span>Informatics</span>
+                                  <span>and</span>
+                                  <span>Bioinformatics</span>
+                                </p>
+                                <p>T.Shibuya</p>
+                                <p>K.Nakai</p>
+                                <p>S.Imoto</p>
+                                <p>Chemistry East Bldg-236</p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td class="half">
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                              <div class="cell_cont">
+                                <p>S2</p>
+                                <p>〇0510086</p>
+                                <p>
+                                  <span>Quantum</span>
+                                  <span>Computational</span>
+                                  <span>Science</span>
+                                </p>
+                                <p>H.Imai</p>
+                                <p><a href="https://www.u-tokyo.ac.jp/campusmap/cam01_06_04_j.html" target="_blank">Science Bldg.4</a>-1220</p>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="time"><span>4</span><span>14:55-</span><span>16:40</span></td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td class="half">
+                              <div class="cell_cont">
+                                <p>S1</p>
+                                <p>〇0510072</p>
+                                <p>
+                                  <span>Computer</span>
+                                  <span>Vision</span>
+                                </p>
+                                <p>N.Yokoya</p>
+                                <p>Chemistry East Bldg-236</p>
+                              </div>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p>0510027</p>
+                                <p>
+                                  <span>Thesis</span>
+                                  <span>Structure</span>
+                                </p>
+                                <p><span>Whittaker Edward</span><span>William Daniel</span></p>
+                                <p>Science Bldg.7-007</p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td class="half">
+                              <div class="cell_cont">
+                                <p>S1</p>
+                                <p>〇0510082</p>
+                                <p>
+                                  <span>Computational</span>
+                                  <span> Science</span>
+                                  <span>Simulation</span>
+                                </p>
+                                <p>Y.Yoshimoto</p>
+                                <p>Science Bldg.7-214</p>
+                              </div>
+                              <div class="cell_cont">
+                                <p>S2</p>
+                                <p>〇0510107</p>
+                                <p>
+                                  <span>Computing</span>
+                                  <span>Architecture</span>
+                                </p>
+                                <p>S.Takamaeda</p>
+                                <p>Science Bldg.7-214</p>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="time"><span>5</span><span>16:50-</span><span>18:35</span></td>
+                            <td>
+                              <div class="cell_cont">
+                                <p><span>0590004</span><span>(Teaching Courses)</span></p>
+                                <p>
+                                  <span>Information</span>
+                                  <span>Science</span>
+                                  <span>Education</span>
+                                  <span>Methods Ⅰ</span>
+                                </p>
+                                <p>T.Tatsumi</p>
+                                <p><a href="https://www.u-tokyo.ac.jp/campusmap/cam01_06_01_j.html" target="_blank">Science Bldg.1</a>-381</p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="time"><span>6</span><span>18:45-</span><span>20:30</span></td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p>△0510068</p>
+                                <p>
+                                  <span>Information</span>
+                                  <span>and</span>
+                                  <span>Occupation</span>
+                                </p>
+                                <p>M.Kusunoki</p>
+                                <p>K.Okuwada</p>
+                                <p>T.Makino</p>
+                                <p><a href="https://www.u-tokyo.ac.jp/campusmap/cam01_04_03_j.html" target="_blank">Engineering Bldg.2</a>-Lecture Room 211</p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                          </tr>
+                        </table><!-- table -->
+                      </div>
+                      <div class="table_bottom_text">
+                        <p>*Other 0510025 Seminar in Information Science III (each instructor)</p>
+                        <p>*Others 0510801 Research Ethics (intensive course)</p>
+                      </div>
+
+                    </div>
+                    <!-- 4年生Aセメスター -->
+                    <div id="table_4" class="schedule_table_wrap">
+                      <div class="annotation">
+                        <p>〇Required Courses</p>
+                        <p>△Electives Courses</p>
+                      </div>
+                      <div class="scrollable">
+                        <table>
+                          <tr>
+                            <th class="table_title" colspan="6" scope="col"><span>4th year A Semester</span></th>
+                          </tr>
+                          <tr>
+                            <th rowspan="2" scope="col" class="time"><span>1</span>
+                              <span>8:30-</span>
+                              <span>10:15</span>
+                            </th>
+                            <th class="week" scope="col"><span>Mon</span></th>
+                            <th class="week" scope="col"><span>Tue</span></th>
+                            <th class="week" scope="col"><span>Wed</span></th>
+                            <th class="week" scope="col"><span>Thu</span></th>
+                            <th class="week" scope="col"><span>Fri</span></th>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p><span>0590005</span><span>(Teaching Courses)</span></p>
+                                <p>
+                                  <span>Information</span>
+                                  <span>Science</span>
+                                  <span>Education</span>
+                                  <span>Methods Ⅱ</span>
+                                </p>
+                                <p>T.Tatsumi</p>
+                                <p><a href="https://www.u-tokyo.ac.jp/campusmap/cam01_06_01_j.html" target="_blank">Science Bldg.1</a>-340</p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="time"><span>2</span><span>10:25-</span><span>12:10</span></td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="time"><span>3</span><span>13:00-</span><span>14:45</span></td>
+                            <td class="half">
+                              <div class="cell_cont">
+                                <p>A1</p>
+                                <p>〇0510092</p>
+                                <p><span>Real Time</span> <span>System</span></p>
+                                <p>S.Kato</p>
+                                <p>Science Bldg.7-214</p>
+                              </div>
+                              <div class="cell_cont">
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="time"><span>4</span><span>14:55-</span><span>16:40</span></td>
+                            <td class="half">
+                              <div class="cell_cont">
+                                <p>A1</p>
+                                <p>〇0510097</p>
+                                <p>
+                                  <span>Software</span>
+                                  <span>Engineering</span>
+                                </p>
+                                <p>H.Ishikawa</p>
+                                <p>Science Bldg.7-007</p>
+                              </div>
+                              <div class="cell_cont">
+
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p>△0510067</p>
+                                <p>
+                                  <span>Information</span>
+                                  <span>Society</span>
+                                  <span>and</span>
+                                  <span>Information</span>
+                                  <span>Ethics</span>
+                                </p>
+                                <p>I.Sato</p>
+                                <p>Science Bldg.7-007</p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="time"><span>5</span><span>16:50-</span><span>18:35</span></td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="cell_cont">
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                              </div>
+                            </td>
+                          </tr>
+                        </table><!-- table -->
+                      </div>
+                      <div class="table_bottom_text">
+                        <p>*Others 0510026 Special Exercise in Information Science (each teacher)</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section><!-- member_list_area -->{{ end }}
+          {{ if eq .Params.slug  "lecture" }}
+          <section id="lecture_content_area" class="content_wrapper">
+            <div class="main_width">
+              <div class="content_inner">
+                <div class="flex_container">
+                  <div class="section_title">
+                    <h3><span>Lecture Contents</span></h3>
+                  </div>
+                  <div class="section_main_content">
+
+                    <div class="date">
+                      <p>（Fiscal Year 2022）</p>
+                    </div>
+
+                    <div class="top_text">
+                      <!-- <p>各講義の詳しい内容は<a href="https://catalog.he.u-tokyo.ac.jp/result?faculties%5B0%5D=5&type=all&interface_language=en" target="_blank">東京大学授業カタログ</a>を御覧下さい</p> -->
+                      <p>Please refer to <a href="https://catalog.he.u-tokyo.ac.jp/result?faculties%5B0%5D=5&type=all&interface_language=en" target="_blank">UTokyo Online Course Catalogue</a> for detailed information on each course.</p>
+                    </div>
+
+                    <div class="pdf_content">
+                      <div class="text_area">
+                        <a href="/files/2022/2022_lecture_curriculum.pdf" target="_blank">Curriculum<span>（PDF File／102KB）</span></a>
+                        <p>Fiscal Year 2022 From the Pamphlet</p>
+                      </div>
+                      <div class="dl_btn_area">
+                        <a href="/files/2022/2022_lecture_curriculum.pdf" download="2022_lecture_curriculum.pdf">PDF Download</a>
+                      </div>
+                    </div>
+                    <a class="curriculum_img_area" href="/files/2022/2022_lecture_curriculum.pdf" target="_blank">
+                      <img src="/en/asset_utokyo-is/media/images/student/lecture/curriculum.jpg" alt="カリキュラム" width="1200" height="810">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section><!-- member_list_area -->{{ end }}
+          {{ if eq .Params.slug  "requirements" }}
+          <section id="curriculum_area" class="content_wrapper">
+            <div class="main_width">
+              <div class="content_inner">
+                <div class="flex_container">
+                  <div class="section_title">
+                    <h3><span>Graduation Requirements</span></h3>
+                  </div>
+                  <div class="section_main_content">
+                    <h4 class="lab_category head_text"><span>Number of credits required for graduation</span></h4>
+
+                    <div class="curriculum_list_wrap">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <th colspan="3" scope="col"><span>Fourth semester (2nd year A Semester)</span></th>
+                            <th colspan="3" scope="col"><span>All required courses for 3rd and 4th year</span></th>
+                            <th colspan="2" scope="col"><span>3rd and 4th year specialized courses<span class="annotation">*1</span></span></th>
+                          </tr>
+                          <tr>
+                            <td class="item"><span>Required Courses</span></td>
+                            <td class="item"><span>Specialized Courses</span></td>
+                            <td class="item">
+                              <!-- <span>4th semester</span> --><span>Total</span>
+                            </td>
+                            <td class="item"><span>3rd year</span></td>
+                            <td class="item"><span>2nd year</span></td>
+                            <td class="item"><span>Total</span></td>
+                            <td class="item"><span>Elective Required Courses</span></td>
+                            <td class="item"><span>Total</span></td>
+                          </tr>
+                          <tr>
+                            <td class="value"><span>12<span class="annotation">*2</span></span></td>
+                            <td class="value"><span>6 or more</span></td>
+                            <td class="value"><span>18 or more</span></td>
+                            <td class="value"><span>32<span class="annotation">*3</span></span></td>
+                            <td class="value"><span>16</span></td>
+                            <td class="value"><span>48</span></td>
+                            <td class="value wide"><span>6 or more</span></td>
+                            <td class="value wide"><span>10 or more<span class="annotation">*4</span></span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="annotation_list">
+                      <dl class="annotation_item">
+                        <dt class="annotation_head">
+                          *1
+                        </dt>
+                        <dd class="annotation_text">
+                          <p>Excluding specialized courses and teaching courses in the fourth semester of the College of Liberal Arts.</p>
+                        </dd>
+                      </dl>
+                      <dl class="annotation_item">
+                        <dt class="annotation_head">
+                          *2
+                        </dt>
+                        <dd class="annotation_text">
+                          <p>In order to take the Special Seminar in Information Science in the fourth grade, students must have earned at least 10 credits out of the 12 credits required in the fourth semester of the second grade in advance.</p>
+                        </dd>
+                      </dl>
+                      <dl class="annotation_item">
+                        <dt class="annotation_head">
+                          *3
+                        </dt>
+                        <dd class="annotation_text">
+                          <p>In order to take the Special Seminar in Information Science in the fourth grade, students must have earned at least 24 credits out of the 32 credits required in the third grade, including System Programming Experiments, Functional and Logic Programming Experiments, Hardware Experiments, and Processor and Compiler Experiments.</p>
+                        </dd>
+                      </dl>
+                      <dl class="annotation_item">
+                        <dt class="annotation_head">
+                          *4
+                        </dt>
+                        <dd class="annotation_text">
+                          <p>At least 6 credits of the 10 credits of specialized courses are from elective required courses</p>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section><!-- member_list_area -->{{ end }}
+
+          {{- partial "inc-pagetop.html" . -}}
+        </div>
+      </div>
+    </div>
+  </div><!-- wrapper -->
+
+  {{- partial "inc-footer.en.html" . -}}
+  {{- partial "inc-sp_menu.en.html" . -}}
+  {{- partial "inc-js.html" . -}}
+  {{ if eq .Params.slug  "schedule" }}<script>
+    var w_width;
+    var margin_offset = 50;
+
+    $(window).on('load resize', function() {
+      w_width = $(window).width();
+    });
+
+
+    $(function() {
+      // 時間割を切り替えた際にスクロールさせる
+      $(".btn_item").on("click", function() {
+        var table_id = $(this).find("a").data("table-id");
+        $(".schedule_table_wrap").removeClass("active");
+        $("#" + table_id).addClass("active");
+
+        var headerHeight = 0;
+
+
+        if (w_width <= 1024) {
+          headerHeight = $("#header").height();
+        }
+
+        var href = $(this).attr("href");
+        var target = $("#" + table_id);
+        var position = target.offset().top - headerHeight - margin_offset; //ヘッダの高さ分位置をずらす
+        $("html, body").animate({
+            scrollTop: position,
+          },
+          550,
+          "swing"
+        );
+        return false;
+      })
+    })
+  </script>{{ end }}
+ {{ end }}

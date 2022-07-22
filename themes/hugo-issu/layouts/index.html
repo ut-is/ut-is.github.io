@@ -1,0 +1,430 @@
+{{ define "main" }}
+<style>{{ replaceRE `@charset "UTF-8";` "" (replaceRE "\n" "" (partial "first_view_en.css" .)) | safeCSS }}</style>
+</head>
+<body id="home" class="home">
+  <div id="wrapper">
+    <div class="flex-wrapper">
+     {{- partial "inc-header.html" . -}}
+     
+     <div class="main_container">
+      <div id="first_view">
+        <div id="home_kv">
+          <div class="home_kv_inner">
+            <div class="kv_slides">
+              <div class="slides_cont">
+                <img class="sp_none" src="/asset_utokyo-is/media/images/home/main_kv_001.jpg" width="1340" height="660" alt="kv">
+              </div>
+              <!-- <div class="slides_cont">
+                <img class="sp_none" src="/asset_utokyo-is/media/images/home/main_kv_002.jpg" width="1600" height="800" alt="kv">
+              </div> -->
+              <div class="slides_cont">
+                <img class="sp_none" src="/asset_utokyo-is/media/images/home/main_kv_003.jpg" width="1600" height="800" alt="kv">
+              </div>
+            </div>
+
+            <div class="overlay_cont">
+              <div class="catch_area">
+                <div class="kv_catch">
+                  <span>東京大学　理学部情報科学科</span>
+                  <span><span>大学院情報理工学系研究科</span><span>コンピュータ科学専攻</span></span>
+                </div>
+                <div class="slide_controller_wrap sp">
+                  <ul class="slide_controller">
+                    <li class="slide_button">
+                      <span></span>
+                    </li>
+                    <li class="slide_button">
+                      <span></span>
+                    </li>
+                    <!-- <li class="slide_button">
+                      <span></span>
+                    </li> -->
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+
+          </div><!-- home_kv_inner -->
+
+        </div><!-- home_kv -->
+      </div><!-- first_view -->
+
+      <div class="info_area_wrap">
+        <div class="info_area">
+
+          <!-- <div class="pamph_banner">
+            <a href="/asset_utokyo-is/media/pdf/220330_is2022.pdf" target="_blank">
+              <div class="item_inner">
+                <img src="/asset_utokyo-is/media/images/home/banner_004.jpg" alt="学科紹介パンフレット　2022年度版" width="360" height="110">
+              </div>
+            </a>
+          </div> -->
+
+          <ul class="banner_list">
+            <li class="banner_item">
+              <a href="/files/2022/utokyo_ISguide2022_all.pdf" target="_blank">
+                <div class="item_inner">
+                  <img src="/asset_utokyo-is/media/images/home/banner_004.jpg" alt="学科紹介パンフレット　2022年度版" width="360" height="110">
+                </div>
+              </a>
+            </li>
+            <li class="banner_item">
+              <a href="https://www.s.u-tokyo.ac.jp/ja/rigakuru/is/" target="_blank">
+                <div class="item_inner">
+                  <img src="/asset_utokyo-is/media/images/home/banner_001.jpg" alt="リガクル　～東京大学理学部の今がわかる本～" width="360" height="110">
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="link_list">
+            <li class="link_list_item">
+              <a href="https://www.u-tokyo.ac.jp/ja/" target="_blank"><span>東京大学</span></a>
+            </li>
+            <li class="link_list_item">
+              <a href="https://www.s.u-tokyo.ac.jp/ja/" target="_blank"><span>理学部</span></a>
+            </li>
+            <li class="link_list_item">
+              <a href="https://www.i.u-tokyo.ac.jp/" target="_blank"><span>情報理工学系研究科</span></a>
+            </li>
+          </ul>
+
+          <div class="slide_controller_wrap pc">
+            <ul class="slide_controller">
+              <li class="slide_button">
+                <span></span>
+              </li>
+              <li class="slide_button">
+                <span></span>
+              </li>
+              <!-- <li class="slide_button">
+                <span></span>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="main_area" role="main">
+        <div id="news_lectures" class="content_wrapper">
+          <section id="news" class="flex-content_wrapper">
+            <div class="flex_content">
+              <div class="content_title">
+                <h2><span>新着情報</span></h2>
+              </div>
+              <div class="info_list">
+                {{ range first 5 (where $.Site.RegularPages "Section" "news") }}<a href="{{ if and (.Params.otherlink) (ne .Params.otherlink "") }}{{ .Params.otherlink }}{{ else }}{{ .Permalink }}{{ end }}" target="_blank" class="blank">
+                  <dl class="list_item">
+                    <dt class="date">{{.Date.Format "2006年01月02日"}}</dt>
+                    <dd class="title">{{ .Title }}</dd>
+                  </dl>
+                </a>
+                {{ end }}
+              </div>
+
+              <div class="more_btn">
+                <a href="/news/">一覧</a>
+              </div>
+            </div>
+          </section>
+          <section id="lectures" class="flex-content_wrapper">
+            <div class="flex_content">
+              <div class="content_title">
+                <h2><span>専攻講演会</span></h2>
+              </div>
+              <div class="info_list">
+                {{ range first 5 (where $.Site.RegularPages "Section" "lecture") }}<a href="{{ if and (.Params.otherlink) (ne .Params.otherlink "") }}{{ .Params.otherlink }}{{ else }}{{ .Permalink }}{{ end }}" target="_blank" class="blank">
+                  <dl class="list_item">
+                    <dt class="date">{{ if and (.Params.helddate) (ne .Params.helddate "") }}{{ .Params.helddate }}{{ end }}{{ if and (.Params.heldtime) (ne .Params.heldtime "") }}{{ .Params.heldtime }}{{ end }}
+                    </dt>
+                    <dd class="title">{{ if and (.Params.speaker) (ne .Params.speaker "") }}{{ .Params.speaker }}{{ else }}{{ .Title }}{{ end }}</dt>
+                    {{ if and (.Params.technique) (ne .Params.technique "") }}<p class="method">{{ .Params.technique }}</p>{{ end }}
+                    
+                  </dl>
+                </a>
+
+                {{ end }}
+              </div>
+
+              <div class="more_btn">
+                <a href="/lecture/">専攻講演会一覧</a>
+              </div>
+            </div>
+          </section>
+
+        </div><!-- news_lectures -->
+
+        <div id="link_area" class="content_wrapper">
+          <div class="main_width">
+            <div class="content_inner">
+              <ul class="link_list">
+                <li class="link_item">
+
+                  <div class="item_inner">
+                    <div class="page_icon">
+                      <img src="./asset_utokyo-is/media/images/home/page_icon_001.png" alt="学科概要" width="50" height="74">
+                    </div>
+                    <div class="page_name">
+                      <a href="/about/">
+                        <p class="name_ja">学科概要</p>
+                        <p class="name_en">About Dept. of IS</p>
+                      </a>
+                    </div>
+                    <div class="link_btn">
+                      <a href="/about/">MORE</a>
+                    </div>
+                  </div>
+
+                </li>
+                <li class="link_item">
+                  <div class="item_inner">
+                    <div class="page_icon">
+                      <img src="./asset_utokyo-is/media/images/home/page_icon_002.png" alt="教員一覧" width="78" height="74">
+                    </div>
+                    <div class="page_name">
+                      <a href="/lab-members/">
+                        <p class="name_ja">教員/研究室</p>
+                        <p class="name_en">Lab. / Members</p>
+                      </a>
+                    </div>
+                    <div class="link_btn">
+                      <a href="lab-members/">MORE</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="link_item">
+                  <div class="item_inner">
+                    <div class="page_icon">
+                      <img src="./asset_utokyo-is/media/images/home/page_icon_004.png" alt="学部カリキュラム" width="46" height="74">
+                    </div>
+                    <div class="page_name">
+                      <a href="https://www.is.s.u-tokyo.ac.jp/shingaku/" target="_blank">
+                        <p class="name_ja">駒場生向け</p>
+                        <p class="name_en">for Komaba Students</p>
+                      </a>
+                    </div>
+                    <div class="link_btn">
+                      <a href="https://www.is.s.u-tokyo.ac.jp/shingaku/" target="_blank">MORE</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="link_item">
+                  <div class="item_inner">
+                    <div class="page_icon">
+                      <img src="./asset_utokyo-is/media/images/home/page_icon_005.png" alt="学部時間割" width="64" height="74">
+                    </div>
+                    <div class="page_name">
+                      <a href="/student/">
+                        <p class="name_ja">理学部学生向け</p>
+                        <p class="name_en">for Undergrad Sci. Students</p>
+                      </a>
+                    </div>
+
+                    <div class="link_btn">
+                      <a href="/student/">MORE</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="link_item">
+                  <div class="item_inner">
+                    <div class="page_icon">
+                      <img src="./asset_utokyo-is/media/images/home/page_icon_006.png" alt="学部卒業要件" width="84" height="74">
+                    </div>
+                    <div class="page_name">
+                      <a href="https://www.i.u-tokyo.ac.jp/edu/course/cs/" target="_blank">
+                        <p class="name_ja">大学院生向け</p>
+                        <p class="name_en">for Grad Students</p>
+                      </a>
+                    </div>
+                    <div class="link_btn">
+                      <a href="https://www.i.u-tokyo.ac.jp/edu/course/cs/" target="_blank">MORE</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="link_item">
+                  <div class="item_inner">
+                    <div class="page_icon">
+                      <img src="./asset_utokyo-is/media/images/home/page_icon_003.png" alt="研究室一覧" width="60" height="74">
+                    </div>
+                    <div class="page_name">
+                      <a href="https://www.i.u-tokyo.ac.jp/edu/course/cs/admission.shtml" target="_blank">
+                        <p class="name_ja">大学院入試</p>
+                        <p class="name_en">Entrance Exam</p>
+                      </a>
+                    </div>
+                    <div class="link_btn">
+                      <a href="https://www.i.u-tokyo.ac.jp/edu/course/cs/admission.shtml" target="_blank">MORE</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- link_area -->
+
+        <div id="banner_area" class="content_wrapper">
+          <div class="main_width">
+            <div class="content_inner">
+              <ul class="banner_list">
+                <li class="banner_item">
+                  <a href="/files/2022/utokyo_ISguide2022_all.pdf" target="_blank">
+                    <div class="item_inner">
+                      <img src="/asset_utokyo-is/media/images/home/banner_004.jpg" alt="学科紹介パンフレット　2022年度版" width="360" height="110">
+                    </div>
+                  </a>
+                </li>
+                <li class="banner_item">
+                  <a href="https://www.s.u-tokyo.ac.jp/ja/rigakuru/is/" target="_blank">
+                    <div class="item_inner">
+                      <img src="/asset_utokyo-is/media/images/home/banner_001.jpg" alt="リガクル　～東京大学理学部の今がわかる本～" width="360" height="110">
+                    </div>
+                  </a>
+                </li>
+                <li class="banner_item">
+                  <a href="https://www.is.s.u-tokyo.ac.jp/alumni/">
+                    <div class="item_inner">
+                      <img src="/asset_utokyo-is/media/images/home/banner_002.jpg" width="360" height="110" alt="東京大学心青会">
+                    </div>
+                  </a>
+                </li>
+                <li class="banner_item">
+                  <a href="/internal">
+                    <div class="item_inner">
+                      <img src="/asset_utokyo-is/media/images/home/banner_006.jpg" alt="内部限定コンテンツはこちら" width="360" height="110">
+                    </div>
+                  </a>
+                </li>
+                <li class="banner_item">
+                  <a href="https://www.is.s.u-tokyo.ac.jp/index.php">
+                    <div class="item_inner">
+                      <img src="/asset_utokyo-is/media/images/home/banner_007.jpg" alt="以前の学科ページはこちらから" width="360" height="110">
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- banner_area -->
+
+        <div id="movie_area" class="content_wrapper">
+          <div class="main_width">
+            <div class="content_inner">
+              <div class="title">
+                <h2><span>Movies</span></h2>
+              </div>
+
+              <div class="movie_list_wrap">
+                <div class="movie_list">
+                  <div class="movie_item">
+                    <a href="https://www.youtube.com/watch?v=G_RMcEDy9ow" class="popup-youtube">
+                      <img src="/asset_utokyo-is/media/images/home/test_movie.jpg" alt="" width="480" height="270">
+                    </a>
+                  </div>
+                  <div class="movie_item">
+                    <a href="https://www.youtube.com/watch?v=G_RMcEDy9ow" class="popup-youtube">
+                      <img src="/asset_utokyo-is/media/images/home/test_movie.jpg" alt="" width="480" height="270">
+                    </a>
+                  </div>
+                  <div class="movie_item">
+                    <a href="https://www.youtube.com/watch?v=G_RMcEDy9ow" class="popup-youtube">
+                      <img src="/asset_utokyo-is/media/images/home/test_movie.jpg" alt="" width="480" height="270">
+                    </a>
+                  </div>
+                  <div class="movie_item">
+                    <a href="https://www.youtube.com/watch?v=G_RMcEDy9ow" class="popup-youtube">
+                      <img src="/asset_utokyo-is/media/images/home/test_movie.jpg" alt="" width="480" height="270">
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div><!-- banner_area -->
+
+        {{- partial "inc-pagetop.html" . -}}
+      </div><!-- main_area -->
+    </div><!-- main_container -->
+    </div>
+ 
+   </div><!-- wrapper -->
+   {{- partial "inc-footer.html" . -}}
+   {{- partial "inc-sp_menu.html" . -}}
+   {{- partial "inc-js.html" . -}}
+   <script src="{{ "/asset_utokyo-is/js/slick.min.js" | absURL }}"></script>
+   <script src="{{ "/asset_utokyo-is/js/jquery.magnific-popup.min.js" | absURL }}"></script>   
+  <script>
+    //ファーストビューSP時の画面FIXjs(アドレスバーを考慮)
+    var w_width;
+    var w_height;
+    var old_width;
+    var is_animating = false;
+    var sp_chatch_offset = 90;
+    $(window).on('load resize', function() {
+      w_width = $(window).width();
+      var active_index;
+      if (w_width < 480) {
+        active_index = $(".slide_controller_wrap.pc").find(".active").index(".active");
+        if (active_index !== -1) {
+          $(".slide_controller_wrap.sp").find(".slide_button").eq(active_index).addClass("active");
+        }
+      } else {
+        active_index = $(".slide_controller_wrap.sp").find(".active").index(".active");
+        if (active_index !== -1) {
+          $(".slide_controller_wrap.pc").find(".slide_button").eq(active_index).addClass("active");
+        }
+      }
+    });
+    $('.kv_slides').on('init', function(event, slick) {
+      $(".slide_button").eq(0).addClass("active");
+    });
+    //KVスライダーjs
+    $('.kv_slides').slick({
+      autoplay: true,
+      autoplaySpeed: 3000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: true,
+      speed: 800,
+      infinite: true,
+      //centerMode: true,
+      centerPadding: '0',
+      arrows: false,
+      dots: false,
+    });
+    // スライダーのコントローラに関する処理
+    $(function() {
+      $(".slide_button").on("click", function() {
+        if (is_animating === true) {
+          return;
+        }
+        $(".slide_button").siblings(".active").removeClass("active");
+        $(this).addClass("active");
+        $(".kv_slides").slick("slickGoTo", $(this).index(), false);
+      })
+      // スライドが変わる直前
+      $(".kv_slides").on("beforeChange", function(event, slick, currentSlide, nextSlide) {
+        $(".slide_button").siblings(".active").removeClass("active");
+        if (w_width < 480) {
+          $(".slide_controller_wrap.sp").find(".slide_button").eq(nextSlide).addClass("active");
+        } else {
+          $(".slide_controller_wrap.pc").find(".slide_button").eq(nextSlide).addClass("active");
+        }
+        is_animating = true;
+      })
+      // スライドが変わった直後
+      $(".kv_slides").on("afterChange", function(event, slick, currentSlide) {
+        is_animating = false;
+      })
+      $(function() {
+        $('.popup-youtube').magnificPopup({
+          type: 'iframe',
+          removalDelay: 200,
+        });
+      });
+    })
+  </script>
+ {{ end }}

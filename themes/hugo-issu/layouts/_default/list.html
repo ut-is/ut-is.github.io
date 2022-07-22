@@ -1,0 +1,26 @@
+{{ define "main" }}
+<body id="home" class="home list">
+  <div id="wrapper">
+    {{- partial "header.html" . -}}
+    <div id="main_area" role="main">
+
+      <div class="main_contents">
+        <div class="main_width">
+          <div class="cont_width">
+            <div class="main_title"><h1>{{ .Title }}</h1></div>
+            <div class="news_list">
+              <ul>
+                {{ range .Data.Pages }}
+                <li>
+                <a href="{{ .RelPermalink }}"><div class="date">{{ .Render "time-element" }}</div><div class="cat"><div class="{{ with .Params.postclass }}{{ . }}{{ end }}"><span>{{ with .Params.postcategories }}{{ . }}{{ end }}</span></div></div><div class="text">{{ .Title }}</div></a>
+                </li>
+                {{ end }}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{- partial "inc-footer.html" . -}}
+{{ end }}

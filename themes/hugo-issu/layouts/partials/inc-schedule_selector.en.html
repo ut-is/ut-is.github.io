@@ -1,0 +1,29 @@
+          
+          <div id="category_selector">
+            <div class="main_width">
+              <ul class="selector">
+
+                <li class="selector_item">
+                  <div class="item_inner">
+                    <a href="/en/student/" class="selector_btn {{ if eq .Params.slug  "student" }} current{{ end }}">Lecture Schedule</a>
+                  </div>
+                </li>
+                <li class="selector_item">
+                  <div class="item_inner">
+                    <a href="/en/student/schedule/" class="selector_btn{{ if eq .Params.slug  "schedule" }} current{{ end }}">Lecture Timetable</a>
+                  </div>
+                </li>
+                <li class="selector_item">
+                  <div class="item_inner">
+                    <a href="/en/student/lecture/" class="selector_btn{{ if eq .Params.slug  "lecture" }} current{{ end }}">Lecture Contents</a>
+                  </div>
+                </li>
+                <li class="selector_item">
+                  <div class="item_inner">
+                    <a href="/en/student/requirements/" class="selector_btn  narrow{{ if eq .Params.slug  "requirements" }} current{{ end }}">Graduation Requirements</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>

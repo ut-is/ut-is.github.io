@@ -1,0 +1,27 @@
+
+<head>
+{{- partial "inc-ga.html" . -}}
+<meta charset="utf-8">
+<title>{{ if and (.Params.otherlink) (ne .Params.otherlink "") }}404 Not Found{{ else }}{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Page.Title }}{{ . }}{{ end  }}｜{{ .Site.Title }}{{ end  }}{{ end }}</title>
+{{ range .AlternativeOutputFormats -}}<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+{{ end -}}
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=0">
+{{ if and (.Params.otherlink) (ne .Params.otherlink "") }}<meta name=”robots” content=”nofollow”>{{ else }}
+<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ default .Description }}{{ end }}" />
+<meta name="keywords" content="{{ if .IsHome }}{{ .Site.Params.Keywords }}{{ else }}{{ delimit .Keywords ", " }}{{ end }}" />
+<meta property="og:title" content=">{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Page.Title }}{{ . }}{{ end  }}｜{{ .Site.Title }}{{ end  }}" />
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end  }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:image" content="{{ .Page.Site.BaseURL }}/asset_utokyo-is/media/images/common/og.jpg" />
+<meta property="og:description" content="{{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ default .Description }}{{ end }}" />
+<meta property="og:site_name" content="{{ .Site.Title }} " />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content=">{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ with .Page.Title }}{{ . }}{{ end  }}｜{{ .Site.Title }}{{ end  }}">
+<meta name="twitter:description" content="{{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ default .Description }}{{ end }}">{{ end  }}
+<link rel="shortcut icon" href="{{ "/favicon.ico" | absURL }}">
+{{ if eq .Site.Language.Lang "en" }}<link rel="stylesheet" href="{{ "/en/asset_utokyo-is/css/magnific-popup.css" | absURL }}">
+<link rel="stylesheet" href="{{ "/en/asset_utokyo-is/css/common.css" | absURL }}">
+<link rel="stylesheet" href="{{ if .IsHome }}{{ "/en/asset_utokyo-is/css/home.css" | absURL }}{{ else }}{{ "/asset_utokyo-is/css/lower.css" | absURL }}{{ end  }}">{{ end }}
+{{ if eq .Site.Language.Lang "ja" }}<link rel="stylesheet" href="{{ "/asset_utokyo-is/css/magnific-popup.css" | absURL }}">
+<link rel="stylesheet" href="{{ "/asset_utokyo-is/css/common.css" | absURL }}">
+<link rel="stylesheet" href="{{ if .IsHome }}{{ "/asset_utokyo-is/css/home.css" | absURL }}{{ else }}{{ "/asset_utokyo-is/css/lower.css" | absURL }}{{ end  }}">{{ end }}

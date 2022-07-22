@@ -1,0 +1,30 @@
+{{ define "main" }}
+<body id="home" class="home single">
+  <div id="wrapper">
+    {{- partial "header.html" . -}}
+    <div id="main_area" role="main">
+
+      <div class="main_contents aaaaa">
+        <div class="main_width">
+          <div class="cont_width">
+            <div class="min_title"><p><img src="/media/images/home/title_news.png" width="244" height="40" alt="ニュースリリース"></p></div>
+            <div class="main_title"><h1>{{ .Title }}</h1></div>
+            <div class="entry_date">{{ .Render "time-element" }}</div>
+            {{ with .Content }}<div class="entry_content">
+             {{ . }}
+            </div>{{ end }}
+			{{ if isset .Params "files" }}
+            <div class="entry_content files_list">
+				<ul>
+					{{ range .Params.files }}<li><a href="{{ .file_upload }}" target="_brank">{{ with .file_name }}{{ . }}{{ else }}{{ .file_upload }}{{ end }}</a></li>
+				{{ end }}
+				</ul>
+            </div>
+			{{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{- partial "inc-footer.html" . -}}
+{{ end }}

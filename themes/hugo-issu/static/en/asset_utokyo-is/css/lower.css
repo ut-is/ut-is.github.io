@@ -1,0 +1,2301 @@
+@charset "UTF-8";
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+a:hover img {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0.8;
+}
+
+/*                下層共通
+======================================================= */
+.lower #wrapper .flex-wrapper {
+  width: 100%;
+}
+.lower #wrapper .flex-wrapper .main_container {
+  overflow: hidden;
+}
+.lower #wrapper .flex-wrapper .main_container #main_area {
+  height: 100%;
+}
+.lower #wrapper .flex-wrapper .main_container #main_area .main_width {
+  max-width: 1140px;
+}
+@media only screen and (max-width: 1200px) {
+  .lower #wrapper .flex-wrapper .main_container #main_area .main_width {
+    padding: 0 20px;
+  }
+}
+.lower #wrapper .flex-wrapper .main_container #main_area .main_width .content_inner .flex_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media only screen and (max-width: 900px) {
+  .lower #wrapper .flex-wrapper .main_container #main_area .main_width .content_inner .flex_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.lower #wrapper .flex-wrapper .main_container #main_area .main_width .content_inner .flex_container .section_title {
+  position: relative;
+  max-width: 260px;
+  width: 25%;
+  padding-top: 5px;
+}
+.lower #wrapper .flex-wrapper .main_container #main_area .main_width .content_inner .flex_container .section_title:before, .lower #wrapper .flex-wrapper .main_container #main_area .main_width .content_inner .flex_container .section_title:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 5px;
+}
+.lower #wrapper .flex-wrapper .main_container #main_area .main_width .content_inner .flex_container .section_title:before {
+  left: 0;
+  background-color: #f9be06;
+}
+.lower #wrapper .flex-wrapper .main_container #main_area .main_width .content_inner .flex_container .section_title:after {
+  right: 0;
+  background-color: #197fc3;
+}
+@media only screen and (max-width: 900px) {
+  .lower #wrapper .flex-wrapper .main_container #main_area .main_width .content_inner .flex_container .section_title {
+    width: 100%;
+    max-width: none;
+  }
+}
+.lower #wrapper .flex-wrapper .main_container #main_area .main_width .content_inner .flex_container .section_title h3 {
+  margin-top: 30px;
+}
+.lower #wrapper .flex-wrapper .main_container #main_area .main_width .content_inner .flex_container .section_title h3 span {
+  font-size: 22px;
+  font-weight: 500;
+  display: inline-block;
+}
+@media only screen and (max-width: 480px) {
+  .lower #wrapper .flex-wrapper .main_container #main_area .main_width .content_inner .flex_container .section_title h3 span {
+    font-size: 24px;
+  }
+}
+.lower #wrapper .flex-wrapper .main_container #main_area .main_width .content_inner .flex_container .section_title p {
+  font-weight: 500;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.lower #wrapper .flex-wrapper .main_container #main_area .content_wrapper {
+  padding: 80px 0 80px;
+}
+.lower #wrapper .flex-wrapper .main_container #main_area .content_wrapper#top_kv {
+  padding-top: 0;
+}
+.lower #wrapper .flex-wrapper .main_container #main_area .content_wrapper#top_kv img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 240px;
+  width: 100%;
+}
+@media only screen and (max-width: 480px) {
+  .lower #wrapper .flex-wrapper .main_container #main_area .content_wrapper#top_kv img {
+    height: 180px;
+  }
+}
+.lower #wrapper .flex-wrapper .main_container #main_area .content_wrapper + .content_wrapper {
+  padding-top: 0px;
+}
+@media only screen and (max-width: 900px) {
+  .lower #wrapper .flex-wrapper .main_container #main_area .content_wrapper {
+    padding: 50px 0 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .lower #wrapper .flex-wrapper .main_container #main_area .content_wrapper {
+    padding: 30px 0 30px;
+  }
+}
+.lower #wrapper .flex-wrapper .main_container #main_area #top_kv {
+  padding: 0;
+  height: 100%;
+  max-height: 240px;
+  overflow: hidden;
+  position: relative;
+}
+.lower #wrapper .flex-wrapper .main_container #main_area #top_kv .overlay_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.lower #wrapper .flex-wrapper .main_container #main_area #top_kv .overlay_text h2 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 30px;
+}
+.lower #wrapper .flex-wrapper .main_container #main_area #top_kv .overlay_text p {
+  margin-top: 10px;
+  color: #fff;
+  font-weight: 500;
+}
+.lower .section_main_content {
+  margin-left: 40px;
+  width: 75%;
+}
+@media only screen and (max-width: 900px) {
+  .lower .section_main_content {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .lower .section_main_content {
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .lower .section_main_content {
+    margin-top: 15px;
+  }
+}
+.lower .section_main_content .date {
+  margin-top: 10px;
+  text-align: right;
+}
+.lower .section_main_content .date p {
+  font-weight: 500;
+}
+
+/*               セレクター category_selector
+======================================================= */
+#category_selector {
+  margin-top: 60px;
+}
+@media only screen and (max-width: 900px) {
+  #category_selector {
+    margin-top: 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #category_selector {
+    margin-top: 30px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #category_selector {
+    margin-top: 20px;
+  }
+}
+#category_selector .selector {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 -10px;
+}
+@media only screen and (max-width: 768px) {
+  #category_selector .selector {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+#category_selector .selector .selector_item {
+  padding: 0 10px;
+  width: 25%;
+}
+@media only screen and (max-width: 768px) {
+  #category_selector .selector .selector_item {
+    width: 50%;
+  }
+  #category_selector .selector .selector_item:nth-child(n+3) {
+    margin-top: 15px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #category_selector .selector .selector_item {
+    width: 100%;
+    max-width: 250px;
+  }
+  #category_selector .selector .selector_item + .selector_item {
+    margin-top: 15px;
+  }
+}
+#category_selector .selector .selector_item .item_inner a {
+  display: block;
+  background-color: #fff;
+  border-radius: 20px;
+  border: solid 1px #323232;
+  padding: 10px 0 8px;
+  font-weight: 500;
+  text-align: center;
+}
+#category_selector .selector .selector_item .item_inner a.current {
+  background-color: #f9be06;
+  border-color: #f9be06;
+}
+#category_selector .selector .selector_item .item_inner a.disable {
+  pointer-events: none;
+  background-color: #d2d1d1;
+  border-color: #a6a6a6;
+  color: #888;
+}
+@media only screen and (min-width: 769px) {
+  #category_selector .selector .selector_item .item_inner a:hover {
+    background-color: #f9be06;
+    border-color: #f9be06;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+}
+
+/*               概要 about
+======================================================= */
+#about #wrapper .flex-wrapper .main_container #main_area .content_wrapper .main_width .content_inner .flex_container .section_main_content .top_text p {
+  font-weight: bold;
+}
+#about #wrapper .flex-wrapper .main_container #main_area .content_wrapper#field_area .text_wrap p, #about #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .text_wrap p {
+  line-height: 2.3;
+  font-weight: 500;
+}
+#about #wrapper .flex-wrapper .main_container #main_area .content_wrapper#field_area .text_wrap p + p, #about #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .text_wrap p + p {
+  margin-top: 50px;
+}
+@media only screen and (max-width: 480px) {
+  #about #wrapper .flex-wrapper .main_container #main_area .content_wrapper#field_area .text_wrap p, #about #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .text_wrap p {
+    font-size: 14px;
+  }
+}
+#about #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .link_btn_list_wrap {
+  margin-top: 35px;
+}
+#about #wrapper .flex-wrapper .main_container #main_area .content_wrapper#past_area {
+  padding-bottom: 120px;
+}
+@media only screen and (max-width: 768px) {
+  #about #wrapper .flex-wrapper .main_container #main_area .content_wrapper#past_area {
+    padding-bottom: 70px;
+  }
+}
+
+#members #category_selector .selector,
+#labs #category_selector .selector {
+  margin: 0 -10px;
+}
+#members #category_selector .selector .selector_item,
+#labs #category_selector .selector .selector_item {
+  padding: 0 10px;
+  min-width: 270px;
+}
+@media only screen and (max-width: 768px) {
+  #members #category_selector .selector .selector_item,
+#labs #category_selector .selector .selector_item {
+    min-width: 200px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #members #category_selector .selector .selector_item,
+#labs #category_selector .selector .selector_item {
+    min-width: 180px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #members #category_selector .selector .selector_item,
+#labs #category_selector .selector .selector_item {
+    min-width: 150px;
+  }
+}
+
+/*              教員一覧 members
+======================================================= */
+#members #wrapper .flex-wrapper .main_container #main_area .content_wrapper#members_list_area .top_text p {
+  font-weight: 500;
+}
+#members #wrapper .flex-wrapper .main_container #main_area .content_wrapper#members_list_area .table_list_wrap {
+  margin-top: 40px;
+  overflow: auto;
+}
+#members #wrapper .flex-wrapper .main_container #main_area .content_wrapper#members_list_area .table_list_wrap .members_list {
+  min-width: 800px;
+}
+#members #wrapper .flex-wrapper .main_container #main_area .content_wrapper#members_list_area .table_list_wrap .members_list + .members_list {
+  margin-top: 40px;
+}
+#members #wrapper .flex-wrapper .main_container #main_area .content_wrapper#members_list_area .table_list_wrap .members_list th,
+#members #wrapper .flex-wrapper .main_container #main_area .content_wrapper#members_list_area .table_list_wrap .members_list td {
+  padding: 14px 10px 10px;
+  font-weight: 500;
+  vertical-align: middle;
+}
+#members #wrapper .flex-wrapper .main_container #main_area .content_wrapper#members_list_area .table_list_wrap .members_list th {
+  border: none;
+  font-weight: bold;
+}
+#members #wrapper .flex-wrapper .main_container #main_area .content_wrapper#members_list_area .table_list_wrap .members_list th.job, #members #wrapper .flex-wrapper .main_container #main_area .content_wrapper#members_list_area .table_list_wrap .members_list th.name, #members #wrapper .flex-wrapper .main_container #main_area .content_wrapper#members_list_area .table_list_wrap .members_list th.specialized_field {
+  border-left: solid 1px #e5e5e5;
+}
+#members #wrapper .flex-wrapper .main_container #main_area .content_wrapper#members_list_area .table_list_wrap .members_list th.rep {
+  min-width: 200px;
+  max-width: 200px;
+  width: 200px;
+  border-right: none;
+}
+#members #wrapper .flex-wrapper .main_container #main_area .content_wrapper#members_list_area .table_list_wrap .members_list th.job {
+  min-width: 90px;
+  max-width: 90px;
+  width: 90px;
+}
+#members #wrapper .flex-wrapper .main_container #main_area .content_wrapper#members_list_area .table_list_wrap .members_list th.name {
+  min-width: 130px;
+  max-width: 13px;
+  width: 130px;
+}
+#members #wrapper .flex-wrapper .main_container #main_area .content_wrapper#members_list_area .table_list_wrap .members_list td {
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 1px solid #e5e5e5;
+  border-top: none;
+}
+#members #wrapper .flex-wrapper .main_container #main_area .content_wrapper#members_list_area .table_list_wrap .members_list td:first-child {
+  border-left: none;
+}
+#members #wrapper .flex-wrapper .main_container #main_area .content_wrapper#members_list_area .table_list_wrap .members_list td:last-child {
+  border-right: none;
+}
+#members #wrapper .flex-wrapper .main_container #main_area .content_wrapper#members_list_area .table_list_wrap .members_list td.marge {
+  vertical-align: top;
+}
+#members #wrapper .flex-wrapper .main_container #main_area .content_wrapper#members_list_area .table_list_wrap .members_list td a {
+  display: block;
+  color: #197fc3;
+  font-weight: bold;
+}
+@media only screen and (min-width: 769px) {
+  #members #wrapper .flex-wrapper .main_container #main_area .content_wrapper#members_list_area .table_list_wrap .members_list td a:hover {
+    opacity: 0.5;
+  }
+}
+#members #wrapper .flex-wrapper .main_container #main_area .content_wrapper#members_list_area .table_list_wrap .members_list .list_title th {
+  background-color: #e8e5d2;
+  text-align: center;
+  font-weight: bold;
+}
+#members #wrapper .flex-wrapper .main_container #main_area .content_wrapper#members_list_area .table_list_wrap .members_list .list_type th {
+  background-color: #f7f6e2;
+  text-align: center;
+}
+
+/*               研究室一覧 labs
+======================================================= */
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area {
+  padding: 80px 0 50px;
+}
+@media only screen and (max-width: 900px) {
+  #labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area {
+    padding-top: 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area {
+    padding-top: 30px;
+  }
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .top_text p {
+  font-weight: 500;
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap {
+  margin-top: 30px;
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap + .labs_list_wrap {
+  margin-top: 70px;
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .lab_category {
+  border-bottom: solid 1px #197fc3;
+  margin-bottom: 40px;
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .lab_category span {
+  display: inline-block;
+  color: #197fc3;
+  font-weight: bold;
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_name {
+  position: relative;
+  padding: 12px 20px 10px;
+  background-color: #197fc3;
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_name:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 5px;
+  height: 10px;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  border-top: solid 5px transparent;
+  border-left: solid 8px #fff;
+  border-right: solid 8px transparent;
+  border-bottom: solid 5px transparent;
+}
+@media only screen and (max-width: 480px) {
+  #labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_name:before {
+    right: 3px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  #labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_name:before {
+    right: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_name {
+    padding: 12px 12px 10px;
+  }
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_name p a {
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_name p a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
+}
+@media only screen and (min-width: 769px) {
+  #labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_name p a:hover:before {
+    left: 0;
+    opacity: 1;
+  }
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_member {
+  padding: 12px 20px 10px;
+  background-color: #e9f4fa;
+}
+@media only screen and (max-width: 480px) {
+  #labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_member {
+    padding: 12px 12px 10px;
+  }
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_member p {
+  color: #197fc3;
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_member p > .no_link {
+  color: #323232;
+  font-weight: bold;
+  padding: 0 0.2em;
+}
+@media only screen and (max-width: 480px) {
+  #labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_member p > .no_link {
+    display: inline-block;
+  }
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_member p a {
+  color: #197fc3;
+  font-weight: bold;
+  position: relative;
+  padding: 0 0.2em;
+}
+@media only screen and (min-width: 769px) {
+  #labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_member p a:hover {
+    opacity: 0.5;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_member p a {
+    display: inline-block;
+  }
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_text {
+  padding: 30px 20px 30px;
+}
+@media only screen and (max-width: 480px) {
+  #labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_text {
+    padding: 30px 12px 30px;
+  }
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_text p {
+  font-weight: 500;
+  line-height: 2.3;
+  margin-top: -5px;
+}
+@media only screen and (max-width: 480px) {
+  #labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_text p {
+    line-height: 1.8;
+  }
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_text p.number {
+  position: relative;
+  counter-increment: count;
+  padding-left: 1.2em;
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_text p.number:before {
+  content: counter(count) ".";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_text ol {
+  margin-top: 15px;
+  padding-left: 1.5em;
+  list-style-type: decimal;
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_text ol li + li {
+  margin-top: 10px;
+}
+@media only screen and (max-width: 480px) {
+  #labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_text ol li + li {
+    margin-top: 1em;
+  }
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_text ol li::marker {
+  font-weight: 500;
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap .labs_list_item .lab_text ol:first-child {
+  margin-top: 0;
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap.other .labs_list_item .lab_name {
+  background-color: #e8e6d2;
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap.other .labs_list_item .lab_name:before {
+  border-left: solid 8px #323232;
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap.other .labs_list_item .lab_name p {
+  color: #197fc3;
+  font-weight: bold;
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap.other .labs_list_item .lab_name p a {
+  color: #197fc3;
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap.other .labs_list_item .lab_name p a:before {
+  background-color: #197fc3;
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap.other .labs_list_item .lab_name p a,
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap.other .labs_list_item .lab_name p span {
+  display: inline-block;
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap.other .labs_list_item .lab_member {
+  background-color: #f6f6e2;
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap.other .labs_list_item .lab_member p {
+  color: #197fc3;
+  font-weight: bold;
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap.other .labs_list_item .lab_member p a {
+  font-weight: bold;
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap.other .labs_list_item .lab_text p {
+  font-weight: 500;
+}
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap.other .labs_list_item .lab_name p.no_link,
+#labs #wrapper .flex-wrapper .main_container #main_area .content_wrapper#labs_list_area .labs_list_wrap.other .labs_list_item .lab_member p.no_link {
+  color: #323232;
+}
+
+/*               授業日程 class
+======================================================= */
+#class #wrapper .flex-wrapper .main_container #main_area .content_wrapper#class_schedule .top_text {
+  margin-top: 15px;
+}
+#class #wrapper .flex-wrapper .main_container #main_area .content_wrapper#class_schedule .top_text p {
+  font-weight: 500;
+}
+#class #wrapper .flex-wrapper .main_container #main_area .content_wrapper#class_schedule .top_text p + p {
+  margin-top: 1em;
+}
+#class #wrapper .flex-wrapper .main_container #main_area .content_wrapper#class_schedule .top_text p a {
+  color: #197fc3;
+  font-weight: bold;
+}
+@media only screen and (min-width: 769px) {
+  #class #wrapper .flex-wrapper .main_container #main_area .content_wrapper#class_schedule .top_text p a:hover {
+    opacity: 0.5;
+  }
+}
+#class #wrapper .flex-wrapper .main_container #main_area .content_wrapper#class_schedule .semester_wrap {
+  margin-top: 40px;
+}
+#class #wrapper .flex-wrapper .main_container #main_area .content_wrapper#class_schedule .semester_wrap .semester_parts + .semester_parts {
+  margin-top: 50px;
+}
+#class #wrapper .flex-wrapper .main_container #main_area .content_wrapper#class_schedule .semester_wrap .semester_parts .head_text {
+  border-bottom: solid 1px #197fc3;
+  padding-bottom: 5px;
+}
+#class #wrapper .flex-wrapper .main_container #main_area .content_wrapper#class_schedule .semester_wrap .semester_parts .head_text span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #197fc3;
+}
+#class #wrapper .flex-wrapper .main_container #main_area .content_wrapper#class_schedule .semester_wrap .semester_parts .main_text {
+  margin-top: 40px;
+}
+#class #wrapper .flex-wrapper .main_container #main_area .content_wrapper#class_schedule .semester_wrap .semester_parts .main_text .item {
+  position: relative;
+  padding-left: 1.2em;
+}
+#class #wrapper .flex-wrapper .main_container #main_area .content_wrapper#class_schedule .semester_wrap .semester_parts .main_text .item:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #323232;
+}
+#class #wrapper .flex-wrapper .main_container #main_area .content_wrapper#class_schedule .semester_wrap .semester_parts .main_text .item + .item {
+  margin-top: 1.2em;
+}
+@media only screen and (max-width: 480px) {
+  #class #wrapper .flex-wrapper .main_container #main_area .content_wrapper#class_schedule .semester_wrap .semester_parts .main_text .item + .item {
+    margin-top: 0.8em;
+  }
+}
+#class #wrapper .flex-wrapper .main_container #main_area .content_wrapper#class_schedule .semester_wrap .semester_parts .main_text .item p {
+  font-weight: 500;
+}
+#class #wrapper .flex-wrapper .main_container #main_area .content_wrapper#class_schedule .semester_wrap .semester_parts .main_text .item p > span {
+  display: inline-block;
+}
+
+#schedule #category_selector .selector,
+#lecture #category_selector .selector,
+#class #category_selector .selector,
+#requirements #category_selector .selector {
+  margin: 0 -10px;
+}
+@media only screen and (max-width: 768px) {
+  #schedule #category_selector .selector,
+#lecture #category_selector .selector,
+#class #category_selector .selector,
+#requirements #category_selector .selector {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #schedule #category_selector .selector,
+#lecture #category_selector .selector,
+#class #category_selector .selector,
+#requirements #category_selector .selector {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+#schedule #category_selector .selector .selector_item,
+#lecture #category_selector .selector .selector_item,
+#class #category_selector .selector .selector_item,
+#requirements #category_selector .selector .selector_item {
+  padding: 0 10px;
+}
+@media only screen and (max-width: 768px) {
+  #schedule #category_selector .selector .selector_item,
+#lecture #category_selector .selector .selector_item,
+#class #category_selector .selector .selector_item,
+#requirements #category_selector .selector .selector_item {
+    width: 50%;
+  }
+  #schedule #category_selector .selector .selector_item:nth-child(n+3),
+#lecture #category_selector .selector .selector_item:nth-child(n+3),
+#class #category_selector .selector .selector_item:nth-child(n+3),
+#requirements #category_selector .selector .selector_item:nth-child(n+3) {
+    margin-top: 15px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #schedule #category_selector .selector .selector_item,
+#lecture #category_selector .selector .selector_item,
+#class #category_selector .selector .selector_item,
+#requirements #category_selector .selector .selector_item {
+    width: 100%;
+    max-width: 250px;
+  }
+  #schedule #category_selector .selector .selector_item + .selector_item,
+#lecture #category_selector .selector .selector_item + .selector_item,
+#class #category_selector .selector .selector_item + .selector_item,
+#requirements #category_selector .selector .selector_item + .selector_item {
+    margin-top: 15px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  #schedule #category_selector .selector .selector_item .item_inner > a.narrow,
+#lecture #category_selector .selector .selector_item .item_inner > a.narrow,
+#class #category_selector .selector .selector_item .item_inner > a.narrow,
+#requirements #category_selector .selector .selector_item .item_inner > a.narrow {
+    letter-spacing: -0.05em;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #schedule #category_selector .selector .selector_item .item_inner > a.narrow,
+#lecture #category_selector .selector .selector_item .item_inner > a.narrow,
+#class #category_selector .selector .selector_item .item_inner > a.narrow,
+#requirements #category_selector .selector .selector_item .item_inner > a.narrow {
+    letter-spacing: -0.08em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #schedule #category_selector .selector .selector_item .item_inner > a.narrow,
+#lecture #category_selector .selector .selector_item .item_inner > a.narrow,
+#class #category_selector .selector .selector_item .item_inner > a.narrow,
+#requirements #category_selector .selector .selector_item .item_inner > a.narrow {
+    letter-spacing: -0.05em;
+  }
+}
+
+/*               時間割 schedule
+======================================================= */
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .link_btn_list_wrap .btn_list {
+  margin: 0 -12px;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .link_btn_list_wrap .btn_list .btn_item {
+  width: 25%;
+  padding: 0 12px;
+  margin-top: 0;
+}
+@media only screen and (max-width: 1500px) {
+  #schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .link_btn_list_wrap .btn_list .btn_item {
+    width: 33.3%;
+  }
+  #schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .link_btn_list_wrap .btn_list .btn_item:nth-child(n+4) {
+    margin-top: 15px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  #schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .link_btn_list_wrap .btn_list .btn_item {
+    width: 50%;
+  }
+  #schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .link_btn_list_wrap .btn_list .btn_item:nth-child(n+3) {
+    margin-top: 15px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .link_btn_list_wrap .btn_list .btn_item {
+    width: 100%;
+  }
+  #schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .link_btn_list_wrap .btn_list .btn_item + .btn_item {
+    margin-top: 15px;
+  }
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .link_btn_list_wrap .btn_list .btn_item a {
+  padding: 12px 12px 10px;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .link_btn_list_wrap .btn_list .btn_item a:after {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 8px solid #197fc3;
+  top: 60%;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .date {
+  margin-top: 20px;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .top_text {
+  margin-top: 10px;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .top_text p {
+  line-height: 2.3;
+  font-weight: 500;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap {
+  margin-top: 40px;
+  position: relative;
+  display: none;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap.active {
+  display: block;
+}
+@media only screen and (max-width: 480px) {
+  #schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap {
+    margin-top: 15px;
+  }
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .annotation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .annotation p + p {
+  margin-left: 20px;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable {
+  overflow: auto;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table {
+  min-width: 810px;
+  width: 100%;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr th,
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr td {
+  background-clip: padding-box;
+  text-align: center;
+  border: solid 1px #e5e5e5;
+  border-top: none;
+  vertical-align: middle;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr th:first-child,
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr td:first-child {
+  border-left: none;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr th:last-child,
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr td:last-child {
+  border-right: none;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr th {
+  background-color: #e8e6d2;
+  height: 40px;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr th.table_title {
+  font-weight: bold;
+  border: none;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr th.week {
+  border-top: none;
+  border-bottom: none;
+  font-weight: bold;
+  height: 40px;
+  padding: 0;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr td {
+  height: 100px;
+  width: 160px;
+  padding: 10px 10px 8px;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr td a {
+  font-weight: 500;
+  color: #197fc3;
+}
+@media only screen and (min-width: 769px) {
+  #schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr td a:hover {
+    opacity: 0.5;
+  }
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr td span {
+  font-weight: 500;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr td span.week {
+  color: #197fc3;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr td p {
+  font-weight: 500;
+  font-size: 15px;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr td > .cell_cont p span {
+  display: inline-block;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr td.half {
+  height: 260px;
+  padding: 0;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr td.half > .cell_cont {
+  min-height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr td.half > .cell_cont:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 80%;
+  height: 1px;
+  background-color: #e5e5e5;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr td.half > .cell_cont:last-child {
+  border: none;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr td.half > .cell_cont:last-child:after {
+  background: none;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr .week,
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr .time {
+  background-color: #f6f6e2;
+  vertical-align: middle;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr .time {
+  padding: 8px;
+  border-top: none;
+  min-width: auto;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr .time {
+  width: 60px;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr .time > span {
+  display: block;
+  font-size: 14px;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .scrollable table tr .time > span:first-child {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+#schedule #wrapper .flex-wrapper .main_container #main_area .content_wrapper#schedule_table_area .schedule_table_wrap .table_bottom_text {
+  margin-top: 20px;
+}
+
+/*              講義内容 lecture
+======================================================= */
+#lecture #wrapper .flex-wrapper .main_container #main_area .content_wrapper#lecture_content_area {
+  padding-bottom: 120px;
+}
+@media only screen and (max-width: 768px) {
+  #lecture #wrapper .flex-wrapper .main_container #main_area .content_wrapper#lecture_content_area {
+    padding-bottom: 70px;
+  }
+}
+#lecture #wrapper .flex-wrapper .main_container #main_area .content_wrapper#lecture_content_area .top_text {
+  margin-top: 15px;
+}
+#lecture #wrapper .flex-wrapper .main_container #main_area .content_wrapper#lecture_content_area .top_text p {
+  font-weight: 500;
+}
+#lecture #wrapper .flex-wrapper .main_container #main_area .content_wrapper#lecture_content_area .top_text p a {
+  color: #197fc3;
+  font-weight: bold;
+}
+@media only screen and (min-width: 769px) {
+  #lecture #wrapper .flex-wrapper .main_container #main_area .content_wrapper#lecture_content_area .top_text p a:hover {
+    opacity: 0.5;
+  }
+}
+#lecture #wrapper .flex-wrapper .main_container #main_area .content_wrapper#lecture_content_area .pdf_content {
+  margin-top: 30px;
+  padding: 35px 30px;
+  background-color: #f6f6e2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media only screen and (max-width: 768px) {
+  #lecture #wrapper .flex-wrapper .main_container #main_area .content_wrapper#lecture_content_area .pdf_content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+#lecture #wrapper .flex-wrapper .main_container #main_area .content_wrapper#lecture_content_area .pdf_content .text_area {
+  width: 70%;
+}
+@media only screen and (max-width: 768px) {
+  #lecture #wrapper .flex-wrapper .main_container #main_area .content_wrapper#lecture_content_area .pdf_content .text_area {
+    width: auto;
+  }
+}
+#lecture #wrapper .flex-wrapper .main_container #main_area .content_wrapper#lecture_content_area .pdf_content .text_area a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #197fc3;
+}
+#lecture #wrapper .flex-wrapper .main_container #main_area .content_wrapper#lecture_content_area .pdf_content .text_area a span {
+  font-size: 16px;
+  color: #323232;
+  font-weight: 500;
+  display: inline-block;
+}
+@media only screen and (min-width: 769px) {
+  #lecture #wrapper .flex-wrapper .main_container #main_area .content_wrapper#lecture_content_area .pdf_content .text_area a:hover {
+    opacity: 0.5;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+}
+#lecture #wrapper .flex-wrapper .main_container #main_area .content_wrapper#lecture_content_area .pdf_content .text_area p {
+  margin-top: 15px;
+  font-weight: 500;
+}
+#lecture #wrapper .flex-wrapper .main_container #main_area .content_wrapper#lecture_content_area .pdf_content .dl_btn_area {
+  width: 30%;
+  position: relative;
+  min-width: 210px;
+}
+@media only screen and (max-width: 768px) {
+  #lecture #wrapper .flex-wrapper .main_container #main_area .content_wrapper#lecture_content_area .pdf_content .dl_btn_area {
+    width: auto;
+  }
+}
+#lecture #wrapper .flex-wrapper .main_container #main_area .content_wrapper#lecture_content_area .pdf_content .dl_btn_area a {
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  background-color: #197fc3;
+  color: #fff;
+  text-align: center;
+  padding: 12px 0 10px;
+  width: 100%;
+  border-radius: 30px;
+}
+@media only screen and (max-width: 768px) {
+  #lecture #wrapper .flex-wrapper .main_container #main_area .content_wrapper#lecture_content_area .pdf_content .dl_btn_area a {
+    position: relative;
+    top: 0;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+    margin: 30px auto 0;
+    width: 200px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  #lecture #wrapper .flex-wrapper .main_container #main_area .content_wrapper#lecture_content_area .pdf_content .dl_btn_area a:hover {
+    background-color: #135784;
+  }
+}
+#lecture #wrapper .flex-wrapper .main_container #main_area .content_wrapper#lecture_content_area .curriculum_img_area {
+  margin-top: 60px;
+  display: block;
+}
+@media only screen and (max-width: 768px) {
+  #lecture #wrapper .flex-wrapper .main_container #main_area .content_wrapper#lecture_content_area .curriculum_img_area {
+    margin-top: 40px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #lecture #wrapper .flex-wrapper .main_container #main_area .content_wrapper#lecture_content_area .curriculum_img_area {
+    margin-top: 30px;
+  }
+}
+#lecture #wrapper .flex-wrapper .main_container #main_area .content_wrapper#lecture_content_area .curriculum_img_area img {
+  width: 100%;
+  height: auto;
+}
+
+/*               卒業要件 requirements
+======================================================= */
+#requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .head_text {
+  border-bottom: solid 1px #197fc3;
+  padding-bottom: 5px;
+}
+#requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .head_text span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #197fc3;
+}
+#requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .curriculum_list_wrap {
+  margin-top: 40px;
+  overflow-x: auto;
+  position: relative;
+}
+#requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .curriculum_list_wrap table tr th,
+#requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .curriculum_list_wrap table tr td {
+  padding: 14px 10px 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+#requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .curriculum_list_wrap table tr th span,
+#requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .curriculum_list_wrap table tr td span {
+  font-weight: 500;
+}
+#requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .curriculum_list_wrap table tr th .annotation,
+#requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .curriculum_list_wrap table tr td .annotation {
+  display: inline-block;
+  font-size: 13px;
+  color: #e90000;
+  font-weight: 500;
+}
+#requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .curriculum_list_wrap table tr th {
+  background-color: #e8e6d2;
+  border-left: solid 1px #fff;
+}
+#requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .curriculum_list_wrap table tr th:first-child {
+  border: none;
+}
+#requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .curriculum_list_wrap table tr td {
+  border-bottom: solid 1px #e5e5e5;
+  border-left: solid 1px #e5e5e5;
+  min-width: 92px;
+}
+#requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .curriculum_list_wrap table tr td.wide {
+  min-width: 125px;
+}
+#requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .curriculum_list_wrap table tr td:first-child {
+  border-left: none;
+}
+#requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .curriculum_list_wrap table tr td.item {
+  background-color: #f6f6e2;
+}
+#requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .curriculum_list_wrap table tr td.item span {
+  display: block;
+}
+#requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .annotation_list {
+  margin-top: 25px;
+}
+#requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .annotation_list .annotation_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .annotation_list .annotation_item + .annotation_item {
+  margin-top: 10px;
+}
+@media only screen and (max-width: 480px) {
+  #requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .annotation_list .annotation_item + .annotation_item {
+    margin-top: 5px;
+  }
+}
+#requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .annotation_list .annotation_item .annotation_head {
+  position: relative;
+  color: #e90000;
+  padding-left: 1em;
+}
+#requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .annotation_list .annotation_item .annotation_head:before {
+  content: "・";
+  position: absolute;
+  color: #323232;
+  top: 0;
+  left: 0;
+}
+#requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .annotation_list .annotation_item .annotation_text {
+  padding-left: 20px;
+}
+#requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .annotation_list .annotation_item .annotation_text p {
+  margin-top: -8px;
+  line-height: 2.3;
+  font-weight: 500;
+}
+@media only screen and (max-width: 480px) {
+  #requirements #wrapper .flex-wrapper .main_container #main_area .content_wrapper#curriculum_area .annotation_list .annotation_item .annotation_text p {
+    margin-top: -4px;
+    line-height: 1.8;
+  }
+}
+
+/*               内部限定 concerned_onry
+======================================================= */
+#internal #wrapper .flex-wrapper .main_container #main_area .content_wrapper#internal_area {
+  padding-bottom: 120px;
+  min-height: 460px;
+}
+@media only screen and (max-width: 768px) {
+  #internal #wrapper .flex-wrapper .main_container #main_area .content_wrapper#internal_area {
+    padding-bottom: 70px;
+  }
+}
+#internal #wrapper .flex-wrapper .main_container #main_area .content_wrapper#internal_area .link_content {
+  margin-top: 30px;
+  padding: 35px 30px;
+  background-color: #f6f6e2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media only screen and (max-width: 768px) {
+  #internal #wrapper .flex-wrapper .main_container #main_area .content_wrapper#internal_area .link_content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+#internal #wrapper .flex-wrapper .main_container #main_area .content_wrapper#internal_area .link_content .text_area {
+  width: 70%;
+}
+@media only screen and (max-width: 768px) {
+  #internal #wrapper .flex-wrapper .main_container #main_area .content_wrapper#internal_area .link_content .text_area {
+    width: auto;
+  }
+}
+#internal #wrapper .flex-wrapper .main_container #main_area .content_wrapper#internal_area .link_content .text_area .title_ja {
+  font-size: 20px;
+  color: #197fc3;
+  font-weight: bold;
+}
+#internal #wrapper .flex-wrapper .main_container #main_area .content_wrapper#internal_area .link_content .text_area .title_en {
+  margin-top: 10px;
+  font-weight: 500;
+}
+#internal #wrapper .flex-wrapper .main_container #main_area .content_wrapper#internal_area .link_content .dl_btn_area {
+  width: 30%;
+  position: relative;
+  min-width: 210px;
+}
+@media only screen and (max-width: 768px) {
+  #internal #wrapper .flex-wrapper .main_container #main_area .content_wrapper#internal_area .link_content .dl_btn_area {
+    width: auto;
+  }
+}
+#internal #wrapper .flex-wrapper .main_container #main_area .content_wrapper#internal_area .link_content .dl_btn_area a {
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  background-color: #197fc3;
+  color: #fff;
+  text-align: center;
+  padding: 12px 0 10px;
+  width: 100%;
+  border-radius: 30px;
+}
+@media only screen and (max-width: 768px) {
+  #internal #wrapper .flex-wrapper .main_container #main_area .content_wrapper#internal_area .link_content .dl_btn_area a {
+    position: relative;
+    top: 0;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+    margin: 30px auto 0;
+    width: 200px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  #internal #wrapper .flex-wrapper .main_container #main_area .content_wrapper#internal_area .link_content .dl_btn_area a:hover {
+    background-color: #135784;
+  }
+}
+#internal #wrapper .flex-wrapper .main_container #main_area .content_wrapper#internal_area .link_content .dl_btn_area a:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 18px;
+  height: 18px;
+  background-image: url("../media/images/common/blank_icon_white.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#internal #wrapper .flex-wrapper .main_container #main_area .content_wrapper#internal_area .curriculum_img_area {
+  margin-top: 60px;
+  display: block;
+}
+@media only screen and (max-width: 768px) {
+  #internal #wrapper .flex-wrapper .main_container #main_area .content_wrapper#internal_area .curriculum_img_area {
+    margin-top: 40px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #internal #wrapper .flex-wrapper .main_container #main_area .content_wrapper#internal_area .curriculum_img_area {
+    margin-top: 30px;
+  }
+}
+#internal #wrapper .flex-wrapper .main_container #main_area .content_wrapper#internal_area .curriculum_img_area img {
+  width: 100%;
+  height: auto;
+}
+
+/*               サービス service
+======================================================= */
+#service #wrapper #main_area .content_wrapper .main_width .main_cont .content_inner .image_cont {
+  margin-bottom: 30px;
+}
+
+#news.news_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap, #news.lecture_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap,
+#lecture_info.news_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap,
+#lecture_info.lecture_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap {
+  border-bottom: solid 1px #e5e5e5;
+}
+#news.news_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap > a, #news.lecture_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap > a,
+#lecture_info.news_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap > a,
+#lecture_info.lecture_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap > a {
+  display: block;
+  padding: 10px 10px 10px;
+}
+#news.news_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap > a:hover, #news.lecture_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap > a:hover,
+#lecture_info.news_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap > a:hover,
+#lecture_info.lecture_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap > a:hover {
+  opacity: 0.5;
+}
+#news.news_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap .article_item .item_date,
+#news.news_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap .article_item .item_title, #news.lecture_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap .article_item .item_date,
+#news.lecture_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap .article_item .item_title,
+#lecture_info.news_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap .article_item .item_date,
+#lecture_info.news_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap .article_item .item_title,
+#lecture_info.lecture_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap .article_item .item_date,
+#lecture_info.lecture_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap .article_item .item_title {
+  font-weight: 500;
+}
+#news.news_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap .article_item .item_date p, #news.lecture_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap .article_item .item_date p,
+#lecture_info.news_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap .article_item .item_date p,
+#lecture_info.lecture_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap .article_item .item_date p {
+  font-size: 14px;
+  color: #888;
+  text-align: left;
+}
+#news.news_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap .article_item .item_title, #news.lecture_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap .article_item .item_title,
+#lecture_info.news_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap .article_item .item_title,
+#lecture_info.lecture_list .flex-wrapper .main_container #main_area .content_wrapper#list_area .article_list .article_item_wrap .article_item .item_title {
+  margin-top: 5px;
+}
+
+/*               新着情報 news
+======================================================= */
+@media only screen and (max-width: 768px) {
+  #news.detail #content_area .section_main_content {
+    margin-top: 35px;
+  }
+}
+#news.detail #content_area .section_main_content .news_content > .content_date {
+  font-weight: 500;
+  font-size: 14px;
+  color: #989595;
+  display: inline-block;
+}
+#news.detail #content_area .section_main_content .news_content > .content_title {
+  border-bottom: solid 2px #197fc3;
+  padding-bottom: 15px;
+  margin-top: 10px;
+}
+#news.detail #content_area .section_main_content .news_content > .content_title > span {
+  font-weight: bold;
+  font-size: 22px;
+}
+@media only screen and (max-width: 480px) {
+  #news.detail #content_area .section_main_content .news_content > .content_title > span {
+    font-size: 18px;
+  }
+}
+#news.detail #content_area .section_main_content .news_content > .article_area {
+  margin-top: 50px;
+}
+@media only screen and (max-width: 768px) {
+  #news.detail #content_area .section_main_content .news_content > .article_area {
+    margin-top: 30px;
+  }
+}
+#news.detail #content_area .section_main_content .news_content > .article_area p {
+  font-weight: 500;
+}
+@media only screen and (max-width: 480px) {
+  #news.detail #content_area .section_main_content .news_content > .article_area p {
+    font-size: 15px;
+  }
+}
+#news.detail #content_area .section_main_content .news_content > .article_area p + p {
+  margin-top: 1.5em;
+}
+#news.detail #content_area .section_main_content .news_content > .article_area.en > p {
+  line-height: 1.8;
+}
+
+/*               講演会 talk
+======================================================= */
+@media only screen and (max-width: 768px) {
+  #lecture_info.detail #content_area .section_main_content {
+    margin-top: 35px;
+  }
+}
+#lecture_info.detail #content_area .section_main_content .lecture_content .content_title,
+#lecture_info.detail #content_area .section_main_content .lecture_content .content_info {
+  padding: 15px 20px 12px;
+}
+@media only screen and (max-width: 480px) {
+  #lecture_info.detail #content_area .section_main_content .lecture_content .content_title,
+#lecture_info.detail #content_area .section_main_content .lecture_content .content_info {
+    padding: 15px 12px 12px;
+  }
+}
+#lecture_info.detail #content_area .section_main_content .lecture_content .content_title {
+  background-color: #e8e5d2;
+  font-weight: bold;
+  font-size: 22px;
+  position: relative;
+  padding-left: 1.8em;
+}
+@media only screen and (max-width: 480px) {
+  #lecture_info.detail #content_area .section_main_content .lecture_content .content_title {
+    font-size: 18px;
+    padding-left: 1.5em;
+  }
+}
+#lecture_info.detail #content_area .section_main_content .lecture_content .content_title:before {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: 15px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid #197fc3;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+@media only screen and (max-width: 480px) {
+  #lecture_info.detail #content_area .section_main_content .lecture_content .content_title:before {
+    border-width: 6px 10px;
+    left: 10px;
+  }
+}
+#lecture_info.detail #content_area .section_main_content .lecture_content .content_info {
+  background-color: #f7f6e2;
+}
+#lecture_info.detail #content_area .section_main_content .lecture_content .content_info p {
+  position: relative;
+  padding-left: 1em;
+  font-weight: 500;
+}
+#lecture_info.detail #content_area .section_main_content .lecture_content .content_info p + p {
+  margin-top: 0.5em;
+}
+#lecture_info.detail #content_area .section_main_content .lecture_content .content_info p:before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 1px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #323232;
+}
+#lecture_info.detail #content_area .section_main_content .lecture_content .article_area {
+  border: solid 1px #e5e5e5;
+  border-top: none;
+  padding: 20px 20px 18px;
+}
+@media only screen and (max-width: 480px) {
+  #lecture_info.detail #content_area .section_main_content .lecture_content .article_area {
+    padding: 20px 12px 18px;
+  }
+}
+#lecture_info.detail #content_area .section_main_content .lecture_content .article_area p {
+  font-weight: 500;
+}
+#lecture_info.detail #content_area .section_main_content .lecture_content .article_area.en > p {
+  line-height: 1.8;
+}
+
+/*               コラム column
+======================================================= */
+#column.single .title_area {
+  margin-bottom: 20px;
+}
+#column.single .title_area .cate {
+  margin-bottom: 8px;
+}
+#column.single .title_area .cate span {
+  padding: 4px 10px 2px;
+  background-color: #4d7c2d;
+  color: #fff;
+  font-size: 12px;
+  display: inline-block;
+}
+#column.single .title_area .title {
+  margin-top: 10px;
+}
+#column.single .title_area .title h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/*                ページネーション
+======================================================= */
+.pagination {
+  margin-top: 50px;
+}
+.pagination h2 {
+  display: none;
+}
+.pagination .nav-links,
+.pagination ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -5px;
+}
+@media only screen and (max-width: 768px) {
+  .pagination .nav-links,
+.pagination ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.pagination .nav-links span,
+.pagination .nav-links a,
+.pagination .nav-links li,
+.pagination ul span,
+.pagination ul a,
+.pagination ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 5px;
+  background-color: #a6a6a6;
+  color: #fff;
+  text-decoration: none;
+  width: 34px;
+  height: 34px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.pagination .nav-links span:hover,
+.pagination .nav-links a:hover,
+.pagination .nav-links li:hover,
+.pagination ul span:hover,
+.pagination ul a:hover,
+.pagination ul li:hover {
+  opacity: 0.8;
+}
+.pagination .nav-links span.next, .pagination .nav-links span.prev,
+.pagination .nav-links a.next,
+.pagination .nav-links a.prev,
+.pagination .nav-links li.next,
+.pagination .nav-links li.prev,
+.pagination ul span.next,
+.pagination ul span.prev,
+.pagination ul a.next,
+.pagination ul a.prev,
+.pagination ul li.next,
+.pagination ul li.prev {
+  display: none;
+}
+.pagination .nav-links span.current,
+.pagination .nav-links a.current,
+.pagination .nav-links li.current,
+.pagination ul span.current,
+.pagination ul a.current,
+.pagination ul li.current {
+  background-color: #404040;
+  border: solid 2px #404040;
+}
+.pagination .nav-links span.current:hover,
+.pagination .nav-links a.current:hover,
+.pagination .nav-links li.current:hover,
+.pagination ul span.current:hover,
+.pagination ul a.current:hover,
+.pagination ul li.current:hover {
+  opacity: 1;
+}
+.pagination .nav-links span.dots,
+.pagination .nav-links a.dots,
+.pagination .nav-links li.dots,
+.pagination ul span.dots,
+.pagination ul a.dots,
+.pagination ul li.dots {
+  margin: 0;
+  background-color: #fff;
+  color: #a6a6a6;
+}
+.pagination .nav-links span.dots:hover,
+.pagination .nav-links a.dots:hover,
+.pagination .nav-links li.dots:hover,
+.pagination ul span.dots:hover,
+.pagination ul a.dots:hover,
+.pagination ul li.dots:hover {
+  opacity: 1;
+}
+.pagination .nav-links li:first-child,
+.pagination ul li:first-child {
+  background-color: #404040;
+  border: solid 2px #404040;
+}
+.pagination .nav-links li:first-child a,
+.pagination ul li:first-child a {
+  background-color: #404040;
+  border: solid 2px #404040;
+}
+@media only screen and (min-width: 769px) {
+  .pagination .nav-links li:first-child a:hover,
+.pagination ul li:first-child a:hover {
+    opacity: 1;
+  }
+}
+
+/*                各種ファイル読み込み
+======================================================= */
+body#contact {
+  background-color: #f8f8f8;
+}
+body#contact #wrapper #main_area #main_title {
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 768px) {
+  body#contact #wrapper #main_area #main_title {
+    margin-bottom: 20px;
+  }
+}
+body#contact #wrapper #main_area #main_title .main_width .main_title_inner {
+  color: #4c4948;
+  margin-bottom: 20px;
+}
+body#contact #wrapper #main_area #main_title .main_width .main_title_inner h1 span, body#contact #wrapper #main_area #main_title .main_width .main_title_inner p span {
+  font-size: 34px;
+  color: #4D7C2D;
+}
+body#contact #wrapper #main_area #main_title .main_width .main_title_inner .content_title_jp span {
+  color: #4D7C2D;
+}
+body#contact #wrapper #main_area .content_wrapper {
+  background-color: #f8f8f8;
+  margin: auto;
+  padding: 0px;
+}
+@media only screen and (max-width: 768px) {
+  body#contact #wrapper #main_area .content_wrapper {
+    padding: 25px 30px 30px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  body#contact #wrapper #main_area .content_wrapper {
+    padding: 20px 15px 25px;
+  }
+}
+body#contact #wrapper #main_area .content_wrapper .form_area {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+@media only screen and (max-width: 1024px) {
+  body#contact #wrapper #main_area .content_wrapper .form_area {
+    margin-bottom: 80px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body#contact #wrapper #main_area .content_wrapper .form_area {
+    margin-bottom: 60px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  body#contact #wrapper #main_area .content_wrapper .form_area {
+    margin-bottom: 40px;
+  }
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_step {
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  max-width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 60px;
+  position: relative;
+}
+@media only screen and (max-width: 768px) {
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_step {
+    width: 160px;
+    margin-bottom: 40px;
+  }
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_step:before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  border-top: solid 2px #4D7C2D;
+  left: 0;
+  top: 25px;
+}
+@media only screen and (max-width: 768px) {
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_step:before {
+    top: 20px;
+  }
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_step > div {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  width: 33.3333%;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_step > div > .step_inner {
+  display: block;
+  width: 50px;
+}
+@media only screen and (max-width: 768px) {
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_step > div > .step_inner {
+    width: 40px;
+  }
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_step > div .step_num {
+  display: block;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: solid 2px #4D7C2D;
+  color: #4D7C2D;
+  display: table;
+  background-color: #fff;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_step > div .step_num > span {
+  width: 100%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+  line-height: 26px;
+  font-size: 26px;
+  font-weight: 700;
+}
+@media only screen and (max-width: 768px) {
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_step > div .step_num {
+    width: 40px;
+    height: 40px;
+  }
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_step > div .step_num > span {
+    font-size: 20px;
+  }
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_step > div .step_text {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin-top: 0.5em;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_step > div .step_text {
+    font-size: 14px;
+  }
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_step > div.step01 > .step_inner {
+  margin-left: 0;
+  margin-right: auto;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_step > div.step01 .step_num {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #fff;
+  background-color: #4D7C2D;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_step > div.step02 > .step_inner {
+  margin-left: auto;
+  margin-right: auto;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_step > div.step02 .step_num {
+  font-family: "Roboto Condensed", sans-serif;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_step > div.step03 > .step_inner {
+  margin-left: auto;
+  margin-right: 0;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_step > div.step03 > .step_inner .step_num {
+  margin-left: 1px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: solid 1px #bababa;
+  border-bottom: solid 1px #bababa;
+  width: 100%;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl + dl {
+  border-top: none;
+}
+@media only screen and (max-width: 768px) {
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl {
+    display: block;
+  }
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dt, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd {
+    display: block;
+    width: 100%;
+  }
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dt {
+  vertical-align: top;
+  width: 16em;
+  padding: 1.75em 1em 1.75em;
+  position: relative;
+  font-weight: 700;
+}
+@media only screen and (max-width: 768px) {
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dt {
+    width: 100%;
+    padding: 1em 0em 0;
+  }
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dt span {
+  position: absolute;
+  top: 2em;
+  right: 0;
+  background-color: #4D7C2D;
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-size: 13px;
+  padding: 4px 10px 3px 8px;
+}
+@media only screen and (max-width: 768px) {
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dt span {
+    font-size: 9px;
+    padding: 3px 5px 3px 4px;
+    position: relative;
+    display: inline-block;
+    top: -2px;
+    margin-left: 0.5em;
+  }
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd {
+  vertical-align: middle;
+  width: 100%;
+  padding: 1.1em 0 1.1em 1.5em;
+  position: relative;
+}
+@media only screen and (max-width: 768px) {
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd {
+    width: 100%;
+    padding: 0.75em 0em 1em 0em;
+  }
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd .wpcf7-form-control-wrap .wpcf7-not-valid-tip {
+  display: inline-block;
+  margin-top: 0.5em;
+  color: #e1251b;
+  font-size: 14px;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd .wpcf7-form-control-wrap .wpcf7-radio label input {
+  display: none;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=text],
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=email],
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=tel],
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd select, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd textarea {
+  background-color: #fff;
+  width: 100%;
+  padding: 1em 1em 0.9em;
+  border-radius: 5px;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=text]::-moz-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=email]::-moz-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=tel]::-moz-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd select::-moz-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd textarea::-moz-placeholder {
+  line-height: 1.3;
+  font-size: 16px;
+  -webkit-text-size-adjust: none;
+  color: #bababa;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=text]:-ms-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=email]:-ms-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=tel]:-ms-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd select:-ms-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd textarea:-ms-input-placeholder {
+  line-height: 1.3;
+  font-size: 16px;
+  -webkit-text-size-adjust: none;
+  color: #bababa;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=text]::-webkit-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=email]::-webkit-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=tel]::-webkit-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd select::-webkit-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd textarea::-webkit-input-placeholder {
+  line-height: 1.3;
+  font-size: 16px;
+  -webkit-text-size-adjust: none;
+  color: #bababa;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=text]::-ms-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=email]::-ms-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=tel]::-ms-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd select::-ms-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd textarea::-ms-input-placeholder {
+  line-height: 1.3;
+  font-size: 16px;
+  -webkit-text-size-adjust: none;
+  color: #bababa;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=text]::placeholder,
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=email]::placeholder,
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=tel]::placeholder,
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd select::placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd textarea::placeholder {
+  line-height: 1.3;
+  font-size: 16px;
+  -webkit-text-size-adjust: none;
+  color: #bababa;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+}
+@media only screen and (max-width: 768px) {
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=text],
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=email],
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=tel],
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd select, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd textarea {
+    padding: 1em 1em 0.9em;
+    font-size: 14px;
+  }
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=text]::-moz-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=email]::-moz-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=tel]::-moz-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd select::-moz-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd textarea::-moz-placeholder {
+    font-size: 14px;
+  }
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=text]:-ms-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=email]:-ms-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=tel]:-ms-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd select:-ms-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd textarea:-ms-input-placeholder {
+    font-size: 14px;
+  }
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=text]::-webkit-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=email]::-webkit-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=tel]::-webkit-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd select::-webkit-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd textarea::-webkit-input-placeholder {
+    font-size: 14px;
+  }
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=text]::-ms-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=email]::-ms-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=tel]::-ms-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd select::-ms-input-placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd textarea::-ms-input-placeholder {
+    font-size: 14px;
+  }
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=text]::placeholder,
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=email]::placeholder,
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=tel]::placeholder,
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd select::placeholder, body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd textarea::placeholder {
+    font-size: 14px;
+  }
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd ul.tel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: -2em;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd ul.tel > li {
+  width: 33.3333%;
+  padding-left: 2em;
+  position: relative;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd ul.tel > li + li:before {
+  position: absolute;
+  left: 0.5em;
+  top: 1.5em;
+  content: "";
+  display: block;
+  border-top: solid 1px #bababa;
+  width: 1em;
+}
+@media only screen and (max-width: 480px) {
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd ul.tel {
+    margin-left: -1.2em;
+  }
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd ul.tel > li {
+    padding-left: 1.2em;
+  }
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd ul.tel > li + li:before {
+    left: 0.3em;
+    width: 0.6em;
+  }
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd ul.zip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd ul.zip > li {
+  width: 36%;
+  padding-left: 2em;
+  position: relative;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd ul.zip > li:before {
+  position: absolute;
+  left: 0.1em;
+  top: 1em;
+  content: "〒";
+  color: #000;
+  font-weight: 600;
+  display: block;
+  width: 1em;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd ul.zip > li + li {
+  width: 64%;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd ul.zip > li + li:before {
+  position: absolute;
+  left: 0.5em;
+  top: 1.5em;
+  content: "";
+  display: block;
+  border-top: solid 1px #bababa;
+  width: 1em;
+}
+@media only screen and (max-width: 480px) {
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd ul.zip > li:before {
+    left: 0.3em;
+  }
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd ul.zip > li + li {
+    padding-left: 1.2em;
+  }
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd ul.zip > li + li:before {
+    left: 0.3em;
+    width: 0.6em;
+  }
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd .wpcf7-list-item {
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 1.5em;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd .wpcf7-radio {
+  display: block;
+  margin-top: 0.5em;
+}
+@media only screen and (max-width: 768px) {
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd .wpcf7-radio {
+    margin-top: 0em;
+  }
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=radio] + span {
+  position: relative;
+  display: inline-block;
+  padding-left: 25px;
+  cursor: pointer;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=radio] + span:before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  content: "";
+  border: 1px solid #a3a3a3;
+  border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #fff;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=radio] + span:after {
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  content: "";
+  border: 1px solid transparent;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  background: #a3a3a3;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=radio]:checked + span::after {
+  opacity: 1;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd textarea {
+  height: 16em;
+  width: 100%;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd .caution {
+  padding: 1em 0em 0.5em;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd .caution p {
+  line-height: 1.1;
+  font-size: 14px;
+}
+@media only screen and (max-width: 768px) {
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=text],
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=email],
+body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd input[type=tel] {
+    width: 100%;
+  }
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd textarea {
+    height: 10em;
+    width: 100%;
+  }
+  body#contact #wrapper #main_area .content_wrapper .form_area .form_table dl dd .wpcf7-list-item {
+    margin: 0.5em 2em 0.5em 0;
+  }
+}
+body#contact #wrapper #main_area .content_wrapper .wpcf7-form.custom-wpcf7c-confirmed .form_area .form_step > div.step01 .step_num {
+  color: #4D7C2D;
+  background-color: #fff;
+}
+body#contact #wrapper #main_area .content_wrapper .wpcf7-form.custom-wpcf7c-confirmed .form_area .form_step > div.step02 .step_num {
+  color: #fff;
+  background-color: #4D7C2D;
+}
+body#contact #wrapper #main_area .content_wrapper .wpcf7-form.custom-wpcf7c-confirmed .form_area .form_table dl dd input[type=text],
+body#contact #wrapper #main_area .content_wrapper .wpcf7-form.custom-wpcf7c-confirmed .form_area .form_table dl dd input[type=email],
+body#contact #wrapper #main_area .content_wrapper .wpcf7-form.custom-wpcf7c-confirmed .form_area .form_table dl dd input[type=tel],
+body#contact #wrapper #main_area .content_wrapper .wpcf7-form.custom-wpcf7c-confirmed .form_area .form_table dl dd select, body#contact #wrapper #main_area .content_wrapper .wpcf7-form.custom-wpcf7c-confirmed .form_area .form_table dl dd textarea {
+  background-color: #f8f8f8;
+  padding-left: 0;
+  padding-right: 0;
+  border: none;
+}
+body#contact #wrapper #main_area .content_wrapper .wpcf7-form.custom-wpcf7c-confirmed .form_area .form_table dl dd textarea {
+  height: auto;
+  padding-top: 0.5em;
+}
+body#contact #wrapper #main_area .content_wrapper .wpcf7-form.custom-wpcf7c-confirmed .form_area .form_table dl dd ul.tel > li input {
+  text-align: center;
+}
+body#contact #wrapper #main_area .content_wrapper .wpcf7-form.custom-wpcf7c-confirmed .form_area .form_table dl dd ul.zip input {
+  text-align: center;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area.thanks .form_step > div.step01 .step_num, body#contact #wrapper #main_area .content_wrapper .form_area.thanks .form_step > div.step02 .step_num {
+  color: #4D7C2D;
+  background-color: #fff;
+  font-family: "Roboto Condensed", sans-serif;
+}
+body#contact #wrapper #main_area .content_wrapper .form_area.thanks .form_step > div.step03 .step_num {
+  color: #fff;
+  background-color: #4D7C2D;
+  font-family: "Roboto Condensed", sans-serif;
+}
+body#contact #wrapper #main_area .content_wrapper .form_thanks_message {
+  background-color: #fff;
+  padding: 60px;
+}
+@media only screen and (max-width: 768px) {
+  body#contact #wrapper #main_area .content_wrapper .form_thanks_message {
+    padding: 30px;
+  }
+}
+body#contact #wrapper #main_area .content_wrapper .form_thanks_message h2 {
+  font-size: 25px5;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1.25em;
+}
+@media only screen and (max-width: 768px) {
+  body#contact #wrapper #main_area .content_wrapper .form_thanks_message h2 {
+    font-size: 20px;
+  }
+}
+body#contact #wrapper #main_area .content_wrapper .form_thanks_message p {
+  text-align: center;
+  letter-spacing: 2.5;
+  font-size: 14px;
+}
+body#contact #wrapper #main_area .content_wrapper .form_btn_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 80px;
+  margin-left: -25px;
+  margin-right: -25px;
+}
+body#contact #wrapper #main_area .content_wrapper .form_btn_area > p {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+body#contact #wrapper #main_area .content_wrapper .form_btn_area > p button,
+body#contact #wrapper #main_area .content_wrapper .form_btn_area > p input, body#contact #wrapper #main_area .content_wrapper .form_btn_area > p a {
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  padding: 1em 0.5em 0.9em;
+  background-color: #4D7C2D;
+  border: solid 2px #4D7C2D;
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+  margin: auto;
+  width: 250px;
+  max-width: 100%;
+}
+body#contact #wrapper #main_area .content_wrapper .form_btn_area > p button:hover, body#contact #wrapper #main_area .content_wrapper .form_btn_area > p button:active,
+body#contact #wrapper #main_area .content_wrapper .form_btn_area > p input:hover,
+body#contact #wrapper #main_area .content_wrapper .form_btn_area > p input:active, body#contact #wrapper #main_area .content_wrapper .form_btn_area > p a:hover, body#contact #wrapper #main_area .content_wrapper .form_btn_area > p a:active {
+  text-decoration: none;
+}
+@media only screen and (min-width: 769px) {
+  body#contact #wrapper #main_area .content_wrapper .form_btn_area > p button,
+body#contact #wrapper #main_area .content_wrapper .form_btn_area > p input, body#contact #wrapper #main_area .content_wrapper .form_btn_area > p a {
+    opacity: 1;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  body#contact #wrapper #main_area .content_wrapper .form_btn_area > p button:hover,
+body#contact #wrapper #main_area .content_wrapper .form_btn_area > p input:hover, body#contact #wrapper #main_area .content_wrapper .form_btn_area > p a:hover {
+    opacity: 0.8;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+}
+body#contact #wrapper #main_area .content_wrapper .form_btn_area > p.back {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+body#contact #wrapper #main_area .content_wrapper .form_btn_area > p.back button,
+body#contact #wrapper #main_area .content_wrapper .form_btn_area > p.back input {
+  background-color: #fff;
+  color: #4D7C2D;
+}
+body#contact #wrapper #main_area .content_wrapper .form_btn_area > p + p {
+  margin-top: 0;
+}
+body#contact #wrapper #main_area .content_wrapper div.wpcf7-validation-errors, body#contact #wrapper #main_area .content_wrapper div.wpcf7-acceptance-missing {
+  border-style: none;
+  color: #e1251b;
+}
+body#contact #wrapper #main_area .content_wrapper div.wpcf7-response-output {
+  text-align: center;
+  margin: 0.5em 0 0;
+  padding: 0;
+  border-style: none;
+  color: #e1251b;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+/*                記事系
+======================================================= */
+/*                お問い合わせ
+======================================================= */

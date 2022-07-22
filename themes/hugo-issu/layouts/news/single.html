@@ -1,0 +1,60 @@
+{{ define "main" }}{{ if and (.Params.otherlink) (ne .Params.otherlink "") }}{{- partial "inc-404.html" . -}}{{ else }}
+</head>
+<body id="news" class="lower detail">
+  <div id="wrapper">
+    <div class="flex-wrapper">
+      {{- partial "inc-header.html" . -}}
+      <div class="main_container">
+        <div id="main_area" role="main">
+          <section id="top_kv" class="content_wrapper">
+            <img src="/asset_utokyo-is/media/images/applicants/kv_applicants.jpg" alt="KV" width="1340" height="240">
+            <div class="overlay_text">
+              <h2>新着情報</h2>
+              <p>NEWS</p>
+            </div>
+          </section>
+
+          <div id="bread">
+            <ol>
+              <li><a href="/"><span class="home"></span></a></li>
+              <li><a href="/news/"><span>新着情報一覧</span></a></li>
+              <li><a href="{{ .Permalink }}"><span>{{ .Title }}</span></a></li>
+            </ol>
+          </div>
+
+
+          <section id="content_area" class="content_wrapper">
+            <div class="main_width">
+              <div class="content_inner">
+                <div class="flex_container">
+                  <div class="section_title">
+                    <h3><span>新着情報</span></h3>
+                    <p>NEWS</p>
+                  </div>
+                  <div class="section_main_content">
+                    <div class="news_content">
+
+                      <div class="content_date">
+                        <p>{{.Date.Format "2006年1月2日"}}</p>
+                      </div>
+                      <h4 class="content_title"><span>{{ .Title }}</span></h4>
+
+                      <div class="article_area">
+                        {{ .Content }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section><!-- member_list_area -->
+
+          {{- partial "inc-pagetop.html" . -}}
+        </div>
+      </div>
+    </div>
+  </div><!-- wrapper -->
+  {{- partial "inc-footer.html" . -}}
+  {{- partial "inc-sp_menu.html" . -}}
+  {{- partial "inc-js.html" . -}}
+ {{ end }}{{ end }}

@@ -1,0 +1,134 @@
+{{ define "main" }}
+</head>
+<body id="lecture_info" class="lower lecture_list">
+  <div id="wrapper">
+    <div class="flex-wrapper">
+      {{- partial "inc-header.en.html" . -}}
+
+      <div class="main_container">
+        <div id="main_area" role="main">
+          <section id="top_kv" class="content_wrapper">
+            <img src="/en/asset_utokyo-is/media/images/news_lecture/kv_news_lecture.jpg" alt="KV" width="1340" height="240">
+            <div class="overlay_text">
+              <h2>Department Lecture</h2>
+            </div>
+          </section>
+
+          <div id="bread">
+            <ol>
+              <li><a href="/en/"><span class="home"></span></a></li>
+              <li><a href="/en/news/"><span>Department Lecture</span></a></li>
+            </ol>
+          </div>
+
+          <section id="list_area" class="content_wrapper">
+            <div class="main_width">
+              <div class="content_inner">
+                <div class="flex_container">
+                  <div class="section_title">
+                    <h3><span>Department Lecture</span></h3>
+                  </div>
+                  {{ $paginator := .Paginate (where $.Site.RegularPages "Section" "lecture") 20 }}
+                  <div class="section_main_content">
+                    <div class="article_list">
+                      {{ range $paginator.Pages }}
+  
+                      <div class="article_item_wrap">
+                        <a href="{{ if and (.Params.otherlink) (ne .Params.otherlink "") }}{{ .Params.otherlink }}{{ else }}{{ .Permalink }}{{ end }}">
+                          <dl class="article_item">
+                            <dt class="item_date">
+                              <p>{{ if and (.Params.helddate) (ne .Params.helddate "") }}{{ .Params.helddate }}{{ end }}{{ if and (.Params.heldtime) (ne .Params.heldtime "") }}, {{ .Params.heldtime }}{{ end }}</p>
+                            </dt>
+                            <dd class="item_title">
+                              {{ if and (.Params.speaker) (ne .Params.speaker "") }}<p>{{ .Params.speaker }}</p>{{ else }}<p>{{ .Title }}</p>{{ end }}
+                              {{ if and (.Params.technique) (ne .Params.technique "") }}<p>{{ .Params.technique }}</p>{{ end }}
+                            </dd>
+                          </dl>
+                        </a>
+                      </div>
+                      {{ end }}
+                    </div>
+                    {{ $adjacent_links := 2 }}
+                    {{ $max_links      := (add (mul $adjacent_links 2) 1) }}
+                    {{ $lower_limit    := (add $adjacent_links 1) }}
+                    {{ $upper_limit    := (sub $paginator.TotalPages $adjacent_links) }}
+                    {{ if gt $paginator.TotalPages 1 }}
+                    <div class="pagenation">
+                     <ul>
+                      <!-- Goto First page. -->
+                      {{ if ne $paginator.PageNumber 1 }}
+                      <li class="pagination__item pagination__item--first">
+                       <a class="pagination__link pagination__link--first" href="{{ $paginator.First.Permalink }}">
+                        &lsaquo;&lsaquo;
+                       </a>
+                      </li>
+                      {{ end }}
+                      <!-- Previous page. -->
+                      {{ if $paginator.HasPrev }}
+                      <li class="pagination__item pagination__item--previous">
+                       <a href="{{ $paginator.Prev.Permalink }}" class="pagination__link pagination__link--previous">
+                        &lsaquo;
+                       </a>
+                      </li>
+                      {{ end }}
+                      {{ range $paginator.Pagers }}
+                      {{ $.Scratch.Set "page_number_flag" false }}
+                      {{ if gt $paginator.TotalPages $max_links }}
+                      {{ if le $paginator.PageNumber $lower_limit }}
+                      {{ if le .PageNumber $max_links }}
+                      {{ $.Scratch.Set "page_number_flag" true }}
+                      {{ end }}
+                      {{ else if ge $paginator.PageNumber $upper_limit }}
+                      {{ if gt .PageNumber (sub $paginator.TotalPages $max_links) }}
+                      {{ $.Scratch.Set "page_number_flag" true }}
+                      {{ end }}
+                      {{ else }}
+                      {{ if and ( ge .PageNumber (sub $paginator.PageNumber $adjacent_links) ) ( le .PageNumber (add $paginator.PageNumber $adjacent_links) ) }}
+                      {{ $.Scratch.Set "page_number_flag" true }}
+                      {{ end }}
+                      {{ end }}
+                      {{ else }}
+                      {{ $.Scratch.Set "page_number_flag" true }}
+                      {{ end }}
+                      {{ if eq ($.Scratch.Get "page_number_flag") true }}
+                      <li {{ if eq . $paginator }} class="active" {{ end }}>
+                       <a href="{{ .Permalink }}">
+                        {{ .PageNumber }}
+                       </a>
+                      </li>
+                      {{ end }}
+                      {{ end }}
+                      <!-- Next page. -->
+                      {{ if $paginator.HasNext }}
+                      <li class="pagination__item pagination__item--next">
+                       <a href="{{ $paginator.Next.Permalink }}">
+                        &rsaquo;
+                       </a>
+                      </li>
+                      {{ end }}
+                      <!-- Last page. -->
+                      {{ if ne $paginator.PageNumber $paginator.TotalPages }}
+                      <li class="pagination__item pagination__item--last">
+                       <a href="{{ $paginator.Last.Permalink }}">
+                        &rsaquo;&rsaquo;
+                       </a>
+                      </li>
+                      {{ end }}
+                     </ul>
+                    </div>
+                    {{ end }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section><!-- member_list_area -->
+
+          {{- partial "inc-pagetop.html" . -}}
+        </div>
+      </div>
+    </div>
+  </div><!-- wrapper -->
+  {{- partial "inc-footer.en.html" . -}}
+  {{- partial "inc-sp_menu.en.html" . -}}
+  {{- partial "inc-js.html" . -}}
+ {{ end }}

@@ -1,0 +1,165 @@
+{{ define "main" }}
+</head>
+<body id="about" class="lower">
+  <div id="wrapper">
+    <div class="flex-wrapper">
+      {{- partial "inc-header.html" . -}}
+
+      <div class="main_container">
+        <div id="main_area" role="main">
+          <section id="top_kv" class="content_wrapper">
+            <img src="/asset_utokyo-is/media/images/about/kv_about.jpg" alt="KV" width="1340" height="240">
+            <div class="overlay_text">
+              <h2>学科概要</h2>
+              <p>About Dept. of IS</p>
+            </div>
+          </section>
+
+          <div id="bread">
+            <ol>
+              <li><a href="/"><span class="home"></span></a></li>
+              <li><a href="{{ .Permalink }}"><span>学科概要</span></a></li>
+            </ol>
+          </div>
+
+          <div id="category_selector">
+            <div class="main_width">
+              <ul class="selector">
+                <!-- <li class="selector_item">
+                  <div class="item_inner">
+                    <a href="javascript:void(0)" class="selector_btn current" data-activate_area="members_list_area">概要</a>
+                  </div>
+                </li>
+                <li class="selector_item">
+                  <div class="item_inner">
+                    <a href="https://www.is.s.u-tokyo.ac.jp/about/history.html" class="selector_btn " data-activate_area="labs_list_area">沿革</a>
+                  </div>
+                </li>
+                <li class="selector_item">
+                  <div class="item_inner">
+                    <a href="https://www.is.s.u-tokyo.ac.jp/about/access.html" class="selector_btn " data-activate_area="labs_list_area">アクセス</a>
+                  </div>
+                </li>
+                <li class="selector_item">
+                  <div class="item_inner">
+                    <a href="https://www.s.u-tokyo.ac.jp/ja/video/" class="selector_btn " data-activate_area="labs_list_area">情報学科紹介ビデオ</a>
+                  </div>
+                </li> -->
+              </ul>
+            </div>
+
+          </div>
+          <section id="field_area" class="content_wrapper">
+            <div class="main_width">
+              <div class="content_inner">
+                <div class="flex_container">
+                  <div class="section_title">
+                    <h3><span>学問分野の紹介</span></h3>
+                    <p>Fields of Study</p>
+                  </div>
+                  <div class="section_main_content">
+                    <div class="text_wrap">
+                      <p>今日社会基盤となり将来の社会・自然科学の展開に不可欠な情報科学について研究・教育を行っている。情報技術は広く科学技術の根幹を成す技術であり、情報と名のつく学科は数多く存在するが、そのほとんどは計算機を道具として利用するだけのものである。理学部情報科学科では、情報処理の根本原理の究明・まったく新しい動作原理の計算機の設計・計算機の新しい使い方の提案というように、計算機・情報そのものを研究対象としている点を特徴としている。具体的には、計算そして知能に関する基礎的な理論、計算機システム・ネットワークの構成法、グラフィックス・自然言語処理・生物情報などの応用分野、そして量子計算・分子計算などの新計算モデルについて研究を行っている。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section><!-- field_area -->
+
+          <section id="curriculum_area" class="content_wrapper">
+            <div class="main_width">
+              <div class="content_inner">
+                <div class="flex_container">
+                  <div class="section_title">
+                    <h3><span>カリキュラム</span><span>概要</span></h3>
+                    <p>Curriculum</p>
+                  </div>
+                  <div class="section_main_content">
+                    <div class="text_wrap">
+                      <p>情報科学科では、情報科学の最先端の研究を行うために必要な素養を習得することを目的に、計算機科学の基礎科目を中心としたカリキュラムが組まれている。特に、駒場の4学期から三年の夏冬学期において、情報科学のための数学や論理学、各種アルゴリズムの基礎、計算システム（ソフトウェアおよびハードウェア）の構成法、人工知能などに関する講義と演習・実験など非常に重要な科目を学習する。特に実験・演習ではコンパイラなどのソフトウェアを開発するプログラミング実験、プロセッサを作成するハードウェア実験を通して情報システムの基本を身に付けるとともに、大学院での研究や就職後における研究開発の基盤となる実践力を体得する。</p>
+                      <p>情報科学科カリキュラムの特徴は、数少ない講義で基礎項目の実力練成を狙っていることである。そのため、駒場の4学期から三年の夏冬学期における講義はすべて必修になっている。また三年の夏冬学期は原則として講義が午前中二限に一科目開講されるだけで、午後はすべて実験・演習に充てられる。
+                      </p>
+                      <p>四年の夏学期から、最先端の研究への入門的な講義が選択科目として始まる。これらの講義を通して、卒業研究や大学院での研究の方向付けをすることが期待される。四年の冬学期は卒業研究にあてられる。この時点で研究室に配属され卒業研究を行い、最終的に卒業論文をまとめる。</p>
+                    </div>
+
+                    <div class="link_btn_list_wrap">
+                      <ul class="btn_list">
+                        <li class="btn_item">
+                          <a href="/student/">
+                            <span>詳細</span>
+                          </a>
+                        </li>
+                        <!-- <li class="btn_item">
+                          <a href="/student/lecture/">
+                            <span>各講義の内容</span>
+                          </a>
+                        </li> -->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section><!-- carriculum_area -->
+
+          <!-- <section id="past_area" class="content_wrapper">
+            <div class="main_width">
+              <div class="content_inner">
+                <div class="flex_container">
+                  <div class="section_title">
+                    <h3><span>過去の学科紹介</span></h3>
+                    <p>Introduction of past departments</p>
+                  </div>
+                  <div class="section_main_content">
+                    <div class="link_btn_list_wrap">
+                      <ul class="btn_list"> -->
+          <!-- <li class="btn_item">
+                          <a href="/vu/21/" target="_blank">
+                            <span>’21年度版</span>
+                          </a>
+                        </li> -->
+          <!-- <li class="btn_item">
+                          <a href="/vu/03/" target="_blank">
+                            <span>’03年度版</span>
+                          </a>
+                        </li>
+                        <li class="btn_item">
+                          <a href="/vu/01/" target="_blank">
+                            <span>’01年度版</span>
+                          </a>
+                        </li>
+                        <li class="btn_item">
+                          <a href="/vu/99/" target="_blank">
+                            <span>’99年度版</span>
+                          </a>
+                        </li>
+                        <li class="btn_item">
+                          <a href="/vu/97/" target="_blank">
+                            <span>’97年度版</span>
+                          </a>
+                        </li>
+                        <li class="btn_item">
+                          <a href="/vu/96/" target="_blank">
+                            <span>’96年度版</span>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section> -->
+          <!-- past_area -->
+
+          {{- partial "inc-pagetop.html" . -}}
+        </div>
+      </div>
+    </div>
+  </div><!-- wrapper -->
+  {{- partial "inc-footer.html" . -}}
+  {{- partial "inc-sp_menu.html" . -}}
+  {{- partial "inc-js.html" . -}}
+ {{ end }}

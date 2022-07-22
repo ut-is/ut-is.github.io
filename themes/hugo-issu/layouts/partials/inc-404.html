@@ -1,0 +1,46 @@
+</head>
+<body class="lower detail">
+  <div id="wrapper">
+    <div class="flex-wrapper">
+      {{- partial "inc-header.html" . -}}
+      <div class="main_container">
+        <div id="main_area" role="main">
+          <section id="top_kv" class="content_wrapper">
+            <img src="/asset_utokyo-is/media/images/applicants/kv_applicants.jpg" alt="KV" width="1340" height="240">
+            <div class="overlay_text">
+              <h2>404 Not Found</h2>
+            </div>
+          </section>
+
+          <div id="bread">
+            <ol>
+              <li><a href="/"><span class="home"></span></a></li>
+              <li><a href="{{ .Permalink }}"><span>404 Not Found</span></a></li>
+            </ol>
+          </div>
+
+
+          <section id="content_area" class="content_wrapper">
+            <div class="main_width">
+              <div class="content_inner">
+                <div class="flex_container">
+                  <div class="section_title">
+                    <h3><span>404 Not Found</span></h3>
+                  </div>
+                  <div class="section_main_content">
+                      <p>ページが見つかりません</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section><!-- member_list_area -->
+
+          {{- partial "inc-pagetop.html" . -}}
+        </div>
+      </div>
+    </div>
+  </div><!-- wrapper -->
+  {{- partial "inc-footer.html" . -}}
+  {{- partial "inc-sp_menu.html" . -}}
+  {{- partial "inc-js.html" . -}}
+

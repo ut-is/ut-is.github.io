@@ -1,0 +1,440 @@
+{{ define "main" }}
+<style>{{ replaceRE `@charset "UTF-8";` "" (replaceRE "\n" "" (partial "first_view.css" .)) | safeCSS }}</style>
+</head>
+<body id="home" class="home">
+  <div id="wrapper">
+    <div class="flex-wrapper">
+     {{- partial "inc-header.en.html" . -}}
+     
+     <div class="main_container">
+      <div id="first_view">
+        <div id="home_kv">
+          <div class="home_kv_inner">
+            <div class="kv_slides en">
+              <div class="slides_cont">
+                <img class="sp_none" src="/en/asset_utokyo-is/media/images/home/main_kv_001.jpg" width="1340" height="660" alt="kv">
+              </div>
+              <!-- <div class="slides_cont">
+                <img class="sp_none" src="/en/asset_utokyo-is/media/images/home/main_kv_002.jpg" width="1600" height="800" alt="kv">
+              </div> -->
+              <div class="slides_cont">
+                <img class="sp_none" src="/en/asset_utokyo-is/media/images/home/main_kv_003.jpg" width="1600" height="800" alt="kv">
+              </div>
+            </div>
+
+            <div class="overlay_cont">
+              <div class="catch_area">
+                <div class="kv_catch">
+                  <span>Department of Computer Science</span>
+                  <span>The University of Tokyo</span>
+                </div>
+                <div class="slide_controller_wrap sp">
+                  <ul class="slide_controller">
+                    <li class="slide_button">
+                      <span></span>
+                    </li>
+                    <li class="slide_button">
+                      <span></span>
+                    </li>
+                    <!-- <li class="slide_button">
+                      <span></span>
+                    </li> -->
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+
+          </div><!-- home_kv_inner -->
+
+        </div><!-- home_kv -->
+      </div><!-- first_view -->
+
+      <div class="info_area_wrap en">
+        <div class="info_area en">
+          <ul class="banner_list en">
+            <li class="banner_item en">
+              <a href="/files/2022/utokyo_ISguide2022_all.pdf" target="_blank">
+                <div class="item_inner">
+                  <img src="/en/asset_utokyo-is/media/images/home/banner_004_en.jpg" alt="学科紹介パンフレット　2022年度版" width="360" height="110">
+                </div>
+              </a>
+            </li>
+            <li class="banner_item en">
+              <a href="https://www.s.u-tokyo.ac.jp/ja/rigakuru/is/" target="_blank">
+                <div class="item_inner">
+                  <img src="/en/asset_utokyo-is/media/images/home/banner_001_en.jpg" alt="RIGAKU-RU" width="360" height="110">
+                </div>
+              </a>
+            </li>
+          </ul>
+
+
+          <ul class="link_list en">
+            <li class="link_list_item en">
+              <a href="https://www.u-tokyo.ac.jp/en/" target="_blank"><span class="en">The University of Tokyo</span></a>
+            </li>
+            <li class="link_list_item en">
+              <a href="https://www.s.u-tokyo.ac.jp/en/" target="_blank"><span class="en">School of Science</span></a>
+            </li>
+            <li class="link_list_item en">
+              <a href="https://www.i.u-tokyo.ac.jp/" target="_blank"><span class="en">Grad School of IST</span></a>
+            </li>
+          </ul>
+
+          <div class="slide_controller_wrap pc en">
+            <ul class="slide_controller">
+              <li class="slide_button">
+                <span></span>
+              </li>
+              <li class="slide_button">
+                <span></span>
+              </li>
+              <!-- <li class="slide_button">
+                <span></span>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="main_area" role="main">
+        <div id="news_lectures" class="content_wrapper">
+          <section id="news" class="flex-content_wrapper">
+            <div class="flex_content">
+              <div class="content_title">
+                <h2><span>NEWS</span></h2>
+              </div>
+              <div class="info_list">
+                {{ range first 5 (where $.Site.RegularPages "Section" "news") }}<a href="{{ if and (.Params.otherlink) (ne .Params.otherlink "") }}{{ .Params.otherlink }}{{ else }}{{ .Permalink }}{{ end }}" target="_blank" class="blank">
+                  <dl class="list_item">
+                    <dt class="date">{{.Date.Format "January 2, 2006"}}</dt>
+                    <dd class="title">{{ .Title }}</dd>
+                  </dl>
+                </a>
+                {{ end }}
+              </div>
+
+              <div class="more_btn">
+                <a href="/en/news/">see more</a>
+              </div>
+            </div>
+          </section>
+          <section id="lectures" class="flex-content_wrapper">
+            <div class="flex_content">
+              <div class="content_title">
+                <h2><span>Department Lecture</span></h2>
+              </div>
+              <div class="info_list">
+                {{ range first 5 (where $.Site.RegularPages "Section" "lecture") }}<a href="{{ if and (.Params.otherlink) (ne .Params.otherlink "") }}{{ .Params.otherlink }}{{ else }}{{ .Permalink }}{{ end }}" target="_blank" class="blank">
+                  <dl class="list_item">
+                    <dt class="date">{{ if and (.Params.helddate) (ne .Params.helddate "") }}{{ .Params.helddate }}{{ end }}{{ if and (.Params.heldtime) (ne .Params.heldtime "") }}, {{ .Params.heldtime }}{{ end }}
+                    </dt>
+                    <dd class="title">{{ if and (.Params.speaker) (ne .Params.speaker "") }}{{ .Params.speaker }}{{ else }}{{ .Title }}{{ end }}</dt>
+                    {{ if and (.Params.technique) (ne .Params.technique "") }}<p class="method">{{ .Params.technique }}</p>{{ end }}
+                    
+                  </dl>
+                </a>
+
+                {{ end }}
+              </div>
+
+              <div class="more_btn">
+                <a href="/en/lecture/">see more</a>
+              </div>
+            </div>
+          </section>
+
+        </div><!-- news_lectures -->
+
+        <div id="link_area" class="content_wrapper">
+          <div class="main_width">
+            <div class="content_inner">
+              <ul class="link_list">
+                <li class="link_item">
+
+                  <div class="item_inner">
+                    <div class="page_icon">
+                      <img src="/en/asset_utokyo-is/media/images/home/page_icon_001.png" alt="About Dept. of IS" width="50" height="74">
+                    </div>
+                    <div class="page_name">
+                      <a href="/en/about">
+                        <p class="name_ja">About Dept. of IS</p>
+                      </a>
+                    </div>
+                    <div class="link_btn">
+                      <a href="/en/about/">MORE</a>
+                    </div>
+                  </div>
+
+                </li>
+                <li class="link_item">
+                  <div class="item_inner">
+                    <div class="page_icon">
+                      <img src="/en/asset_utokyo-is/media/images/home/page_icon_002.png" alt="Members" width="78" height="74">
+                    </div>
+                    <div class="page_name">
+                      <a href="/en/lab-members/">
+                        <p class="name_ja"><span>Lab. / </span><span>Members</span></p>
+                      </a>
+                    </div>
+                    <div class="link_btn">
+                      <a href="/en/lab-members/">MORE</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="link_item">
+                  <div class="item_inner">
+                    <div class="page_icon">
+                      <img src="/en/asset_utokyo-is/media/images/home/page_icon_004.png" alt="Curriculum" width="46" height="74">
+                    </div>
+                    <div class="page_name">
+                      <a href="https://www.is.s.u-tokyo.ac.jp/shingaku/">
+                        <p class="name_ja">
+                          <span>for Komaba</span>
+                          <span>Students</span>
+                        </p>
+                      </a>
+                    </div>
+                    <div class="link_btn">
+                      <a href="https://www.is.s.u-tokyo.ac.jp/shingaku/">MORE</a>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="link_item">
+                  <div class="item_inner">
+                    <div class="page_icon">
+                      <img src="/en/asset_utokyo-is/media/images/home/page_icon_005.png" alt="Schedule" width="64" height="74">
+                    </div>
+                    <div class="page_name">
+                      <a href="/en/student/">
+                        <p class="name_ja">
+                          <span>for Undergrad</span>
+                          <span>Sci. Students</span>
+                        </p>
+                      </a>
+                    </div>
+
+                    <div class="link_btn">
+                      <a href="/en/student/">MORE</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="link_item">
+                  <div class="item_inner">
+                    <div class="page_icon">
+                      <img src="/en/asset_utokyo-is/media/images/home/page_icon_006.png" alt="Graduation Requirements" width="84" height="74">
+                    </div>
+                    <div class="page_name">
+                      <a href="https://www.i.u-tokyo.ac.jp/edu/course/cs/index_e.shtml" target="_blank">
+                        <p class="name_ja">
+                          <span>for Grad</span>
+                          <span>Students</span>
+                        </p>
+                      </a>
+                    </div>
+                    <div class="link_btn">
+                      <a href="https://www.i.u-tokyo.ac.jp/edu/course/cs/index_e.shtml" target="_blank">MORE</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="link_item">
+                  <div class="item_inner">
+                    <div class="page_icon">
+                      <img src="/en/asset_utokyo-is/media/images/home/page_icon_003.png" alt="Laboratories" width="60" height="74">
+                    </div>
+                    <div class="page_name">
+                      <a href="https://www.i.u-tokyo.ac.jp/edu/course/cs/admission_e.shtml" target="_blank">
+                        <p class="name_ja">Entrance Exam</p>
+                      </a>
+                    </div>
+                    <div class="link_btn">
+                      <a href="https://www.i.u-tokyo.ac.jp/edu/course/cs/admission_e.shtml" target="_blank">MORE</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- link_area -->
+
+        <div id="banner_area" class="content_wrapper">
+          <div class="main_width">
+            <div class="content_inner">
+              <ul class="banner_list">
+                <li class="banner_item">
+                  <a href="/files/2022/utokyo_ISguide2022_all.pdf" target="_blank">
+                    <div class="item_inner">
+                      <img src="/en/asset_utokyo-is/media/images/home/banner_004_en.jpg" alt="Department Introduction Pamphlet Edition for the year 2022" width="360" height="110">
+                    </div>
+                  </a>
+                </li>
+                <li class="banner_item">
+                  <a href="https://www.s.u-tokyo.ac.jp/ja/rigakuru/is/" target="_blank">
+                    <div class="item_inner">
+                      <img src="/en/asset_utokyo-is/media/images/home/banner_001_en.jpg" alt="RIGAKU-RU" width="360" height="110">
+                    </div>
+                  </a>
+                </li>
+                <li class="banner_item">
+                  <a href="https://www.is.s.u-tokyo.ac.jp/alumni/">
+                    <div class="item_inner">
+                      <img src="/en/asset_utokyo-is/media/images/home/banner_002.jpg" width="360" height="110" alt="UNIVERSITY OF TOKYO SHINSEIKAI">
+                    </div>
+                  </a>
+                </li>
+                <!-- <li class="banner_item">
+                  <a href="/">
+                    <div class="item_inner">
+                      <img src="/en/asset_utokyo-is/media/images/home/banner_003.jpg" width="360" height="110" alt="キャンパス　スナップショット">
+                    </div>
+                  </a>
+                </li> -->
+                <!-- <li class="banner_item">
+                  <a href="/en/asset_utokyo-is/media/pdf/220330_is2022.pdf" target="_blank">
+                    <div class="item_inner">
+                      <img src="/en/asset_utokyo-is/media/images/home/banner_004_en.jpg" alt="Department Introduction Pamphlet Edition for the year 2022" width="360" height="110">
+                    </div>
+                  </a>
+                </li> -->
+                <!-- <li class="banner_item">
+                  <a href="/">
+                    <div class="item_inner">
+                      <img src="/en/asset_utokyo-is/media/images/home/banner_005.jpg" alt="情報科学科" width="360" height="110">
+                    </div>
+                  </a>
+                </li> -->
+                <li class="banner_item">
+                  <a href="/en/internal">
+                    <div class="item_inner">
+                      <img src="/en/asset_utokyo-is/media/images/home/banner_006_en.jpg" alt="Click here for Concerned Only" width="360" height="110">
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- banner_area -->
+
+        <div id="movie_area" class="content_wrapper">
+          <div class="main_width">
+            <div class="content_inner">
+              <div class="title">
+                <h2><span>Movies</span></h2>
+              </div>
+
+              <div class="movie_list_wrap">
+                <div class="movie_list">
+                  <div class="movie_item">
+                    <a href="https://www.youtube.com/watch?v=G_RMcEDy9ow" class="popup-youtube">
+                      <img src="/en/asset_utokyo-is/media/images/home/test_movie.jpg" alt="" width="480" height="270">
+                    </a>
+                  </div>
+                  <div class="movie_item">
+                    <a href="https://www.youtube.com/watch?v=G_RMcEDy9ow" class="popup-youtube">
+                      <img src="/en/asset_utokyo-is/media/images/home/test_movie.jpg" alt="" width="480" height="270">
+                    </a>
+                  </div>
+                  <div class="movie_item">
+                    <a href="https://www.youtube.com/watch?v=G_RMcEDy9ow" class="popup-youtube">
+                      <img src="/en/asset_utokyo-is/media/images/home/test_movie.jpg" alt="" width="480" height="270">
+                    </a>
+                  </div>
+                  <div class="movie_item">
+                    <a href="https://www.youtube.com/watch?v=G_RMcEDy9ow" class="popup-youtube">
+                      <img src="/en/asset_utokyo-is/media/images/home/test_movie.jpg" alt="" width="480" height="270">
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div><!-- banner_area -->
+
+        {{- partial "inc-pagetop.html" . -}}
+      </div><!-- main_area -->
+    </div><!-- main_container -->
+    </div>
+ 
+   </div><!-- wrapper -->
+   {{- partial "inc-footer.en.html" . -}}
+   {{- partial "inc-sp_menu.en.html" . -}}
+   {{- partial "inc-js.html" . -}}
+   <script src="{{ "/asset_utokyo-is/js/slick.min.js" | absURL }}"></script>
+   <script src="{{ "/asset_utokyo-is/js/jquery.magnific-popup.min.js" | absURL }}"></script>   
+  <script>
+    //ファーストビューSP時の画面FIXjs(アドレスバーを考慮)
+    var w_width;
+    var w_height;
+    var old_width;
+    var is_animating = false;
+    var sp_chatch_offset = 90;
+    $(window).on('load resize', function() {
+      w_width = $(window).width();
+      var active_index;
+      if (w_width < 480) {
+        active_index = $(".slide_controller_wrap.pc").find(".active").index(".active");
+        if (active_index !== -1) {
+          $(".slide_controller_wrap.sp").find(".slide_button").eq(active_index).addClass("active");
+        }
+      } else {
+        active_index = $(".slide_controller_wrap.sp").find(".active").index(".active");
+        if (active_index !== -1) {
+          $(".slide_controller_wrap.pc").find(".slide_button").eq(active_index).addClass("active");
+        }
+      }
+    });
+    $('.kv_slides').on('init', function(event, slick) {
+      $(".slide_button").eq(0).addClass("active");
+    });
+    //KVスライダーjs
+    $('.kv_slides').slick({
+      autoplay: true,
+      autoplaySpeed: 3000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: true,
+      speed: 800,
+      infinite: true,
+      //centerMode: true,
+      centerPadding: '0',
+      arrows: false,
+      dots: false,
+    });
+    // スライダーのコントローラに関する処理
+    $(function() {
+      $(".slide_button").on("click", function() {
+        if (is_animating === true) {
+          return;
+        }
+        $(".slide_button").siblings(".active").removeClass("active");
+        $(this).addClass("active");
+        $(".kv_slides").slick("slickGoTo", $(this).index(), false);
+      })
+      // スライドが変わる直前
+      $(".kv_slides").on("beforeChange", function(event, slick, currentSlide, nextSlide) {
+        $(".slide_button").siblings(".active").removeClass("active");
+        if (w_width < 480) {
+          $(".slide_controller_wrap.sp").find(".slide_button").eq(nextSlide).addClass("active");
+        } else {
+          $(".slide_controller_wrap.pc").find(".slide_button").eq(nextSlide).addClass("active");
+        }
+        is_animating = true;
+      })
+      // スライドが変わった直後
+      $(".kv_slides").on("afterChange", function(event, slick, currentSlide) {
+        is_animating = false;
+      })
+      $(function() {
+        $('.popup-youtube').magnificPopup({
+          type: 'iframe',
+          removalDelay: 200,
+        });
+      });
+    })
+  </script>
+ {{ end }}

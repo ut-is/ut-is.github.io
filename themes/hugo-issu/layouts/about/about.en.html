@@ -1,0 +1,160 @@
+{{ define "main" }}
+</head>
+<body id="about" class="lower">
+  <div id="wrapper">
+    <div class="flex-wrapper">
+      {{- partial "inc-header.en.html" . -}}
+
+      <div class="main_container">
+        <div id="main_area" role="main">
+          <section id="top_kv" class="content_wrapper">
+            <img src="/en/asset_utokyo-is/media/images/about/kv_about.jpg" alt="KV" width="1340" height="240">
+            <div class="overlay_text">
+              <h2>About Dept. of IS</h2>
+            </div>
+          </section>
+
+          <div id="bread">
+            <ol>
+              <li><a href="/en/"><span class="home"></span></a></li>
+              <li><a href="{{ .Permalink }}"><span>About Dept. of IS</span></a></li>
+            </ol>
+          </div>
+
+          <div id="category_selector">
+            <div class="main_width">
+              <ul class="selector">
+                <!-- <li class="selector_item">
+                  <div class="item_inner">
+                    <a href="javascript:void(0)" class="selector_btn current" data-activate_area="members_list_area">概要</a>
+                  </div>
+                </li>
+                <li class="selector_item">
+                  <div class="item_inner">
+                    <a href="https://www.is.s.u-tokyo.ac.jp/about/history.html" class="selector_btn " data-activate_area="labs_list_area">沿革</a>
+                  </div>
+                </li>
+                <li class="selector_item">
+                  <div class="item_inner">
+                    <a href="https://www.is.s.u-tokyo.ac.jp/about/access.html" class="selector_btn " data-activate_area="labs_list_area">アクセス</a>
+                  </div>
+                </li>
+                <li class="selector_item">
+                  <div class="item_inner">
+                    <a href="https://www.s.u-tokyo.ac.jp/ja/video/" class="selector_btn " data-activate_area="labs_list_area">情報学科紹介ビデオ</a>
+                  </div>
+                </li> -->
+              </ul>
+            </div>
+
+          </div>
+          <section id="field_area" class="content_wrapper">
+            <div class="main_width">
+              <div class="content_inner">
+                <div class="flex_container">
+                  <div class="section_title">
+                    <h3><span>Fields of Study</span></h3>
+                  </div>
+                  <div class="section_main_content">
+                    <div class="text_wrap">
+                      <p>The department conducts research and education in information science, which is fundamental to today's society and essential to the future development of social and natural sciences. Information technology is a fundamental technology for a wide range of science and technology. Although many departments have the name "information" in their name, most of them only use computers as a tool. The Department of Information Science in the Faculty of Science is characterized by the fact that its research targets computers and information itself, such as investigating the fundamental principles of information processing, designing computers with completely new operating principles, and proposing new ways of using computers. Specifically, the department conducts research on fundamental theories of computation and intelligence, methods for constructing computer systems and networks, applied fields such as graphics, natural language processing, and biological information, and new computational models such as quantum computation and molecular computation.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section><!-- field_area -->
+
+          <section id="curriculum_area" class="content_wrapper">
+            <div class="main_width">
+              <div class="content_inner">
+                <div class="flex_container">
+                  <div class="section_title">
+                    <h3><span>Curriculum</span></h3>
+                  </div>
+                  <div class="section_main_content">
+                    <div class="text_wrap">
+                      <p>The curriculum in the Department of Information Science focuses on basic courses in computer science, with the aim of providing students with the background necessary to conduct cutting-edge research in information science. In particular, from the fourth semester of Komaba to the summer and winter semesters of the third year, students study very important subjects such as mathematics and logic for information science, fundamentals of various algorithms, methods of constructing computational systems (software and hardware), and lectures, exercises and experiments related to artificial intelligence. In particular, through programming experiments to develop software such as compilers and hardware experiments to create processors, students learn the basics of information systems and acquire practical skills that will serve as a foundation for research and development in graduate school and after employment.</p>
+
+                      <p>A characteristic of the curriculum of the Department of Information Science is that it aims to develop basic skills in a few lectures. For this reason, all lectures from the fourth semester at Komaba to the summer and winter semesters of the third year are compulsory. In the summer and winter semesters of the third year, in principle, only one lecture is given in the morning during the second period, and all afternoons are devoted to experiments and exercises.</p>
+
+                      <p>In the summer semester of the fourth year, introductory lectures on cutting-edge research are offered as elective courses. Through these lectures, students are expected to set the direction for their graduation research and graduate studies. The winter term of the fourth year is devoted to graduation research. At this point, students are assigned to a laboratory where they conduct their graduation research and finally compile a graduation thesis.</p>
+                    </div>
+
+                    <div class="link_btn_list_wrap">
+                      <ul class="btn_list">
+                        <li class="btn_item">
+                          <a href="/en/student/">
+                            <span>Details</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section><!-- carriculum_area -->
+
+          <!-- <section id="past_area" class="content_wrapper">
+            <div class="main_width">
+              <div class="content_inner">
+                <div class="flex_container">
+                  <div class="section_title">
+                    <h3><span>過去の学科紹介</span></h3>
+                    <p>Introduction of past departments</p>
+                  </div>
+                  <div class="section_main_content">
+                    <div class="link_btn_list_wrap">
+                      <ul class="btn_list"> -->
+          <!-- <li class="btn_item">
+                          <a href="/vu/21/" target="_blank">
+                            <span>’21年度版</span>
+                          </a>
+                        </li> -->
+          <!-- <li class="btn_item">
+                          <a href="/vu/03/" target="_blank">
+                            <span>’03年度版</span>
+                          </a>
+                        </li>
+                        <li class="btn_item">
+                          <a href="/vu/01/" target="_blank">
+                            <span>’01年度版</span>
+                          </a>
+                        </li>
+                        <li class="btn_item">
+                          <a href="/vu/99/" target="_blank">
+                            <span>’99年度版</span>
+                          </a>
+                        </li>
+                        <li class="btn_item">
+                          <a href="/vu/97/" target="_blank">
+                            <span>’97年度版</span>
+                          </a>
+                        </li>
+                        <li class="btn_item">
+                          <a href="/vu/96/" target="_blank">
+                            <span>’96年度版</span>
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section> -->
+          <!-- past_area -->
+
+          {{- partial "inc-pagetop.html" . -}}
+        </div>
+      </div>
+    </div>
+  </div><!-- wrapper -->
+
+  {{- partial "inc-footer.en.html" . -}}
+  {{- partial "inc-sp_menu.en.html" . -}}
+  {{- partial "inc-js.html" . -}}
+ {{ end }}

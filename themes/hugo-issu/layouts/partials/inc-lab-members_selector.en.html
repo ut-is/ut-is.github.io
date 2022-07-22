@@ -1,0 +1,17 @@
+
+          <div id="category_selector">
+            <div class="main_width">
+              <ul class="selector">
+                <li class="selector_item">
+                  <div class="item_inner">
+                    {{ if eq .Params.slug  "lab-members" }}<a href="javascript:void(0)" class="selector_btn current" data-activate_area="members_list_area">Members</a>{{ else }}<a href="/en/lab-members/" class="selector_btn" data-activate_area="members_list_area">Members</a>{{ end }}
+                  </div>
+                </li>
+                <li class="selector_item">
+                  <div class="item_inner">
+                    {{ if eq .Params.slug  "lab" }}<a href="javascript:void(0)" class="selector_btn current" data-activate_area="labs_list_area">Laboratories</a>{{ else }}<a href="/en/lab-members/lab/" class="selector_btn" data-activate_area="labs_list_area">Laboratories</a>{{ end }}
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>

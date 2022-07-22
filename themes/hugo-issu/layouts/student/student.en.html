@@ -1,0 +1,140 @@
+{{ define "main" }}
+</head>
+<body id="class" class="lower">
+  <div id="wrapper">
+    <div class="flex-wrapper">
+      {{- partial "inc-header.en.html" . -}}
+
+      <div class="main_container">
+        <div id="main_area" role="main">
+          <section id="top_kv" class="content_wrapper">
+            <img src="/en/asset_utokyo-is/media/images/student/kv_student.jpg" alt="KV" width="1340" height="240">
+            <div class="overlay_text">
+              <h2>for Undergrad Sci. Students</h2>
+            </div>
+          </section>
+
+          <div id="bread">
+            <ol>
+              <li><a href="/en/"><span class="home"></span></a></li>
+              <li><a href="/en/student/"><span>for Undergrad Sci. Students</span></a></li>
+              <li><a href="{{ .Permalink }}"><span>{{ .Title }}</span></a></li>
+            </ol>
+          </div>
+          {{- partial "inc-schedule_selector.en.html" . -}}
+          <section id="class_schedule" class="content_wrapper">
+            <div class="main_width">
+              <div class="content_inner">
+                <div class="flex_container">
+                  <div class="section_title">
+                    <h3><span>Lecture Schedule</span></h3>
+                  </div>
+                  <div class="section_main_content">
+                    <div class="date">
+                      <p>（Fiscal Year 2022）</p>
+                    </div>
+                    <div class="top_text">
+                      <p>For class dates and more information, please see the<a href="/files/2022/2022年度理学部授業日程.pdf" target="_blank"> 2022 School of Science Schedule of Classes (PDF)</a>.</p>
+                      <p>This is the class schedule for the Faculty of Science.<br>Please note that the schedule is different from that of the fourth semester of the first semester of the College of Liberal Arts and the Graduate School of Information Science and Technology.</p>
+                    </div>
+
+                    <div class="semester_wrap">
+                      <!-- 夏学期 -->
+                      <div class="semester_parts">
+                        <h4 class="head_text"><span>Summer</span></h4>
+                        <div class="main_text">
+                          <div class="item">
+                            <p>S Semester : Monday, April 4 - Thursday, July 28</p>
+                            <p>Examination and make-up class period : Wednesday, April 20 - Thursday, July 28</p>
+                          </div>
+                          <div class="item">
+                            <p>S1 Term : Monday, April 4 - Thursday, June 2</p>
+                            <p>Examination and make-up class period : Tuesday, May 31 - Thursday, June 2</p>
+                          </div>
+                          <div class="item">
+                            <p>S2 Term : Friday, June 3 - Thursday, July 28</p>
+                            <p>Examination and make-up class period : July 25 (Mon.) - July 28 (Thu.)</p>
+                          </div>
+                          <div class="item">
+                            <p>Summer Break : July 29 (Fri.) - September 30 (Fri.)</p>
+                          </div>
+                          <div class="item">
+                            <p>
+                              Classes are suspended for the entire day on Tuesday, April 12 (The University of Tokyo Commemoration Day (Entrance Ceremony))</p>
+                          </div>
+                          <div class="item">
+                            <p>Afternoon classes will be cancelled on May 9 (Mon.) (Faculty of Science Welcome Party (Koishikawa Botanical Garden)) [Tentative schedule].</p>
+                          </div>
+                          <div class="item">
+                            <p>May 13 (Fri.): Classes will be cancelled for the whole day (May Festival (Preparation))</p>
+                          </div>
+                          <div class="item">
+                            <p>Classes will be held all day on April 25 (Mon.) and on Friday.</p>
+                          </div>
+                          <div class="item">
+                            <p>Classes will be held all day on April 28 (Thursday) and all day on Tuesday.</p>
+                          </div>
+                          <div class="item">
+                            <p>On Monday, May 30, all classes will be held on Thursday.</p>
+                          </div>
+                          <div class="item">
+                            <p>On Tuesday, July 19, all classes will be held on Mondays.</p>
+                          </div>
+                          <div class="item">
+                            <p>On Friday, July 22, all classes will be held on Tuesday. (S2 Term Courses)</p>
+                          </div>
+                          <div class="item">
+                            <p>Registration period (S semester, S1 term, S2 term): April 4 (Mon.) - April 19 (Tue.)</p>
+                          </div>
+
+                        </div>
+
+                      </div>
+                      <!-- 冬学期 -->
+                      <div class="semester_parts">
+                        <h4 class="lab_category head_text"><span>Winter</span></h4>
+                        <div class="main_text">
+                          <div class="item">
+                            <p>Semester A : October 3 (Monday) - January 30 (Monday)</p>
+                            <p>Examination and make-up class period : Tuesday, January 17 - Monday, January 30</p>
+                          </div>
+                          <div class="item">
+                            <p>A1 Term : Monday, October 3 - Monday, November 28</p>
+                            <p>Examination and make-up class period : Monday, November 21 - Monday, November 28</p>
+                          </div>
+                          <div class="item">
+                            <p>A2 Term : Tuesday, November 29 - Monday, January 30</p>
+                            <p>Examination and make-up class period : Tuesday, January 24 - Thursday, January 26</p>
+                          </div>
+                          <div class="item">
+                            <p>Winter Break : December 28 (Wed.) - January 3 (Tue.)</p>
+                          </div>
+                          <div class="item">
+                            <p>Spring Break : Tuesday, January 31 - Friday, March 31</p>
+                          </div>
+                          <div class="item">
+                            <p>Classes will be suspended for the whole day on November 18 (Fri.) (Komaba Festival)</p>
+                          </div>
+                          <div class="item">
+                            <p>Classes will be suspended on all days on January 13th (Fri.) (Common Test Preparation)</p>
+                          </div>
+                          <div class="item">
+                            <p>Registration period (A semester, A1 term, A2 term): October 3 (Mon.) - October 14 (Fri.)</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section><!-- member_list_area -->
+          {{- partial "inc-pagetop.html" . -}}
+        </div>
+      </div>
+    </div>
+  </div><!-- wrapper -->
+  {{- partial "inc-footer.en.html" . -}}
+  {{- partial "inc-sp_menu.en.html" . -}}
+  {{- partial "inc-js.html" . -}}
+ {{ end }}

@@ -1,0 +1,420 @@
+{{ define "main" }}
+</head>
+<body id="labs" class="lower">
+  <div id="wrapper">
+    <div class="flex-wrapper">
+      {{- partial "inc-header.en.html" . -}}
+
+      <div class="main_container">
+        <div id="main_area" role="main">
+          <section id="top_kv" class="content_wrapper">
+            <img src="/en/asset_utokyo-is/media/images/lab-members/kv_lab_members.jpg" alt="KV" width="1340" height="240">
+            <div class="overlay_text">
+              <h2>Lab. / Members</h2>
+            </div>
+          </section>
+          {{ if eq .Params.slug  "lab" }}
+          <div id="bread">
+            <ol>
+              <li><a href="/en/"><span class="home"></span></a></li>
+              <li><a href="/en/lab-members/"><span>Lab. / Members</span></a></li>
+              <li><a href="{{ .Permalink }}"><span>{{ .Title }}</span></a></li>
+            </ol>
+          </div>
+          {{- partial "inc-lab-members_selector.en.html" . -}}
+
+          {{ if eq .Params.slug  "lab" }}
+          <section id="labs_list_area" class="content_wrapper">
+            <div class="main_width">
+              <div class="content_inner">
+                <div class="flex_container">
+                  <div class="section_title">
+                    <h3><span>Laboratories</span></h3>
+                  </div>
+                  <div class="section_main_content">
+                    <div class="top_text">
+                      <p>List of laboratories and faculty members belonging to the Department of Computer Science, Graduate School of Information Science and Technology.</p>
+                    </div>
+                    <div class="date">
+                      <p>（April 2022）</p>
+                    </div>
+
+                    <section class="labs_list_wrap">
+                      <h4 class="lab_category"><span>Laboratories around Science Bldg. 7</span></h4>
+
+                      <!-- 今井研究室 -->
+                      <div class="labs_list_item">
+                        <div class="lab_name">
+                          <p><a href="https://www-imai.is.s.u-tokyo.ac.jp/" target="_blank">Imai Laboratory</a></p>
+                        </div>
+                        <div class="lab_member">
+
+                          <p><a href="https://www-imai.is.s.u-tokyo.ac.jp/" target="_blank">Hiroshi Imai</a>/
+                            <a href="https://sites.google.com/g.ecc.u-tokyo.ac.jp/yukokuroki/home/japanese" target="_blank">Yuko Kuroki</a>/<a href="https://researchmap.jp/wakakuwa" target="_blank">Eyuri Wakakuwa</a>
+                          </p>
+                        </div>
+                        <div class="lab_text">
+                          <ol>
+                            <li>
+                              <p>Algorithm design and analysis, especially several scientific algorithms and their development into computational algebra, as well as disjunctive system theory and optimization, including system analysis</p>
+                            </li>
+                            <li>
+                              <p>Based on this algorithmic research, impact new fields such as computational biology, databases, geographic information systems, car navigation, knowledge discovery, etc.</p>
+                            </li>
+                            <li>
+                              <p>Quantum Computation and Quantum Information Science</p>
+                            </li>
+                          </ol>
+                        </div>
+                      </div>
+
+                      <!-- 須田研究室 -->
+                      <div class="labs_list_item">
+                        <div class="lab_name">
+                          <p><a href="http://olab.is.s.u-tokyo.ac.jp/~reiji/lab-e.html" target="_blank">Suda Laboratory</a></p>
+                        </div>
+                        <div class="lab_member">
+
+                          <p><a href="http://olab.is.s.u-tokyo.ac.jp/~reiji/index.html" target="_blank">Reiji Suda</a>/<a href="https://tk-ono.neocities.org/" target="_blank">Taku Onodera</a>
+                          </p>
+                        </div>
+                        <div class=" lab_text">
+                          <p>Numerical algorithms are the basis of our research theme, and our research is mainly aimed at achieving high speed and high performance in parallel, distributed, and network computing, as well as applied simulations such as physics.</p>
+                        </div>
+                      </div>
+
+                      <!-- 小林研究室 -->
+                      <div class="labs_list_item">
+                        <div class="lab_name">
+                          <p><a href="https://www-kb.is.s.u-tokyo.ac.jp/index.html.en" target="_blank">Kobayashi Laboratory</a></p>
+                        </div>
+                        <div class="lab_member">
+
+                          <p><a href="https://www-kb.is.s.u-tokyo.ac.jp/~koba/" target="_blank">Naoki Kobayashi</a>/<a href="https://www-kb.is.s.u-tokyo.ac.jp/~ryosuke/" target="_blank">Ryosuke Sato</a>
+                          </p>
+                        </div>
+                        <div class="lab_text">
+                          <p>Our laboratory studies basic software theory and its applications to programming languages, program verification, and program transformation. Recently, we have been especially focusing on automatic program verification methods based on higher-order model checking.</p>
+                        </div>
+                      </div>
+
+                      <!-- 五十嵐研究室 -->
+                      <div class="labs_list_item">
+                        <div class="lab_name">
+                          <p><a href="https://www-ui.is.s.u-tokyo.ac.jp/en/" target="_blank">Igarashi Laboratory</a></p>
+                        </div>
+                        <div class="lab_member">
+
+                          <p><a href="http://www-ui.is.s.u-tokyo.ac.jp/~takeo/" target="_blank">Takeo Igarashi</a>/<a href="https://sites.google.com/view/tsukasafukusato/" target="_blank">Tsukasa Fukusato</a></p>
+                        </div>
+                        <div class="lab_text">
+                          <p>We conduct research on user interfaces to make computer applications easier to use. In particular, we are conducting the following research</p>
+
+                          <ol>
+                            <li>
+                              <p>Research on interaction methods that enable easy generation and use of 3D graphics</p>
+                            </li>
+                            <li>
+                              <p>Research on pen input interface utilizing the freedom of handwriting</p>
+                            </li>
+                            <li>
+                              <p>Research on interfaces for efficient handling of huge information spaces</p>
+                            </li>
+                          </ol>
+                        </div>
+                      </div>
+
+                      <!-- 杉山・石田研究室 -->
+                      <div class="labs_list_item">
+                        <div class="lab_name">
+                          <p><a href="http://www.ms.k.u-tokyo.ac.jp/index.html" target="_blank">Sugiyama-Ishida Laboratory</a></p>
+                        </div>
+                        <div class="lab_member">
+                          <p> <a href="http://www.ms.k.u-tokyo.ac.jp/sugi/index.html" target="_blank">Masashi Sugiyama</a>/<a href="https://takashiishida.github.io/" target="_blank">Takashi Ishida</a>
+                          </p>
+                        </div>
+                        <div class="lab_text">
+                          <p>Our laboratory conducts a variety of research on machine learning.</p>
+                          <ol>
+                            <li>
+                              <p>Basic theory of supervised learning, unsupervised learning, reinforcement learning, etc.</p>
+                            </li>
+                            <li>
+                              <p>Practical algorithms for supervised learning, unsupervised learning, reinforcement learning, etc.</p>
+                            </li>
+                            <li>
+                              <p>Applications of machine learning techniques to industry and natural sciences</p>
+                            </li>
+                          </ol>
+                        </div>
+                      </div>
+
+                      <!-- 宮尾研究室 -->
+                      <div class="labs_list_item">
+                        <div class="lab_name">
+                          <p><a href="https://mynlp.is.s.u-tokyo.ac.jp/en/index" target="_blank">Miyao Laboratory</a></p>
+                        </div>
+                        <div class="lab_member">
+                          <p><a href="https://mynlp.is.s.u-tokyo.ac.jp/en/index" target="_blank">Yusuke Miyao</a></p>
+                        </div>
+                        <div class="lab_text">
+                          <p>Our research focuses on the following research themes in natural language processing and computational linguistics.</p>
+
+                          <ol>
+                            <li>
+                              <p>Computational models and basic analysis techniques for natural language: syntax and semantics, syntactic analysis, semantic analysis, etc.</p>
+                            </li>
+                            <li>
+                              <p>Applications of natural language processing: machine translation, question answering, dialogue systems, etc.
+                              </p>
+                            </li>
+                            <li>
+                              <p>Grounding to connect natural language and other media (images/video, numerical data, etc.)</p>
+                            </li>
+                          </ol>
+                        </div>
+                      </div>
+
+                      <!-- 吉本研究室 -->
+                      <div class="labs_list_item">
+                        <div class="lab_name">
+                          <p><a href="https://www.cp.is.s.u-tokyo.ac.jp/" target="_blank">Yoshimoto Laboratory</a></p>
+                        </div>
+                        <div class="lab_member">
+                          <p><a href="http://www.cp.is.s.u-tokyo.ac.jp/" target="_blank">Yoshihide Yoshimoto</a></p>
+                        </div>
+                        <div class="lab_text">
+                          <p>Computational science is a new approach to science following experimental and theoretical approaches that has developed along with the exponential growth of computers. In this laboratory, we conduct education and research at the boundary between computational science and computer science, with first-principles electronic structure calculations at the core.</p>
+                        </div>
+                      </div>
+
+                      <!-- 加藤研究室 -->
+                      <div class="labs_list_item">
+                        <div class="lab_name">
+                          <p><a href="http://www.pf.is.s.u-tokyo.ac.jp/" target="_blank">Kato Laboratory</a></p>
+                        </div>
+                        <div class="lab_member">
+                          <p><a href="http://www.pf.is.s.u-tokyo.ac.jp/" target="_blank">Shinpei Kato</a></p>
+                        </div>
+                        <div class="lab_text">
+                          <p>Our research interests include operating systems, real-time systems, and parallel and distributed systems. In particular, we are working on resource management for heterogeneous computing environments integrating many-core CPUs, GPGPUs, FPGAs, etc. We also focus on parallel processing and performance analysis by taking advantage of the features of those processors. As for applications, we are developing self-driving cars, high-precision 3D maps, and online machine learning frameworks.</p>
+                        </div>
+                      </div>
+
+                      <!-- 高前田研究室 -->
+                      <div class="labs_list_item">
+                        <div class="lab_name">
+                          <p><a href="https://sites.google.com/view/casys/?authuser=0" target="_blank">Takamaeda Laboratory</a></p>
+                        </div>
+                        <div class="lab_member">
+                          <p><a href="https://sites.google.com/site/shinyaty/home?authuser=0" target="_blank">
+                              Shinya Takamaeda</a></p>
+                        </div>
+                        <div class="lab_text">
+                          <p>Focusing on computer architecture, we will promote research on highly efficient and enjoyable next-generation computers, including custom computing using FPGAs and dedicated hardware, co-design of algorithms to be computed and hardware such as machine learning processing, and high-level synthesis compilers to support hardware design.</p>
+                        </div>
+                      </div>
+
+                      <!-- 佐藤研究室 -->
+                      <div class="labs_list_item">
+                        <div class="lab_name">
+                          <p><a href="https://www.ml.is.s.u-tokyo.ac.jp/home-en" target="_blank">Sato Laboratory</a></p>
+                        </div>
+                        <div class="lab_member">
+                          <p><a href="https://www.ml.is.s.u-tokyo.ac.jp/home-en" target="_blank">Issei Sato</a></p>
+                        </div>
+                        <div class="lab_text">
+                          <p>
+                            We study the following topics in machine learning.<br>
+                            <br>
+                            Theoretical analysis of learning, including quantifying prediction uncertainty, learning feature representations of data, learning based on human interaction, learning from biased learning data, and deep learning.<br>
+                            <br>As an application, we are developing analysis and support systems for the medical field.
+                          </p>
+                        </div>
+                      </div>
+
+                      <!-- 横矢研究室 -->
+                      <div class="labs_list_item">
+                        <div class="lab_name">
+                          <p><a href="http://www.ms.k.u-tokyo.ac.jp/index.html#Yokoya" target="_blank">Yokoya Laboratory</a></p>
+                        </div>
+                        <div class="lab_member">
+                          <p><a href="https://naotoyokoya.com/" target="_blank">Naoto Yokoya</a></p>
+                        </div>
+                        <div class="lab_text">
+                          <p>Our laboratory conducts research in image processing and spatio-temporal data analysis. In particular, we are working on the following topics</p>
+                          <ol>
+                            <li>
+                              <p>Image processing: super-resolution, image restoration, denoising, compressed sensing image reconstruction, image synthesis</p>
+                            </li>
+                            <li>
+                              <p>Spatio-temporal data analysis: semantic domain segmentation, change detection and recognition, signal source separation</p>
+                            </li>
+                            <li>
+                              <p>Applications of image processing and spatio-temporal data analysis: disaster situational awareness, environmental monitoring</p>
+                            </li>
+                          </ol>
+                        </div>
+                      </div>
+                      <!-- 谷中研究室 -->
+                      <div class="labs_list_item">
+                        <div class="lab_name">
+                          <p><a href="https://hitomiyanaka.mystrikingly.com" target="_blank">Yanaka Laboratory</a></p>
+                        </div>
+                        <div class="lab_member">
+                          <p><a href="https://hitomiyanaka.mystrikingly.com" target="_blank">Hitomi Yanaka</a></p>
+                        </div>
+                        <div class="lab_text">
+                          <p>Based on the fusion of machine learning and symbolic logic, we are engaged in research on computational linguistics and natural language processing, focusing on the following topics, aiming at "natural language processing technology that understands the meaning of natural language more like humans".</p>
+                          <ol>
+                            <li>
+                              <p>Interdisciplinary and multidisciplinary analysis of statistical language processing techniques</p>
+                            </li>
+                            <li>
+                              <p>Fundamentals and applied techniques of semantic analysis and natural language inference</p>
+                            </li>
+                          </ol>
+                        </div>
+                      </div>
+
+
+
+                    </section><!-- labs_list_wrap -->
+
+                    <section class="labs_list_wrap other">
+                      <h4 class="lab_category"><span>Other Laboratories</span></h4>
+
+                      <!-- 中井研究室 -->
+                      <div class="labs_list_item">
+                        <div class="lab_name">
+                          <p><a href="http://fais.hgc.jp/" target="_blank">Nakai Laboratory</a><span>（The Institute of Medical Science）</span></p>
+                        </div>
+                        <div class="lab_member">
+                          <p><a href="http://www.hgc.jp/~knakai/" target="_blank">Kenta Nakai</a> </p>
+                        </div>
+                        <div class="lab_text">
+                          <p>Genome Informatics, DNA sequence information analysis, Gene function prediction</p>
+                        </div>
+                      </div>
+
+                      <!-- 井元・片山研究室 -->
+                      <div class="labs_list_item">
+                        <div class="lab_name">
+                          <p> <a href="http://bonsai.hgc.jp/~imoto/index.html" target="_blank">Imoto-Katayama Laboratory</a><span>（The Institute of Medical Science）</span></p>
+                        </div>
+                        <div class="lab_member">
+                          <p><a href="http://bonsai.hgc.jp/~imoto/index.html" target="_blank">Seiya Imoto</a>/<a href="https://researchmap.jp/_ko77ka?lang=en" target="_blank">Kotoe Katayama</a></p>
+                        </div>
+                        <div class="lab_text">
+                          <p>Genome Statistical Science, Receipt Information Analysis</p>
+                        </div>
+                      </div>
+                      <!-- 朴研究室 -->
+                      <div class="labs_list_item">
+                        <div class="lab_name">
+                          <p> <a href="https://www.hgc.jp/~park/" target="_blank">Park Laboratory</a><span>（The Institute of Medical Science）</span></p>
+                        </div>
+                        <div class="lab_member">
+                          <p><a href="https://www.hgc.jp/~park/" target="_blank">Sung-Joon Park</a></p>
+                        </div>
+                        <div class="lab_text">
+                          <p>Life Information, Computational Intelligence</p>
+                        </div>
+                      </div>
+
+                      <!-- 渋谷研究室 -->
+                      <div class="labs_list_item">
+                        <div class="lab_name">
+                          <p><a href="https://shibuyalab.hgc.jp/index.html" target="_blank">Shibuya Laboratory</a><span>（The Institute of Medical Science）</span></p>
+                        </div>
+                        <div class="lab_member">
+                          <p><a href="https://www.hgc.jp/~tshibuya/index.html" target="_blank">Tetsuo Shibuya</a></p>
+                        </div>
+                        <div class="lab_text">
+                          <p>Genome Analysis, Algorithm Theory</p>
+                        </div>
+                      </div>
+
+                      <!-- 中田研究室 -->
+                      <div class="labs_list_item">
+                        <div class="lab_name">
+                          <p class="no_link"><span>Nakata Laboratory</span><span>（Social ICT Research Center）</span></p>
+                        </div>
+                        <div class="lab_member">
+                          <p class="no_link">Toshiyuki Nakata</p>
+                        </div>
+                        <div class="lab_text">
+                          <p>Parallel Architecture, Parallel Programming Languages, Cyber-physical systems architecture</p>
+                        </div>
+                      </div>
+
+                      <!-- 清水研究室 -->
+                      <div class="labs_list_item">
+                        <div class="lab_name">
+                          <p><a href="http://www.bi.a.u-tokyo.ac.jp/" target="_blank">Shimizu Laboratory</a><span>（Agricultural and Life Sciences）</span></p>
+                        </div>
+                        <div class="lab_member">
+                          <p><a href="http://www.bi.a.u-tokyo.ac.jp/~shimizu/" target="_blank">Kentaro Shimizu</a></p>
+                        </div>
+                        <div class="lab_text">
+                          <p>Bioinformatics, Parallel and Distributed Computing</p>
+                        </div>
+                      </div>
+
+                      <!-- 相澤研究室 -->
+                      <div class="labs_list_item">
+                        <div class="lab_name">
+                          <p><a href="http://www-al.nii.ac.jp/" target="_blank">Aizawa Laboratory</a><span>（National Institute of Informatics）</span></p>
+                        </div>
+                        <div class="lab_member">
+                          <p><a href="http://research.nii.ac.jp/~akiko/" target="_blank">Akiko Aizawa</a></p>
+                        </div>
+                        <div class="lab_text">
+                          <p>Text Media, Knowledge Processing</p>
+                        </div>
+                      </div>
+
+                      <!-- 佐藤研究室 -->
+                      <div class="labs_list_item">
+                        <div class="lab_name">
+                          <p><a href="http://research.nii.ac.jp/pbv/index.html" target="_blank">Sato Laboratory</a><span>（National Institute of Informatics）</span></p>
+                        </div>
+                        <div class="lab_member">
+                          <p><a href="https://researchmap.jp/imarik/?lang=en" target="_blank">Imari Sato</a></p>
+                        </div>
+                        <div class="lab_text">
+                          <p>Computer Vision, Computational Photography, Image Analysis, Reflection Analysis, Medical Imaging</p>
+                        </div>
+                      </div>
+
+                      <!-- 河原林研究室 -->
+                      <div class="labs_list_item">
+                        <div class="lab_name">
+                          <p class="no_link"><span>Kawarabayashi Laboratory（National Institute of Informatics）</span></p>
+                        </div>
+                        <div class="lab_member">
+                          <p><a href="https://researchmap.jp/k_keniti/" target="_blank">Kenichi Kawarabayashi</a></p>
+                        </div>
+                        <div class="lab_text">
+                          <p>Algorithms, Discrete Mathematics, Theoretical Computer Science</p>
+                        </div>
+                      </div>
+
+
+                    </section><!-- labs_list_wrap -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section><!-- labs_list_area -->{{ end }}
+          {{ end }}
+          {{- partial "inc-pagetop.html" . -}}
+        </div>
+      </div>
+    </div>
+  </div><!-- wrapper -->
+
+  {{- partial "inc-footer.en.html" . -}}
+  {{- partial "inc-sp_menu.en.html" . -}}
+  {{- partial "inc-js.html" . -}}
+ {{ end }}

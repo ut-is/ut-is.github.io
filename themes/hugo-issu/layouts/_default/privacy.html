@@ -1,0 +1,341 @@
+ 
+ {{ define "main" }}
+ <head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ with .Page.Title }}{{ . }} - {{ end }}{{ .Site.Title }}</title>
+  <!--<base href="{{ .Site.BaseURL }}">-->
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=0">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:description" content="">
+  <meta property="og:site_name" content=""/>
+  <meta property="og:title" content=""/>
+  <link rel="shortcut icon" href="{{ "/favicon2020.ico" | absURL }}">
+  <link rel="stylesheet" href="{{ "/asset_jinsei-100nenjidai/css/common.css" | absURL }}">
+  <link rel="stylesheet" href="{{ "/asset_jinsei-100nenjidai/css/lower.css" | absURL }}">
+  <link rel="stylesheet" href="{{ "/fontawesome/css/all.min.css" | absURL }}">
+</head>
+<body id="privacy" class="lower">
+
+  <div id="wrapper">
+   <div class="sidebar wrapper_inner">
+    {{- partial "inc-header.html" . -}}
+    {{- partial "inc-side_navi.html" . -}}
+   </div><!-- sidebar -->
+   <div id="main_area" class="wrapper_inner" role="main">
+
+    <div class="content">
+     <div class="kv_area">
+      <div id="home_kv" class="flexslider home_slide_inner">
+       <ul class="slides home_slide_inner">
+        <li><img src="/asset_jinsei-100nenjidai/media/images/home/home_kv000.jpg" width="1080" height="668" alt=""></li>
+       </ul>
+       <div id="home_kv-catch" class="home_slide_inner">
+        <div>
+         <div class="home_kv-detail">
+          <h1><img src="/asset_jinsei-100nenjidai/media/images/home/home_kv_logo.png" width="5800" height="60" alt="人生100年時代クリニック"></h1>
+          <p>空いていれば、すぐにでも診察可能です。<br>
+           予約も可能です。<br>
+           末永く寄り添うクリニックを目指しております。</p>
+         </div>
+        </div>
+       </div>
+      </div><!-- flexslider -->
+      <div id="home_slide" class="slick-slider">
+       <ul class="slick-slides main_width">
+        <li><a href=""><img src="/asset_jinsei-100nenjidai/media/images/home/slide_doctor_kobayashi.jpg" width="394" height="184" alt=""></a></li>
+        <li><a href=""><img src="/asset_jinsei-100nenjidai/media/images/home/slide_doctor_takeyama.jpg" width="394" height="184" alt=""></a></li>
+        <!--<li><a href=""><img src="/asset_jinsei-100nenjidai/media/images/home/slide_doctor_nakagome.jpg" width="394" height="184" alt=""></a></li>-->
+        <li><a href=""><img src="/asset_jinsei-100nenjidai/media/images/home/slide_doctor_ehara.jpg" width="394" height="184" alt=""></a></li>
+       </ul>
+      </div>
+     </div><!-- kv_area -->
+
+     <div id="clinic_info" class="home_cont color_cont">
+      <div class="main_width">
+       <div class="clinic_info_row">
+        <div class="btns float_col left_col">
+         <div class="float_col_inner">
+          <div class="cont_btn">
+           <a href="#"><span>当クリニックのご案内</span></a>
+          </div>
+          <div class="cont_btn">
+           <a href="#"><span>受診の方法</span></a>
+          </div>
+          <div class="cont_btn">
+           <a href="#"><span>医師紹介・出番表</span></a>
+          </div>
+         </div>
+        </div>
+        <div class="open float_col right_col">
+         <div class="float_col_inner">
+          <div class="home_sub_title">
+           <h2>診療時間</h2>
+          </div>
+          <div class="timetable">
+
+           <table>
+            <thead>
+             <tr>
+              <th scope="row">&nbsp;</th>
+              <th scope="col">月</th>
+              <th scope="col">火</th>
+              <th scope="col">水</th>
+              <th scope="col">木</th>
+              <th scope="col">金</th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+              <th scope="row">9:00～12:45</th>
+              <td>〇</td>
+              <td>〇</td>
+              <td>-</td>
+              <td>〇</td>
+              <td>-</td>
+             </tr>
+             <tr>
+              <th scope="row">14:00～17:45</th>
+              <td>〇</td>
+              <td>〇</td>
+              <td>-</td>
+              <td>〇</td>
+              <td>-</td>
+             </tr>
+             <tr>
+              <th scope="row">10:00～13:45</th>
+              <td>-</td>
+              <td>-</td>
+              <td>〇</td>
+              <td>-</td>
+              <td>-</td>
+             </tr>
+             <tr>
+              <th scope="row">15:00～18:45</th>
+              <td>-</td>
+              <td>-</td>
+              <td>〇</td>
+              <td>-</td>
+              <td>-</td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+          <div class="caution_text">
+           <p>※祝日も診療します。</p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div><!-- home_cont -->
+
+     <div id="access" class="home_cont">
+      <div class="home_cont_inner">
+       <div class="main_width gmap_width">
+        <div class="home_cont_title"><h2>アクセス</h2></div>
+        <div class="inner_block gmap top_inner">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1620.5468007502438!2d139.7696919564489!3d35.67469718019579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188be231d24fe9%3A0x39285ea5c3f91bc3!2z44CSMTA0LTAwMzEg5p2x5Lqs6YO95Lit5aSu5Yy65Lqs5qmL77yT5LiB55uu77yR77yQ4oiS77yR!5e0!3m2!1sja!2sjp!4v1488889173883" allowfullscreen></iframe>
+        </div>
+        <div class="gmap_btn btn">
+         <button><span>地図を表示</span></button>
+        </div>
+       </div>
+      </div>
+      <div class="home_cont_inner">
+       <div class="main_width">
+        <div class="home_min_title"><h3>ルート案内</h3></div>
+        <div class="access_links">
+         <ul>
+          <li>
+           <div class="link_btn">
+            <a href="#" target="_blank"><span><span class="line">東京メトロ</span><span>銀座駅 B5</span></span></a>
+           </div>
+          </li>
+          <li>
+           <div class="link_btn">
+            <a href="#" target="_blank"><span><span class="line">東京メトロ</span><span>日比谷駅 A1</span></span></a>
+           </div>
+          </li>
+          <li>
+           <div class="link_btn">
+            <a href="#" target="_blank"><span><span class="line">東京メトロ</span><span>東銀座駅 A1</span></span></a>
+           </div>
+          </li>
+          <li>
+           <div class="link_btn">
+            <a href="#" target="_blank"><span><span class="line">東京メトロ</span><span>銀座一丁目駅 5番</span></span></a>
+           </div>
+          </li>
+          <li>
+           <div class="link_btn">
+            <a href="#" target="_blank"><span><span class="line">JR</span><span>有楽町駅 銀座口</span></span></a>
+           </div>
+          </li>
+          <li>
+           <div class="link_btn">
+            <a href="#" target="_blank"><span><span>現在地から</span><span class="line">のルート</span></span></a>
+           </div>
+          </li>
+         </ul>
+        </div>
+       </div>
+      </div>
+     </div><!-- home_cont -->
+
+     <div id="news" class="home_cont color_cont">
+      <div class="main_width">
+       <div class="home_cont_title"><h2>当クリニックからのお知らせ</h2></div>
+       <div class="news_list">
+        <ul>
+         {{ range first 5 .Data.Pages.ByPublishDate.Reverse }}
+         <li>
+          <a href="{{ .RelPermalink }}"><span class="date">{{ .Render "time-element" }}</span><span class="title">{{ .Title }}</span></a>
+         </li>
+         {{ end }}
+        </ul>
+       </div>
+      </div>
+     </div><!-- home_cont -->
+
+     <div id="column" class="home_cont">
+      <div class="main_width">
+       <div class="home_cont_title"><h2>人生100年時代ブログ</h2></div>
+       <div class="column_thumbs">
+        <div class="thumb_col">
+         <a href="/column/cat01/001/">
+          <div class="thumb">
+           <div class="size"><img src="/asset_jinsei-100nenjidai/media/images/common/no-image300x160.jpg" width="300" height="160" alt=""></div>
+          </div>
+          <div class="thumb_title"><h3>経口抗凝固療法として・・・</h3></div>
+         </a>
+        </div><!-- thumb_col -->
+        <div class="thumb_col">
+         <a href="/column/cat01/001/">
+          <div class="thumb">
+           <div class="size"><img src="/asset_jinsei-100nenjidai/media/images/common/no-image300x160.jpg" width="300" height="160" alt=""></div>
+           <div class="trim"><img src="/asset_jinsei-100nenjidai/media/images/dammy/home_column_thumb_dammy02.jpg" width="300" height="160" alt=""></div>
+          </div>
+          <div class="thumb_title"><h3>動悸、労作時の息切れ</h3></div>
+         </a>
+        </div><!-- thumb_col -->
+        <div class="thumb_col">
+         <a href="/column/cat01/001/">
+          <div class="thumb">
+           <div class="size"><img src="/asset_jinsei-100nenjidai/media/images/common/no-image300x160.jpg" width="300" height="160" alt=""></div>
+           <div class="trim"><img src="/asset_jinsei-100nenjidai/media/images/dammy/home_column_thumb_dammy03.jpg" width="300" height="160" alt=""></div>
+          </div>
+          <div class="thumb_title"><h3>倦怠感、労作時息切れ</h3></div>
+         </a>
+        </div><!-- thumb_col -->
+        <div class="thumb_col">
+         <a href="/column/cat01/001/">
+          <div class="thumb">
+           <div class="size"><img src="/asset_jinsei-100nenjidai/media/images/common/no-image300x160.jpg" width="300" height="160" alt=""></div>
+           <div class="trim"><img src="/asset_jinsei-100nenjidai/media/images/dammy/home_column_thumb_dammy04.jpg" width="300" height="160" alt=""></div>
+          </div>
+          <div class="thumb_title"><h3>2月25日</h3></div>
+         </a>
+        </div><!-- thumb_col -->
+        <div class="thumb_col">
+         <a href="/column/cat01/001/">
+          <div class="thumb">
+           <div class="size"><img src="/asset_jinsei-100nenjidai/media/images/common/no-image300x160.jpg" width="300" height="160" alt=""></div>
+           <div class="trim"><img src="/asset_jinsei-100nenjidai/media/images/dammy/home_column_thumb_dammy05.jpg" width="300" height="160" alt=""></div>
+          </div>
+          <div class="thumb_title"><h3>2月17日</h3></div>
+         </a>
+        </div><!-- thumb_col -->
+        <div class="thumb_col">
+         <a href="/column/cat01/001/">
+          <div class="thumb">
+           <div class="size"><img src="/asset_jinsei-100nenjidai/media/images/common/no-image300x160.jpg" width="300" height="160" alt=""></div>
+           <div class="trim"><img src="/asset_jinsei-100nenjidai/media/images/dammy/home_column_thumb_dammy06.jpg" width="300" height="160" alt=""></div>
+          </div>
+          <div class="thumb_title"><h3>日本循環器学会では・・・</h3></div>
+         </a>
+        </div><!-- thumb_col -->
+        <div class="thumb_col">
+         <a href="/column/cat01/001/">
+          <div class="thumb">
+           <div class="size"><img src="/asset_jinsei-100nenjidai/media/images/common/no-image300x160.jpg" width="300" height="160" alt=""></div>
+          </div>
+          <div class="thumb_title"><h3>花粉－食物アレルギー症候群</h3></div>
+         </a>
+        </div><!-- thumb_col -->
+        <div class="thumb_col">
+         <a href="/column/cat01/001/">
+          <div class="thumb">
+           <div class="size"><img src="/asset_jinsei-100nenjidai/media/images/common/no-image300x160.jpg" width="300" height="160" alt=""></div>
+           <div class="trim"><img src="/asset_jinsei-100nenjidai/media/images/dammy/home_column_thumb_dammy08.jpg" width="300" height="160" alt=""></div>
+          </div>
+          <div class="thumb_title"><h3>心房細動と抗血栓療法　3</h3></div>
+         </a>
+        </div><!-- thumb_col -->
+        <div class="thumb_col">
+         <a href="/column/cat01/001/">
+          <div class="thumb">
+           <div class="size"><img src="/asset_jinsei-100nenjidai/media/images/common/no-image300x160.jpg" width="300" height="160" alt=""></div>
+           <div class="trim"><img src="/asset_jinsei-100nenjidai/media/images/dammy/home_column_thumb_dammy09.jpg" width="300" height="160" alt=""></div>
+          </div>
+          <div class="thumb_title"><h3>心房細動と抗血栓療法　2</h3></div>
+         </a>
+        </div><!-- thumb_col -->
+       </div>
+      </div>
+     </div><!-- home_cont -->
+    </div><!-- content -->
+    {{- partial "inc-footer.html" . -}}
+
+   </div><!-- main_area -->
+
+  </div><!-- wrapper -->
+
+  {{- partial "inc-footer.html" . -}}
+  <script src="/asset_jinsei-100nenjidai/js/slick.min.js"></script>
+  <script src="/asset_jinsei-100nenjidai/js/jquery.flexslider-min.js"></script>
+  <script>
+   $(window).load(function(){
+    //高さ
+    //$(".home_slide_inner").heightLine();
+    //$(".float_col").matchHeight();
+    //$(".thumb_col").matchHeight();
+    //Flexs slides
+    $('#home_kv').flexslider({
+     directionNav: true,
+     controlNav: true,
+     animation: "fade",
+     pauseOnAction: false,
+     animationSpeed:3000,
+     slideshowSpeed: 8000,
+     easing:'easeOutQuad',
+     pauseOnAction: false
+    });
+    //Slick slides
+    $('.slick-slides').slick({
+     infinite: true,
+     slidesToShow: 2,
+     slidesToScroll: 1,
+     prevArrow: "<button type='button' class='slick-prev'><span>&nbsp;</span></button>",
+     nextArrow: "<button type='button' class='slick-next'><span>&nbsp;</span></i></button>",
+    });
+    //Gmap Btn
+    $('.gmap_btn').on('click', function () {
+     $(this).prev('.gmap').slideToggle(300);
+     initialize();
+    });
+
+
+    var fadeSpeed = 1500;
+    $('#home_slide ul.slick-slides')
+     .css({opacity: '0.0'})
+     .animate({opacity: '1'}, fadeSpeed);
+   });
+  </script>
+  {{ end }}
+
