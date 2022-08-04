@@ -1,4 +1,5 @@
-baseURL = "https://tokyodcs.tane.website/"
+#baseURL = "https://tokyodcs.tane.website/"
+baseURL = "https://www.is.s.u-tokyo.ac.jp/hugo/"
 #baseURL = "/"
 defaultContentLanguage = "ja"
 languageCode = "ja-jp"
