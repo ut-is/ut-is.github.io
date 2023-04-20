@@ -1,0 +1,252 @@
+@charset "utf-8";
+
+html{
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	
+}
+body{
+	color:#4a4a4a;
+}
+strong{
+	font-weight:bold;
+}
+a{outline:none;}
+
+/*============================
+#container
+============================*/
+#container {
+	font-size:62.5%;
+-webkit-text-size-adjust: 100%;	
+}
+.inner {
+	width:980px;
+	margin:0 auto;
+}
+
+/*============================
+header
+============================*/
+#container header {
+	width:100%;
+	overflow:hidden;
+}
+#container header #univLogo {
+	width:980px;
+	background:url(../highschool/images/logomark.png) 0 0 no-repeat;
+	background-size:21px auto;
+	font-size:120%;
+	padding:10px 0 10px 30px;
+	margin:20px auto 16px auto;
+	box-sizing:border-box;
+}
+
+/*============================
+#contents
+============================*/
+#container #contents {
+	width:980px;
+	padding:50px 0 0 0;
+	margin:0 auto;
+	overflow:hidden;
+}
+#page_index #container #contents article h2,
+.page_article #container #contents h3 {
+	font-size:240%;
+	line-height:130%;
+	background:url(../highschool/images/headline01.png) 0 0 no-repeat;
+	padding:0 0 0 25px;
+	margin-bottom:15px;
+	text-align:left;
+}
+#container #contents article h4{
+	font-size:170%;
+	font-weight:bold;
+	margin:25px 0 15px 0;
+}
+#container #contents article p {
+	font-size:150%;
+	line-height:160%;
+	margin-bottom:1em;
+	text-indent:1em;
+}
+#container #contents article .otherLinks {
+	/*border-top:1px solid #e5e5e5;*/
+	margin-top:30px;
+}
+#container #contents article .otherLinks li {
+	font-size:180%;
+	line-height:160%;
+	background:url(../highschool/images/arrow_list01.png) 0 center no-repeat;
+	padding:0 0 0 18px;
+	margin:20px 0 5px 0;
+}
+#container #contents article dl.otherLinks li a {
+	color:#1579c1;
+}
+#container #contents article dl.otherLinks li a:hover {
+	text-decoration:underline;
+}
+/*#container #contents article dl.otherLinks dd {
+	font-size:150%;
+	line-height:160%;
+		border-bottom:1px solid #e5e5e5;
+		padding:0 0 20px 18px;
+}*/
+
+
+/*============================
+pagetop
+============================*/
+#container #contents p.pageTop {
+	clear:both;
+	font-size:120%;
+	text-align:right;
+	margin:20px 0;
+}
+#container #contents p.pageTop a {
+	background:url(../highschool/images/arrow_pageTop.png) 0 center no-repeat;
+	padding-left:20px;
+}
+#container #contents p.pageTop a:hover{
+	text-decoration:underline;
+}
+
+/*============================
+footer
+============================*/
+#container > footer {
+	width:100%;
+	background-color:#323232;
+	border-top:3px solid #1579c1;
+	color:#f6f6f6;
+	overflow:hidden;
+}
+#container > footer dl {
+	float:left;
+	width:60%;	
+	margin-top:35px;
+	margin-bottom:25px;
+}
+#container > footer dl dt {
+	font-size:140%;
+	line-height:140%;
+	margin-bottom:8px;
+}
+#container > footer dl dd.add {
+	font-size:120%;
+	line-height:140%;
+}
+#container > footer .snsBtn{
+	float:left;
+	width:40%;
+	margin-top:35px;
+	margin-bottom:25px;
+}
+#container > footer div.twitter {
+	float:right;
+	padding-left:10px;
+}
+#container > footer div.fb-like {
+		float:right;
+}
+#container > footer p.copyright {
+	font-size:110%;
+	border-top:1px solid #535353;
+	clear:both;
+	text-align:center;
+	padding:25px 0;
+	margin-bottom:50px;
+}
+
+/*============================
+レスポンシブ
+============================*/
+
+@media screen and (max-width: 980px) {
+	/*コンテンツ幅より狭い場合*/	
+	#container #contents article {
+    width: 100%;
+    float: none;
+}
+	.inner {
+	width:100%;
+}
+#container header #univLogo {
+	width:100%;
+	padding-left:40px;
+	background-position:10px 0;
+}
+#container #contents {
+	width:100%;
+	padding:5% 3% 2% 3%;
+	box-sizing:border-box;
+}
+#container #contents article {
+	width:100%;
+	float:none;
+}
+#page_index #container #contents article h2,
+.page_article #container #contents h3 {
+		background-size:6px 100% !important;
+		padding:0 0 0 20px;
+}
+#container > footer {
+	box-sizing:border-box;
+	padding:0 3%;
+}
+/*文字を大きく*/
+#container #contents article p {
+	font-size:160%;
+}
+}
+
+@media screen and (max-width: 768px) {
+		/*Tablet*/
+	
+
+}
+@media screen and (max-width: 468px) {
+	/*SmartPhone*/
+	#container header #univLogo {
+	margin: 10px 10px 5px 0;
+	}
+	
+#page_index #container #contents article h2,
+.page_article #container #contents h3 {
+	font-size:180%;
+	margin-bottom:10px;
+	padding:0 0 0 10px;
+}
+#container #contents article p {
+	/*font-size:160%;*/
+}
+#container > footer dl {
+	float:none;
+	width:100%;	
+	margin-top:20px;
+	margin-bottom:10px;
+}
+#container > footer dl dt {
+	font-size:130%;
+	margin-bottom:5px;
+}
+#container > footer dl dd.add {
+	font-size:110%;
+}
+#container > footer .snsBtn{
+float:none;
+overflow:hidden;
+	width:100%;	
+	margin-top:10px;
+	margin-bottom:20px;
+}
+#container > footer p.copyright {
+	font-size:100%;
+	padding:20px 0;
+	margin-bottom:0;
+}
+}
+@media screen and (max-width: 375px) {	
+/*更に狭いiPhone用*/
+	
+}

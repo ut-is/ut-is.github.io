@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<meta charset="UTF-8">
+<title>アルゴリズムびっくり箱｜高校生に伝えたいほんとうの情報科学｜東京大学理学部情報科学科・コンピュータ科学専攻</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="format-detection" content="telephone=no">
+<meta name="description" lang="ja" CONTENT="高校生向けの東京大学理学部情報科学科・コンピュータ科学専攻への進学案内です。">
+<meta name="keywords" lang="ja" content="高校生, 東京大学, 理学部, 情報科学科, 大学院情報理工学系研究科, コンピュータ科学, コンピュータサイエンス, 進学案内" />
+
+<link href="../css/highschool.css" rel="stylesheet" type="text/css">
+<link href="../css/import.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]><script src="js/html5shiv-printshiv.js"></script><![endif]-->
+
+
+</head>
+<body id="page_algorithm" class="page_article">
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script> 
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		<div id="container">
+		<header>
+						<div id="univLogo"><span  class="university"><a href="/">東京大学理学部 情報科学科</a></span><span class="postgraduate"><a href="/">東京大学大学院情報理工学系研究科 コンピュータ科学専攻</a></span></div>
+						<div id="mainImg">
+						<div class="inner">
+										<h1><img src="images/article/mainImg_article.png" alt="高校生に伝えたいほんとうの情報科学"/></h1>
+								</div>
+				</div>
+						<nav>
+						<div class="inner">
+										<ul>
+										<li id="btn_index" class="l1"><a href="index.html">HOME</a></li>
+										<li id="btn_algorithm" class="l2"><a href="algorithm.html">アルゴリズム<br>びっくり箱</a></li>
+										<li id="btn_computer" class="l2"><a href="computer.html">計算する<br>機械をつくる</a></li>
+										<li id="btn_ai" class="l2"><a href="ai.html">人工知能と<br>機械学習</a></li>
+										<li id="btn_simulation" class="l2"><a href="simulation.html">森羅万象を<br>シミュレーション</a></li>
+										<li id="btn_ui" class="l2"><a href="ui.html">未来のユーザー<br>インターフェイス</a></li>
+										<li id="btn_logic" class="l1"><a href="logic.html">論理の話</a></li>
+										<li id="btn_faq" class="l1"><a href="faq.html">FAQ</a></li>
+								</ul>
+								</div>
+				</nav>
+						
+						<!-- / #header --></header>
+		<div id="contents">
+<article>
+		<h2>アルゴリズムびっくり箱</h2>
+						<div class="articleWrap">						
+						<div class="section">
+										<p>有名な数学者ガウスには、小学生の頃の愉快な逸話があります。生徒に時間のかかる課題を与えて教室から出ようとした教師が、1から100までの数を足すようにと問題を出したのですが、ガウスはすぐに回答したので、教室から出られなくなったというのです。 </p>
+										<p>もちろん、これは等差数列の和の公式に気がついて、100に101をかけて2で割ればすぐに答が出ます。高校生なら、2<sup>1</sup>、2<sup>2</sup>、2<sup>3</sup>……2<sup>100</sup>までの総和を求めることも、等比数列和の公式でわりと容易に計算できるでしょう。 </p>
+										<p>ガウスの逸話は、同じことを計算するのでも、方式（アルゴリズム）が違えば効率が極端に違うことを示しています。教師が小学生には30秒では計算不可能だと思ったことが、可能になったのですから。 </p>
+										<blockquote>
+										ここで問題です。では、2<sup>100</sup>を計算するのに必要な、2のべき乗の整数の乗算回数は何回でしょうか？　99回でできるのは確かですが、もっと少なくすることができます。<span class="small">（このようなことを考えるのが好きな人は、情報科学を楽しく追及できます。）</span></blockquote>
+								<p>情報科学が社会基盤となったいまは、独創的なアルゴリズムによって新しい技術が創造され、これまでの不可能を可能にしています。 </p>
+								<p>たとえば、ウェブ上の情報を探し出すインターネット検索は、20世紀の大発明のひとつですが、以前のやり方では、ウェブページ中に含まれている検索キーワードの数や割合などを活用して、どのページが最も検索結果にふさわしいかを順序づけて回答していました。 </p>
+								<p>しかしグーグルの開発者は、たくさん参照されているページこそ価値が高いと考え、ウェブページ間の参照関係（リンクのグラフ構造）に着目したのです。そして、膨大な数のページの参照関係を探索・計算可能にしたのが、ランダムウォークというアルゴリズムでした。この方法を採り入れた検索エンジンは、まさしくユーザーがほしい情報を示すことができたので、一躍人気の高い検索エンジンになっています。 </p>
+								<p>これは、ユーザーがたどるウェブページのリンクに着目するという新しいアイデアと、データを大量に収集し、実用的な時間で計算可能にした斬新なアルゴリズムによって、ブレークスルーをもたらした例です。 </p>
+												<p>グラフの理論そのものは情報科学の一角をなしていて、古くは地図の4色塗り分け可能性の証明から、インターネット時代のセキュリティを保証する公開鍵暗号（鍵が公開されてる暗号って不思議ですよね）まで、多彩な情報数理の問題の解決に用いられています。 <br>
+														　社会を変えるようなアルゴリズムは、研究者・開発者の自由で柔軟な発想、デザインと解析の卓越した力の産物です。ちょっと、興味がわいてきたでしょうか？ </p>
+
+						</div>
+				</div></article>
+						<div id="side"> <img src="images/article/algorithm02.jpg"  alt=""/> <img src="images/article/algorithm01.jpg"  alt=""/> 
+						
+						<!--<p class="caption">キャプション</p>--> 
+						<!-- / #side --></div>
+						<p class="pageTop"><a href="#container">PAGETOP</a></p>
+						<!-- / #contents --></div>
+		<footer>
+						<div class="inner">
+						<dl>
+										<dt>東京大学理学部情報科学科・東京大学大学院情報理工学系研究科コンピュータ科学専攻</dt>
+										<dd class="add">〒113-0033 東京都文京区本郷7-3-1 / e-mail: www-admin@is.s.u-tokyo.ac.jp </dd>
+								</dl>
+						<div class="snsBtn">
+										<div class="twitter"> <a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-hashtags="UTokyoIS" target="_blank">ツイート</a> </div>
+										<div class="fb-like" data-href="http://www.is.s.u-tokyo.ac.jp/shingaku/highschool/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+								</div>
+						<p class="copyright"> Copyright &copy; Dept. of IS / All rights reserved. </p>
+				</div>
+						<!-- / #footer --></footer>
+		
+		<!-- / #container --></div>
+
+		<!-- script --> 
+		<script src="../js/jquery-1.11.1.js"></script> 
+		<script src="../js/common.js"></script>
+</body>
+</html>

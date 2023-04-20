@@ -1,0 +1,372 @@
+@charset "utf-8";
+
+a{
+	color:#4a4a4a;
+	text-decoration:none;
+}
+
+/*============================
+header
+============================*/
+#container header #univLogo span.university:after {
+	content:" ｜ "	
+}
+#container header #mainImg{
+	width:100%;
+	background:url(../highschool/images/bg_mainImg.png) 0 0 repeat-x;
+}
+#container header h1 {
+	width:100%;
+	text-align:center;
+}
+#container header h1 img {
+	width:100%;
+}
+/*============================
+#nav
+============================*/
+#container header nav {
+	width:100%;
+	border-top:1px solid #dedede;
+	border-bottom:1px solid #dedede;
+}
+#container header nav ul {
+	width:100%;
+	overflow:hidden;
+	border-left:1px solid #dedede;
+	display:table;
+}
+#container header nav ul li {
+	display:table-cell;
+	vertical-align:top;
+	box-sizing:border-box;
+	width:12.5%;
+	height:160px;
+	text-align:center;
+	border-right:1px solid #dedede;
+	font-size:130%;
+	line-height:130%;
+/*	letter-spacing:-1px;*/
+}
+#container header nav ul li:hover{
+	background:url(../highschool/images/arrow_head.png) center bottom no-repeat;
+}
+#container header nav ul li a{
+	width:100%;
+	height:100%;
+	display:block;
+	box-sizing:border-box;
+}
+#container header nav ul li.l1 a{
+	padding-top:115px;
+}
+#container header nav ul li.l2 a{
+	padding-top:108px;
+}
+#container header nav ul li.l3 a{
+	padding-top:100px;
+}
+#container header nav ul li#btn_index a {
+	background:url(../highschool/images/icon01.png) center 17px no-repeat;
+}
+#container header nav ul li#btn_algorithm a {
+	background:url(../highschool/images/icon02.png) center 17px no-repeat;
+}
+#container header nav ul li#btn_computer a {
+	background:url(../highschool/images/icon03.png) center 17px no-repeat;
+}
+#container header nav ul li#btn_ai a {
+	background:url(../highschool/images/icon04.png) center 17px no-repeat;
+}
+#container header nav ul li#btn_simulation a {
+	background:url(../highschool/images/icon05.png) center 17px no-repeat;
+}
+#container header nav ul li#btn_ui a {
+	background:url(../highschool/images/icon06.png) center 17px no-repeat;
+}
+#container header nav ul li#btn_logic a {
+	background:url(../highschool/images/icon07.png) center 17px no-repeat;
+}
+#container header nav ul li#btn_faq a {
+	background:url(../highschool/images/icon08.png) center 17px no-repeat;
+}
+
+/*curretnt*/
+#page_index #container header nav ul li#btn_index,
+#page_algorithm #container header nav ul li#btn_algorithm,
+#page_computer #container header nav ul li#btn_computer ,
+#page_ai #container header nav ul li#btn_ai,
+#page_simulation #container header nav ul li#btn_simulation ,
+#page_ui #container header nav ul li#btn_u,
+#page_logic #container header nav ul li#btn_logic ,
+#page_faq #container header nav ul li#btn_faq {
+background:#f6f6f6 url(../highschool/images/arrow_head.png) center bottom no-repeat;
+}
+
+/*============================
+#contents
+============================*/
+#container #contents .articleWrap {
+	width:63%;
+	float:left;
+}
+.page_article #container #contents h2 {
+	font-size:500%;
+	line-height:130%;
+	border-bottom:2px solid #f9b600;
+	margin-bottom:30px;
+}
+#container #contents .articleWrap .section blockquote{
+	font-size:150%;
+	line-height:160%;
+	padding:20px;
+	/*background:url(../highschool/images/blockquote.png);*/
+	background-color:#EEE;
+	margin-bottom:15px;
+	color:#101010;
+}
+#container #contents .articleWrap .section blockquote .small{
+	font-size:85%;
+}
+#container #contents .articleWrap .section {
+	margin-bottom:35px;
+}
+#container #contents .articleWrap .section p.method{
+	background-color:#EEE;
+	padding:10px 20px;
+	color:#000;
+}
+#container #contents .articleWrap .section p.num{
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+#container #contents .articleWrap .section p.num em{
+	font-style:italic;
+}
+#container #contents .articleWrap .caption{
+	font-size:120%;
+	line-height:160%;
+	margin:30px 0;
+}
+
+/*============================
+#side
+============================*/
+#container #contents #side {
+	width:35%;
+	float:right;
+}
+#container #contents #side img {
+	padding-bottom:8px;
+}
+#container #contents #side .caption{
+	font-size:120%;
+	line-height:160%;
+	margin:0 auto 20px auto;
+	max-width:340px;
+	text-align:left;
+}
+#container #contents #side a .caption{
+	background:url(../highschool/images/arrow_list01.png) no-repeat  0px center;
+padding: 0px 0px 0px 18px;
+}
+
+
+/*============================
+FAQ
+============================*/
+#page_faq #acMenu{
+	margin:30px 0;
+	width:100%;
+}
+#page_faq #acMenu > dt {
+display:block;
+width:100%;
+cursor:pointer;
+background:#fef8e5 url(../highschool/images/article/trigger_open.png) right center no-repeat;
+font-size:200%;
+line-height:150%;
+padding:20px 45px 20px 20px;
+margin-top:20px;
+width:100%;
+box-sizing:border-box;
+}
+#page_faq #acMenu > dt span{
+	display:block;
+	float:left;
+	width:67px;
+	height:47px;
+	background:url(../highschool/images/article/iconQ.png) 0 0  no-repeat;
+	margin-top:-5px;
+}
+#page_faq #acMenu dt.open {
+background:#fef8e5 url(../highschool/images/article/trigger_close.png) right center no-repeat;
+}
+#page_faq #acMenu > dd {
+display:none;
+background:url(../highschool/images/article/iconA.png) 15px 15px no-repeat;
+padding:20px 50px 30px 85px;
+overflow:hidden;
+font-size:150%;
+line-height:170%;
+border-left:5px solid #f0f0f0;
+border-right:5px solid #f0f0f0;
+border-bottom:5px solid #f0f0f0;
+width:100%;
+box-sizing:border-box;
+}
+#page_faq #acMenu > dd ul {
+	margin-top:20px;
+}
+#page_faq #acMenu > dd ul li a {
+	font-size:120%;
+	line-height:160%;
+	background:url(../highschool/images/arrow_list01.png) 0 center no-repeat;
+	padding:0 0 0 18px;
+	margin:20px 0 5px 0;
+	color:#1579c1;
+}
+
+/*============================
+レスポンシブ
+============================*/
+
+@media screen and (max-width: 980px) {
+	/*コンテンツ幅より狭い場合*/	
+		#container #contents .articleWrap {
+    width: 100%;
+    float: none;
+}
+	#container header h1 img {
+	width:95%;
+}
+#container header nav ul li {
+	padding:0 3px;
+}
+#container header nav ul li br {
+	display:none;
+}
+#container #contents #side {
+	width:100%;
+	float:none;
+	text-align:center;
+}
+#container #contents #side img {
+	width:auto;
+	height:auto;
+}
+
+
+}
+
+@media screen and (max-width: 768px) {
+		/*Tablet*/
+		#container header #univLogo {
+	background-size:26px auto !important;
+	font-size:110% !important;
+	padding:7px 0 7px 45px !important;
+	margin:20px auto 16px 0 !important;
+}
+	
+#container header #univLogo span.university:after {
+	content:" "	
+}
+#container header #univLogo span {
+	display:block;
+	margin-bottom:3px;
+}
+#container header nav ul li {
+	font-size:110%;
+	height:auto;
+	padding-bottom:10px;
+}
+#container header nav ul li a{
+	background-size:80% auto !important;
+	background-position:center 10px !important;
+}
+#container header nav ul li.l1 a{
+	padding-top:105%;
+}
+#container header nav ul li.l2 a{
+	padding-top:105%;
+}
+#container header nav ul li.l3 a{
+	padding-top:105%;
+}
+.page_article #container #contents h2 {
+	font-size:350%;
+	margin-bottom:20px;
+}
+}
+@media screen and (max-width: 468px) {
+	/*SmartPhone*/
+	#container header #univLogo {
+	font-size:95%;
+	}
+		#container header nav {
+		border-bottom:none;
+	}
+	#container header nav ul{
+		display:block;
+	}
+	#container header nav ul li {
+		display:block;
+		float:left;
+	width:25%;
+	height:80px;
+	font-size:110%;
+	line-height:130%;
+	border-bottom:1px solid #dedede;
+}
+#container header nav ul li a{
+	background-size:30px auto !important;
+	background-position:center 5px !important;
+}
+#container header nav ul li.l1 a{
+	padding-top:40px;
+}
+#container header nav ul li.l2 a{
+	padding-top:40px;
+}
+#container header nav ul li.l3 a{
+	padding-top:40px;
+}
+
+.page_article #container #contents h2 {
+	font-size:250%;
+}
+#page_faq #acMenu{
+	margin:20px 0;
+}
+#page_faq #acMenu > dt,
+#page_faq #acMenu > dt.open {
+font-size:160%;
+background-size:30px auto;
+padding: 15px 40px 15px 15px;
+}
+#page_faq #acMenu > dt span{	
+	background-size:30px auto;
+	width:40px;
+	margin-top:0;
+}
+#page_faq #acMenu > dd {
+	background-size:30px auto;
+	background-position:12px 10px;
+padding:10px 10px 10px 55px;
+font-size:150%;
+border-left:3px solid #f0f0f0;
+border-right:3px solid #f0f0f0;
+border-bottom:3px solid #f0f0f0;
+}
+#page_faq #acMenu > dd ul {
+	margin-top:10px;
+}
+}
+@media screen and (max-width: 375px) {	
+/*更に狭いiPhone用*/
+	#container #contents #side img {	
+		width:100%;
+}
+	#container header nav ul li {
+	font-size:100%;
+}
+}

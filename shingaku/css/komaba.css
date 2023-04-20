@@ -1,0 +1,483 @@
+@charset "utf-8";
+
+a{
+	color:#4a4a4a;
+	text-decoration:none;
+}
+#container #contents a{
+	color:#1579c1;
+}
+#container #contents a:hover{
+	text-decoration:underline;
+}
+
+/*============================
+header
+============================*/
+
+#container header #mainImg{
+	width:100%;
+	background:#000;
+}
+#container header img {
+	width:100%;
+}
+
+
+/*============================
+#contents
+============================*/
+#container #contents article {
+	width:100%;
+}
+#container #contents #lead {
+	width:100%;
+	border-bottom:4px solid #f0f0f0;
+	padding-bottom:20px;
+	margin-bottom:40px;
+}
+#container #contents #lead p {
+	font-size:150%;
+	line-height:160%;
+	margin-bottom:1em;
+	text-indent:1em;
+}
+#container #contents h1 {
+	font-size:500%;
+	line-height:130%;
+	border-bottom:2px solid #1579c1;
+	margin-bottom:30px;
+	text-align:center;
+}
+#container #contents #lead blockquote{
+	width:100%;
+	color:#717171;
+	margin-bottom:30px;
+	overflow:hidden;
+	position:relative;
+	height:auto;
+	display:table;
+}
+#container #contents #lead blockquote p{
+	text-indent:0;
+	font-weight:bold;
+	font-size:180%;
+	line-height:160%;
+	margin-bottom:0;
+}
+#container #contents #lead blockquote footer{
+	font-size:120%;
+	margin-top:5px;
+}
+#container #contents #lead blockquote:before{
+	content:" ";
+	background:url(../images/qtBefore.png) 0 center no-repeat;
+	width:3%;
+	/*height:92px;*/
+	display:table-cell;
+	margin-top:8px;
+}
+#container #contents #lead blockquote:after{
+	content:" ";
+	background:url(../images/qtAfter.png) right center no-repeat;
+	width:3%;
+	/*height:92px;*/
+	display:table-cell;
+	margin-top:8px;
+}
+#container #contents #lead blockquote .lead{
+	display:table-cell;
+	width:94%;
+	padding:0 15px;
+}
+#container #contents article#detail{
+	height:1030px;
+	position:relative;
+	clear:both;
+	border-bottom:4px solid #f0f0f0;
+	padding-bottom:20px;
+	margin-bottom:40px;
+}
+#container #contents article #sec02{
+	position:absolute;
+	top:0;
+	left:0;
+	width:635px;
+	border-bottom:2px solid #f0f0f0;
+	padding-bottom:20px;
+}
+#container #contents article #sec03{
+	position:absolute;
+	top:0;
+	right:0;
+	width:315px;
+}
+#container #contents article #sec02 p.caption{
+	text-align:right;
+	font-size:120%;
+	margin-bottom:0;
+	margin-top:10px;
+}
+#page_index #container #contents article h2 span{
+	font-size:62.5%;
+}
+#container #contents article #sec03 .row.box01{
+	border-bottom:2px solid #f0f0f0;
+	margin-bottom:30px;
+}
+#container #contents article .movieBox p{
+	text-indent:0;
+	margin-top:5px;
+}
+#container #contents article .movieBox span{
+	font-size:80%;
+}
+#container #contents article #sec04{
+	width:635px;
+	position:absolute;
+	top:485px;
+	left:0;
+	border-bottom:2px solid #f0f0f0;
+	padding-bottom:20px;
+}
+#container #contents article #sec05{
+	width:635px;
+	position:absolute;
+	top:810px;
+	left:0;
+}
+#container #contents article dl.tableDL{
+	width:100%;
+	overflow:hidden;
+}
+#container #contents article dl.tableDL dt{
+	width:20%;
+	box-sizing:border-box;
+	float:left;
+	border-right:solid 4px #fff;
+	border-bottom:solid 5px #fff;
+	background-color:#e5e5e5;
+	padding:8px 20px;
+	font-size:150%;
+	line-height:140%;
+	font-weight:bold;
+}
+#container #contents article dl.tableDL dd{
+	width:80%;
+	box-sizing:border-box;
+	float:left;
+	border-bottom:solid 5px #fff;
+	background-color:#f5f5f5;
+	padding:8px 20px;
+	font-size:120%;
+	line-height:160%;
+}
+
+
+/*============================
+#sec06
+============================*/
+article#links #sec06 {
+	width:100%;
+	overflow:hidden;
+}
+article#links #sec06 div.linkBox {
+	float:left;
+	box-sizing:border-box;
+	border-left:1px dotted #6b6b6b;
+	padding:10px 20px;
+}
+article#links #sec06 div.linkBox h3 {
+	font-size:200%;
+	padding:15px 10px 10px 90px;
+	line-height:120%;
+	box-sizing:border-box;
+}
+article#links #sec06 div.linkBox.box01{
+	width:29%;
+	border-left:none;
+}
+article#links #sec06 div.linkBox.box02{
+	width:35%;
+}
+article#links #sec06 div.linkBox.box03{
+	width:36%;
+}
+article#links #sec06 div.linkBox.box01 h3{
+	background:#f0f0f0 url(../images/banner01.jpg) no-repeat 0 0;
+}
+article#links #sec06 div.linkBox.box02 h3{
+	background:#f0f0f0 url(../images/banner02.jpg) no-repeat 0 0;
+}
+article#links #sec06 div.linkBox.box03 h3{
+	background:#f0f0f0 url(../images/banner03.jpg) no-repeat 0 0;
+}
+article#links #sec06 div.linkBox h3 span {
+	display:block;
+	font-size:75%;
+	margin-top:3px;
+}
+article#links #sec06 div.linkBox > ul {
+	font-size:140%;
+	line-height:140%;
+	margin:15px 0;
+}
+article#links #sec06 div.linkBox  ul li{
+	margin-bottom:3px;
+	text-indent:-1em;
+	padding-left:1em;
+}
+article#links #sec06 div.linkBox ul  a{
+	color:#4a4a4a;
+}
+article#links #sec06 div.linkBox ul li:before {
+	content:"> "
+}
+article#links #sec06 div.linkBox ul li .nest {
+	margin-top:3px;
+}
+article#links #sec06 div.linkBox ul li .nest li {
+	letter-spacing:-1px;
+}
+/*パンフレット*/
+article#links aside {
+	clear:both;
+	background-color:#1579c1;
+	margin:20px 0 60px 0;
+	overflow:hidden;
+	width:100%;
+}
+article#links aside h3 {
+	background-color:#0b59a9;
+	color:#fff;
+	font-size:200%;
+	font-weight:bold;
+	padding:55px 0;
+	float:left;
+	box-sizing:border-box;
+	width:27%;
+}
+article#links aside h3 span{
+	background: url(../images/pamph.png) 0 center no-repeat;
+	padding:4px 0 4px 50px;
+		display:block;
+		margin:0 auto;
+		width:6em;
+}
+article#links aside ul {
+	overflow:hidden;
+	width:73%;
+}
+article#links aside ul li {
+		font-size:160%;
+		line-height:140%;
+		float:left;
+		padding:15px 0 15px 0;
+		width:50%;
+		box-sizing:border-box;
+		text-align:center;
+}
+#container #contents article#links aside ul li a {
+	color:#fff;
+	height:70px;
+}
+
+article#links aside ul li a span {
+	display:block;
+	padding-top:10px;
+}
+article#links aside ul li:first-child{
+	border-right:1px dotted #fff;
+}
+
+
+/*============================
+レスポンシブ
+============================*/
+
+@media screen and (max-width: 980px) {
+	/*コンテンツ幅より狭い場合*/	
+	#container #contents #lead blockquote:before{
+		background-size:auto 100%;
+}
+#container #contents #lead blockquote:after{
+	background-size:auto 100%;
+}
+#container #contents article#detail{
+	height:auto;
+	position:static;
+	margin-bottom:30px;
+}
+#container #contents article #sec02{
+	position:static;
+	width:100%;
+	margin-bottom:30px;
+	text-align:center;
+}
+#container #contents article #sec03{
+	position:static;
+	width:100%;
+	margin-bottom:30px;
+	border-bottom:2px solid #f0f0f0;
+}
+#container #contents article #sec04{
+	clear:both;
+	width:100%;
+	position:static;
+	margin-bottom:30px;
+}
+#container #contents article #sec05{
+	width:100%;
+	position:static;
+	border-bottom:none;
+	padding-bottom:0;
+}
+#container #contents article .row{
+	overflow:hidden;
+	clear:both;
+}
+#container #contents article .row .movieBox{
+	float:left;
+	width:33%;
+	padding-right:10px;
+	box-sizing:border-box;
+}
+#container #contents article .row .movieBox img{
+	width:100%;
+}
+#container #contents article .movieBox span{
+	font-size:80%;
+}
+article#links #sec06 div.linkBox {	
+	padding:10px 10px;
+}
+article#links #sec06 div.linkBox h3 {
+	font-size:170%;
+	padding:10px 10px 5px 70px;	
+	background-size:60px auto !important;
+}
+/*パンフレット*/
+article#links aside {
+	margin:20px 0 40px 0;
+}
+article#links aside h3 {
+	font-size:170%;
+	padding:10px;
+	float:none;
+	width:100%;
+	display:block;
+}
+article#links aside ul {
+	width:100%;
+	display:table;
+	float:none;
+}
+article#links aside ul li {
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+		font-size:150%;
+		float:none;
+		padding:20px;
+		width:auto;
+}
+article#links aside ul li a span {
+	display:block;
+	vertical-align:middle;
+	padding:10px 0;
+}
+/*文字を大きく*/
+#container #contents article dl.tableDL dd{
+	font-size:140%;
+}	
+	
+}
+
+@media screen and (max-width: 768px) {
+		/*Tablet*/
+#container #contents h1 {
+	font-size:350%;
+	margin-bottom:20px;
+}
+#container #contents article #sec02 video{
+	width:100%;
+}
+#container #contents article dl.tableDL dt{
+	width:100%;
+	float:none;
+	border-right:none;
+}
+#container #contents article dl.tableDL dd{
+	width:100%;
+	float:none;
+}
+#container #contents article dl.tableDL dt br{
+	display:none;
+}
+article#links #sec06 div.linkBox {
+	float:none;
+	border-left:none;
+	padding:10px 0;
+}
+article#links #sec06 div.linkBox.box01,
+article#links #sec06 div.linkBox.box02,
+article#links #sec06 div.linkBox.box03{
+	width:100%;
+}
+}
+@media screen and (max-width: 530px) {	
+/*パンフレット用ブレイクポイント*/
+	article#links aside ul{
+	display:block;
+}
+article#links aside ul li {
+	display:block;
+	text-align:center;
+	padding:10px;
+}
+article#links aside ul li:first-child{
+display:block;
+	padding:10px;
+	border-bottom:1px dotted #fff;
+	border-right:none;
+}
+#container #contents article#links aside ul li a {
+	display:block;
+	height:auto;
+}
+article#links aside ul li a img {
+	display:inline;
+	}
+article#links aside ul li a span{
+	padding-bottom:0;
+}
+}
+
+@media screen and (max-width: 468px) {
+	/*SmartPhone*/
+	#container #contents #lead p {
+	font-size:160%;
+}	
+#container #contents h1 {
+	font-size:250%;
+}
+#container #contents article blockquote p{
+	font-size:160%;
+}
+#container #contents article blockquote footer{
+	font-size:110%;
+	margin-top:5px;
+}
+#container #contents article .row .movieBox{
+	float:none;
+	width:100%;
+	padding-right:0;
+}
+}
+@media screen and (max-width: 375px) {	
+/*更に狭いiPhone用*/
+	article#links aside ul li a img {
+	width:100%;
+	height:auto;
+	}
+}
