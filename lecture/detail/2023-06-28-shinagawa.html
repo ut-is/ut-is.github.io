@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ja" class="loading">
+
+<head>
+    <!-- GoogleAnalytics -->
+    <!--テストサイト-->
+    <!-- GoogleAnalytics -->
+    <meta charset="utf-8">
+    <title>CryptOpt: Automatic Cryptographic Code Optimization with Verified Compilation | 東京大学 理学部情報科学科/大学院情報理工学系研究科コンピュータ科学専攻</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=0">
+    <meta name="keywords" content="東京大学,理学部,情報科学科,大学院,情報理工学系研究科,コンピュータ科学専攻">
+    <meta name="description" content="東京大学 理学部情報科学科/東京大学 大学院情報理工学系研究科 コンピュータ科学専攻">
+    <meta property="og:title" content="多様性に配慮した意思決定のための機械学習｜東京大学 理学部情報科学科/大学院情報理工学系研究科コンピュータ科学専攻" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.is.s.u-tokyo.ac.jp/lecture/detail/2023-04-12-muroya.html" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="東京大学 理学部情報科学科/東京大学 大学院情報理工学系研究科 コンピュータ科学専攻" />
+    <meta property="og:site_name" content="東京大学 理学部情報科学科/大学院情報理工学系研究科コンピュータ科学専攻" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="多様性に配慮した意思決定のための機械学習｜東京大学 理学部情報科学科/大学院情報理工学系研究科コンピュータ科学専攻">
+    <meta name="twitter:description" content="東京大学 理学部情報科学科/東京大学 大学院情報理工学系研究科 コンピュータ科学専攻">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link rel="stylesheet" href="/asset_utokyo-is/css/common.css">
+    <link rel="stylesheet" href="/asset_utokyo-is/css/lower.css">
+
+</head>
+
+<body id="lecture_info" class="lower detail">
+    <div id="wrapper">
+        <div class="flex-wrapper">
+            <header>
+                <div id="header" role="banner">
+                    <div class="sticky_area">
+                        <div id="hd_logo">
+                            <div class="logo_inner">
+                                <a href="/">
+                                    <h1><span><img src="/asset_utokyo-is/media/images/common/hd_logo.png" width="260"
+                                                height="220" alt="東京大学理学部 情報科学科／東京大学大学院情報理工学系研究科　コンピュータ科学専攻"></span>
+                                    </h1>
+                                </a>
+                            </div>
+                        </div>
+                        <nav id="gnavi">
+                            <ul>
+                                <li>
+                                    <a href="/about/">
+                                        <p class="ja_text">学科概要</p>
+                                        <p class="en_text">About Dept. of IS</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/lab-members/">
+                                        <p class="ja_text">教員/研究室</p>
+                                        <p class="en_text">Lab. / Members</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/files/2022/utokyo_ISguide2022_all.pdf" target="_blank">
+                                        <p class="ja_text">学科パンフレット</p>
+                                        <p class="en_text">Dept. Pamphlet</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/shingaku/" target="_blank">
+                                        <p class="ja_text">駒場生向け</p>
+                                        <p class="en_text">for Komaba Students</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/student/">
+                                        <p class="ja_text">理学部学生向け</p>
+                                        <p class="en_text">for Undergrad Students</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.i.u-tokyo.ac.jp/edu/course/cs/" target="_blank" class="blank">
+                                        <p class="ja_text">大学院生向け</p>
+                                        <p class="en_text">for Grad Students</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.i.u-tokyo.ac.jp/edu/course/cs/admission.shtml" target="_blank"
+                                        class="blank">
+                                        <p class="ja_text">大学院入試</p>
+                                        <p class="en_text">Entrance Exam</p>
+                                    </a>
+                                </li>
+                                <li class="lang_change">
+                                    <a href="/en/" class=" lang">
+                                        <span>EN</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav><!-- gnavi -->
+                    </div><!-- sticky_area -->
+
+                    <div id="sp_hd_logo">
+                        <a href="/">
+                            <ul class="flex_logo_list">
+                                <li class="list_item">
+                                    <div class="logo_img_wrap">
+                                        <img src="/asset_utokyo-is/media/images/home/department_logo_001.png"
+                                            alt="東京大学 理学部" width="140" height="44">
+                                    </div>
+                                    <div class="logo_text_wrap">
+                                        <p>情報科学科</p>
+                                    </div>
+                                </li>
+                                <li class="list_item">
+                                    <div class="logo_img_wrap">
+                                        <img src="/asset_utokyo-is/media/images/home/department_logo_002.png"
+                                            alt="東京大学 理学部" width="140" height="44">
+                                    </div>
+                                    <div class="logo_text_wrap">
+                                        <p>コンピュータ科学専攻</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div id="sp_menu_btn">
+                        <div class="sp_btn_cont">
+                            <span class="border01"></span>
+                            <span class="border02"></span>
+                            <span class="border03"></span>
+                        </div>
+                    </div><!-- sp_menu_btn -->
+                </div><!-- header -->
+            </header>
+            <div class="main_container">
+                <div id="main_area" role="main">
+                    <section id="top_kv" class="content_wrapper">
+                        <img src="/asset_utokyo-is/media/images/applicants/kv_applicants.jpg" alt="KV" width="1340"
+                            height="240">
+                        <div class="overlay_text">
+                            <h2>専攻講演会</h2>
+                            <p>Department Lecture</p>
+                        </div>
+                    </section>
+
+                    <div id="bread">
+                        <ol>
+                            <li><a href="/"><span class="home"></span></a></li>
+                            <li><span>専攻講演会</span></li>
+                            <li><a href="/lecture/detail/2023-06-28-shinagawa.html"><span>クラウドコンピューティングを進化させる基盤システムソフトウェア</span></a></li>
+                        </ol>
+                    </div>
+
+                    <section id="content_area" class="content_wrapper">
+                        <div class="main_width">
+                            <div class="content_inner">
+                                <div class="flex_container">
+                                    <div class="section_title">
+                                        <h3><span>専攻講演会</span></h3>
+                                        <p>Department Lecture</p>
+                                    </div>
+                                    <div class="section_main_content">
+                                        <div class="lecture_content">
+                                            <h4 class="content_title"><span>ククラウドコンピューティングを進化させる基盤システムソフトウェア</span></h4>
+                                            <div class="content_info">
+                                                <p>講演者: 品川 高廣（東京大学 情報基盤センター）</p>
+                                                <p>2023年6月28日（水）15時00分～16時30分</p>
+                                                <p>理学部7号館007教室とZoomのハイブリッド</p>
+                                            </div>
+                                            <div class="article_area">
+                                              <p>クラウドコンピューティングは現代社会に欠かせない情報処理の基盤的な仕組みであるが、処理内容の高度化や利用形態の多様化に伴い、クラウド環境を支えるオペレーティングシステムや仮想化ソフトウェアなどの基盤システムソフトウェアも絶えず進化し続ける必要がある。本講演では、まずクラウド環境における基盤システムソフトウェアの基本的なアーキテクチャについて解説したうえで、既存システムにおける性能やセキュリティなどに関する課題について述べる。次に、これらの課題を解決するための、新しいハードウェア機能と先進的ソフトウェア・アーキテクチャを組み合わせた次世代基盤システムソフトウェア研究をいくつか紹介する。最後に、基盤システムソフトウェア研究における将来の方向性について述べる。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section><!-- member_list_area -->
+
+                    <div id="pagetop" class="main_btn_top">
+                        <a class="btn_top" href="#"><span class="arrow"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- wrapper -->
+    <footer>
+        <div id="footer" role="contentinfo">
+            <div class="main_width">
+
+                <div class="address">
+                    <p>〒113-8656 東京都文京区本郷7-3-1</p>
+                    <p>東京大学理学部情報科学科・東京大学大学院情報理工学系研究科コンピュータ科学専攻</p>
+                </div>
+                <div class="mail_address">
+                    <p>contact[at]is.s.u-tokyo.ac.jp</p>
+                </div>
+
+                <div class="copy">
+                    <p><span>Copyright © Dept. of IS. All Rights Reserved</span></p>
+                </div>
+            </div>
+        </div><!-- footer -->
+    </footer>
+    <div id="sp_menu">
+        <div id="sp_menu_area">
+            <!-- <div class="sp_gnavi_title">
+      <p><span>MENU</span></p>
+    </div> -->
+            <div id="sp_gnavi">
+                <ul>
+                    <li><a href="/about/">学科概要</a></li>
+                    <li><a href="/lab-members/">教員/研究室</a></li>
+                    <li><a href="/files/2022/utokyo_ISguide2022_all.pdf" target="_blank">学科パンフレット</a></li>
+                    <li><a href="/shingaku/" target="_blank">駒場生向け</a></li>
+                    <li><a href="/student/">理学部学生向け</a></li>
+                    <li><a href="https://www.i.u-tokyo.ac.jp/edu/course/cs/" target="_blank" class="blank"><span>大学院生向け</span></a></li>
+                    <li><a href="https://www.i.u-tokyo.ac.jp/edu/course/cs/admission.shtml" target="_blank"
+                            class="blank"><span>大学院入試</span></a></li>
+                </ul>
+            </div>
+
+            <div id="sp_menu_info">
+                <ul>
+                    <li>
+                        <a href="/en/" class="lang"><span>EN</span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- #sp_menu_info -->
+        </div><!-- #sp_menu_area -->
+    </div><!-- #sp_menu -->
+    <script src="/asset_utokyo-is/js/jquery.js"></script>
+    <script src="/asset_utokyo-is/js/easing.js"></script>
+    <script src="/asset_utokyo-is/js/common.js"></script>
+    <script src="/asset_utokyo-is/js/slick.min.js"></script>
+</body>
+
+</html>
