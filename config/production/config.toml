@@ -12,9 +12,10 @@ theme = "hugo-issu"
     title = "東京大学 理学部情報科学科/大学院情報理工学系研究科コンピュータ科学専攻"
     weight = 1
     contentDir = "content/ja"
-    dateFormat = "2006年1月2日"
-    description = "東京大学 理学部情報科学科/東京大学 大学院情報理工学系研究科 コンピュータ科学専攻"
-    keywords =  "東京大学,理学部,情報科学科,大学院,情報理工学系研究科,コンピュータ科学専攻"
+    [languages.ja.params]
+      dateFormat = "2006年1月2日"
+      description = "東京大学 理学部情報科学科/東京大学 大学院情報理工学系研究科 コンピュータ科学専攻"
+      keywords =  "東京大学,理学部,情報科学科,大学院,情報理工学系研究科,コンピュータ科学専攻"
 
   [languages.en]
     languageName = "English"
@@ -22,9 +23,10 @@ theme = "hugo-issu"
     title = "Department of Computer Science, The University of Tokyo"
     weight = 2
     contentDir = "content/en"
-    dateFormat = "Jan. 2, 2006"
-    description = "Department of Information Science, Faculty of Science, The University of Tokyo / Department of Computer Science, Graduate School of Information Science and Technology, The University of Tokyo"
-    keywords =  "The University of Tokyo, Faculty of Science, Department of Information Science, Graduate School of Information Science and Technology, Department of Computer Science"
+    [languages.en.params]
+      dateFormat = "Jan. 2, 2006"
+      description = "Department of Information Science, Faculty of Science, The University of Tokyo / Department of Computer Science, Graduate School of Information Science and Technology, The University of Tokyo"
+      keywords =  "The University of Tokyo, Faculty of Science, Department of Information Science, Graduate School of Information Science and Technology, Department of Computer Science"
 
 
 [taxonomies]
