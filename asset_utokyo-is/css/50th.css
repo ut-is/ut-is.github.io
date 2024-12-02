@@ -1,0 +1,183 @@
+
+body{
+	color:#4a4a4a;
+}
+#container #contents a{
+	color:#1579c1;
+}
+#container #contents a:hover{
+	text-decoration:underline;
+}
+
+
+/*============================
+header
+============================*/
+#container header {
+	width:100%;
+}
+
+#container header #mainImg{
+	width:100%;
+}
+#container header img {
+	width:100%;
+	height: 360px;
+	object-fit: cover;
+}
+
+
+
+#container header #univLogo {
+	width:980px;
+	background:url(../media/images/50th-anniversary/department_logo.png) 0 0 no-repeat;
+	background-size:21px auto;
+	font-size:100%;
+	padding:10px 0 10px 30px;
+	margin:20px auto 16px auto;
+	box-sizing:border-box;
+}
+
+/*============================
+#contents
+============================*/
+#container #contents {
+	width:980px;
+	padding:50px 0 0 0;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+#container #contents h1 {
+	font-size:300%;
+	line-height:130%;
+	border-bottom:2px solid #1579c1;
+	margin-bottom:30px;
+	text-align:center;
+}
+
+#container #contents h2,
+#container #contents h3 {
+	font-size:180%;
+	line-height:130%;
+	background:url(../media/images/50th-anniversary/headline01.png) 0 0 no-repeat;
+	padding:0 0 0 25px;
+	margin-bottom:15px;
+	text-align:left;
+}
+#container #contents article h4{
+	font-size:170%;
+	font-weight:bold;
+	margin:25px 0 15px 0;
+}
+#container #contents p {
+	font-size:100%;
+	line-height:110%;
+
+	margin-bottom:1em;
+	text-indent:1em;
+}
+
+#container #contents ul {
+    list-style-type: disc;
+
+    font-size:100%;
+	line-height:110%;
+
+	margin-bottom:1em;
+	text-indent:1em;
+}
+
+#container #contents li{
+	display: list-item;
+    list-style-position: inside;
+}
+
+
+
+
+/*============================
+レスポンシブ
+============================*/
+
+@media screen and (max-width: 980px) {
+	/*コンテンツ幅より狭い場合*/
+
+	.inner {
+	width:100%;
+}
+#container header #univLogo {
+	width:100%;
+	padding-left:40px;
+	background-position:10px 0;
+}
+#container #contents {
+	width:100%;
+	padding:5% 3% 2% 3%;
+	box-sizing:border-box;
+}
+#page_index #container #contents article h2,
+.page_article #container #contents h3 {
+		background-size:6px 100% !important;
+		padding:0 0 0 20px;
+}
+/*文字を大きく*/
+#container #contents p{
+	font-size:120%;
+}
+/*文字を大きく*/
+#container #contents ul{
+	font-size:120%;
+}
+}
+
+@media screen and (max-width: 768px) {
+		/*Tablet*/
+
+
+}
+@media screen and (max-width: 468px) {
+	/*SmartPhone*/
+	#container header #univLogo {
+	margin: 10px 10px 5px 0;
+	}
+
+#page_index #container #contents h2,
+.page_article #container #contents h3 {
+	font-size:180%;
+	margin-bottom:10px;
+	padding:0 0 0 10px;
+}
+#container #contents  p {
+	/*font-size:160%;*/
+}
+#container > footer dl {
+	float:none;
+	width:100%;
+	margin-top:20px;
+	margin-bottom:10px;
+}
+#container > footer dl dt {
+	font-size:130%;
+	margin-bottom:5px;
+}
+#container > footer dl dd.add {
+	font-size:110%;
+}
+#container > footer .snsBtn{
+float:none;
+overflow:hidden;
+	width:100%;
+	margin-top:10px;
+	margin-bottom:20px;
+}
+#container > footer p.copyright {
+	font-size:100%;
+	padding:20px 0;
+	margin-bottom:0;
+}
+}
+@media screen and (max-width: 375px) {
+/*更に狭いiPhone用*/
+
+}
