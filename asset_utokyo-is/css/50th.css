@@ -56,8 +56,7 @@ header
 	text-align:center;
 }
 
-#container #contents h2,
-#container #contents h3 {
+#container #contents h2 {
 	font-size:180%;
 	line-height:130%;
 	background:url(../media/images/50th-anniversary/headline01.png) 0 0 no-repeat;
@@ -65,11 +64,20 @@ header
 	margin-bottom:15px;
 	text-align:left;
 }
+
+#container #contents h3{
+	font-size:140%;
+	line-height:100%;
+	margin-bottom:15px;
+	text-align:left;
+}
+
 #container #contents article h4{
 	font-size:170%;
 	font-weight:bold;
 	margin:25px 0 15px 0;
 }
+
 #container #contents p {
 	font-size:100%;
 	line-height:110%;
